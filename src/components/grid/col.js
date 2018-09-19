@@ -15,25 +15,25 @@ const Col = styled.div`
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-      config(p).breakpoints[d] && config(p).media[d]`
+    config(p).breakpoints[d] && config(p).media[d]`
       ${p => p[d] && `
-        flex: 0 0 ${(p[d] / config(p).columns)*100}%;
-        max-width: ${(p[d] / config(p).columns)*100}%;
+        flex: 0 0 ${(p[d] / config(p).columns) * 100}%;
+        max-width: ${(p[d] / config(p).columns) * 100}%;
       `}
     `)}
   `}
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-      config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ 'offset-' + d ] && `margin-left: ${ (p[ 'offset-' + d ] / config(p).columns) * 100}%`};
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[ d + 'Offset' ] && `margin-left: ${(p[ 'offset-' + d ] / config(p).columns) * 100}%`};
     `)}
   `}
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-      config(p).breakpoints[d] && config(p).media[d]`
-      flex-direction: ${p[ 'reverse-' + d ] ? `column-reverse` : `column`};
+    config(p).breakpoints[d] && config(p).media[d]`
+      flex-direction: ${p[ d + 'Reverse' ] ? `column-reverse` : `column`};
     `)}
   `}
 
@@ -45,8 +45,32 @@ const Col = styled.div`
 
 Col.displayName = 'Col'
 
+const numberOrString = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number
+])
+
 Col.propTypes = {
-  children: PropTypes.node
+  xs: numberOrString,
+  sm: numberOrString,
+  md: numberOrString,
+  lg: numberOrString,
+  xl: numberOrString,
+  xsOffset: numberOrString,
+  smOffset: numberOrString,
+  mdOffset: numberOrString,
+  lgOffset: numberOrString,
+  xlOffset: numberOrString,
+  xsReverse: PropTypes.bool,
+  smReverse: PropTypes.bool,
+  mdReverse: PropTypes.bool,
+  lgReverse: PropTypes.bool,
+  xlReverse: PropTypes.bool,
+  noGutter: PropTypes.bool,
+  gutterWidth: PropTypes.number,
+  columns: PropTypes.number,
+  children: PropTypes.node,
+  debug: PropTypes.bool
 }
 
 export default Col

@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
@@ -13,9 +12,9 @@ const Container = styled.div`
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
     config(p).container[d] && config(p).media[d]`
-        width: ${p => config(p).container[d]}px;
+        max-width: ${p => config(p).container[d]}px;
       `
-    )}
+  )}
   `}
 
   ${({debug}) => debug && css`
@@ -27,8 +26,10 @@ const Container = styled.div`
 Container.displayName = 'Container'
 
 Container.propTypes = {
+  paddingWidth: PropTypes.number,
   fluid: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  debug: PropTypes.bool
 }
 
 export default Container

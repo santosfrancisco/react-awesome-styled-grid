@@ -1,3 +1,5 @@
-import Grid from './components/grid'
+import Container from './components/grid/container'
+import Row from './components/grid/row'
+import Col from './components/grid/col'
 
-export default Grid
+export { Container, Row, Col }

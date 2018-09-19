@@ -1,5 +1,6 @@
 
 import styled, { css } from 'styled-components'
+import PropTypes from 'prop-types'
 import config, { DIMENSIONS } from '../../config'
 
 const Row = styled.div`
@@ -11,8 +12,8 @@ const Row = styled.div`
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-      config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ 'reverse-' + d ] && `flex-direction: row-reverse;`}
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[ d + 'Reverse' ] && `flex-direction: row-reverse;`}
     `)}
   `}
 
@@ -23,5 +24,20 @@ const Row = styled.div`
 `
 
 Row.displayName = 'Row'
+
+const numberOrString = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number
+])
+
+Row.propTypes = {
+  xsReverse: numberOrString,
+  smReverse: numberOrString,
+  mdReverse: numberOrString,
+  lgReverse: numberOrString,
+  xlReverse: numberOrString,
+  children: PropTypes.node,
+  debug: PropTypes.bool
+}
 
 export default Row
