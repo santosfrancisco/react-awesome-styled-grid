@@ -1,4 +1,6 @@
 .docz
+lib
+dist
 # Logs
 logs
 *.log
