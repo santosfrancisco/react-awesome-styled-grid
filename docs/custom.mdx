@@ -1,10 +1,9 @@
 ---
 name: Custom configuration
 route: /custom
-order: 3
 ---
 import { Playground } from 'docz'
-import { Container, Row, Col } from './'
+import { Container, Row, Col } from '../src'
 import { ThemeProvider } from 'styled-components'
 
 # Using a custom configuration
@@ -17,10 +16,10 @@ import { ThemeProvider } from 'styled-components'
     paddingWidth: 16, // px
     mediaQuery: 'only screen',
     container: {
-      sm: 576, // px
-      md: 768, // px
-      lg: 992, // px
-      xl: 1200 // px
+      sm: 540, // px
+      md: 720, // px
+      lg: 960, // px
+      xl: 1140 // px
     },
     breakpoints: {
       xs: 1, // px
