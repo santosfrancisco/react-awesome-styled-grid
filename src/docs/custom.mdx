@@ -1,0 +1,68 @@
+---
+name: Custom configuration
+route: /custom
+order: 1
+---
+import { Playground } from 'docz'
+import { Container, Row, Col } from '../'
+import { ThemeProvider } from 'styled-components'
+
+# Using a custom configuration
+
+To use a custom config, import the **ThemeProvider** 
+from Styled-components ```import { ThemeProvider } from 'styled-components'```, 
+and pass a named object ```awesomegrid``` to the theme prop, as the example below.
+The properties of your custom configuration will overwrite the default settings. Just set properties that are different from the default.
+
+Try changing any property in customConf below and see what happens.
+
+<Playground>
+{() => {
+  const customConf = {
+    columns: 12,
+    gutterWidth: 16, // px
+    paddingWidth: 16, // px
+    mediaQuery: 'only screen',
+    container: {
+      sm: 540, // px
+      md: 720, // px
+      lg: 960, // px
+      xl: 1140 // px
+    },
+    breakpoints: {
+      xs: 1, // px
+      sm: 576, // px
+      md: 768, // px
+      lg: 992, // px
+      xl: 1200 // px
+    }
+  }
+  return (
+    <ThemeProvider theme={{awesomegrid: customConf}}>
+      <Container>
+        <Row>
+          <Col debug xs={4} sm={6} md={9}>
+            <span role="img" aria-label="so cool">
+              xs={1} sm={3} md={6} lg={6}
+            </span>
+          </Col>
+          <Col debug noGutter>
+            <Col debug>inside another Col</Col>
+            <Col debug>inside another Col</Col>
+          </Col>
+        </Row>
+        <Row>
+          <Col debug xs={12} sm={6} md={10} lg={6}>
+            xs={12} sm={6} md={10} lg={6}
+          </Col>
+          <Col debug xs={12} sm={6} md={2} lg={6}>
+            xs={12} sm={6} md={2} lg={6}
+          </Col>
+        </Row>
+      </Container>
+    </ThemeProvider>
+    )
+  }}
+</Playground>
+
+    

@@ -14,7 +14,7 @@ npm i react-awesome-styled-grid
 
 ## Documentation
 
-Click [here](http://awesome-styled-grid.surge.sh) for documentation
+Click [here](https://santosfrancisco.github.io/react-awesome-styled-grid/) for documentation
 
 ## Basic usage
 

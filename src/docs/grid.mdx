@@ -1,0 +1,138 @@
+---
+name: Usage
+route: /usage
+order: 3
+---
+
+import { Container, Row, Col } from '../'
+
+# Usage
+
+Resizes your window to see the responsive magic happening 😎
+
+## Responsive
+
+<Container>
+  <Row>
+    <Col debug xs={4} sm={6} md={9}>
+      <span role="img" aria-label="so cool">
+        xs={1} sm={3} md={6} lg={6}
+      </span>
+    </Col>
+    <Col debug noGutter>
+      <Col debug>inside another Col</Col>
+      <Col debug>inside another Col</Col>
+    </Col>
+  </Row>
+  <Row>
+    <Col debug xs={12} sm={6} md={10} lg={6}>
+      xs={12} sm={6} md={10} lg={6}
+    </Col>
+    <Col debug xs={12} sm={6} md={2} lg={6}>
+      xs={12} sm={6} md={2} lg={6}
+    </Col>
+  </Row>
+</Container>
+
+> 💡**Tip!** if no dimension is defined, the column size will be **auto**. 
+(i.e. md={6}. This means that ```xs``` and ```sm``` is auto, 
+and from ```md```, the size will be 6 columns)
+
+```js
+<Container>
+  <Row>
+    <Col debug xs={4} sm={6} md={9}>
+      <span role="img" aria-label="so cool">
+        xs={4} sm={3} md={6} lg={6}
+      </span>
+    </Col>
+    <Col debug noGutter>
+      <Col debug>inside another Col</Col>
+      <Col debug>inside another Col</Col>
+    </Col>
+  </Row>
+  <Row>
+    <Col debug xs={12} sm={6} md={10} lg={6}>
+      xs={12} sm={6} md={10} lg={6}
+    </Col>
+    <Col debug xs={12} sm={6} md={2} lg={6}>
+      xs={12} sm={6} md={2} lg={6}
+    </Col>
+  </Row>
+</Container>
+```
+
+## Offset
+
+<Container>
+  <Row><Col debug xs={1} xsOffset={11}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} xsOffset={10}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} xsOffset={9}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} xsOffset={8}>&nbsp;</Col></Row>
+  <Row><Col debug xs={5} xsOffset={7}>&nbsp;</Col></Row>
+  <Row><Col debug xs={6} xsOffset={6}>&nbsp;</Col></Row>
+  <Row><Col debug xs={7} xsOffset={5}>&nbsp;</Col></Row>
+  <Row><Col debug xs={8} xsOffset={4}>&nbsp;</Col></Row>
+  <Row><Col debug xs={9} xsOffset={3}>&nbsp;</Col></Row>
+  <Row><Col debug xs={10} xsOffset={2}>&nbsp;</Col></Row>
+  <Row><Col debug xs={11} xsOffset={1}>&nbsp;</Col></Row>
+</Container>
+
+```js
+<Container>
+  <Row><Col debug xs={1} xsOffset={11}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} xsOffset={10}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} xsOffset={9}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} xsOffset={8}>&nbsp;</Col></Row>
+  <Row><Col debug xs={5} xsOffset={7}>&nbsp;</Col></Row>
+  <Row><Col debug xs={6} xsOffset={6}>&nbsp;</Col></Row>
+  <Row><Col debug xs={7} xsOffset={5}>&nbsp;</Col></Row>
+  <Row><Col debug xs={8} xsOffset={4}>&nbsp;</Col></Row>
+  <Row><Col debug xs={9} xsOffset={3}>&nbsp;</Col></Row>
+  <Row><Col debug xs={10} xsOffset={2}>&nbsp;</Col></Row>
+  <Row><Col debug xs={11} xsOffset={1}>&nbsp;</Col></Row>
+</Container>
+```
+## Row reverse
+
+<Container>
+  <Row mdReverse>
+    <Col debug xs={4}>Column A</Col>
+    <Col debug xs={4}>Column B</Col>
+    <Col debug xs={4}>Column C</Col>
+  </Row>
+</Container>
+
+```js
+<Container>
+  <Row mdReverse>
+    <Col debug xs={4}>Column A</Col>
+    <Col debug xs={4}>Column B</Col>
+    <Col debug xs={4}>Column C</Col>
+  </Row>
+</Container>
+```
+
+## Column reverse
+
+<Container>
+  <Row>
+    <Col noGutter mdReverse>
+      <Col debug xs={4}>Column A</Col>
+      <Col debug xs={4}>Column B</Col>
+      <Col debug xs={4}>Column C</Col>
+    </Col>
+  </Row>
+</Container>
+
+```js
+<Container>
+  <Row>
+    <Col noGutter mdReverse>
+      <Col debug xs={4}>Column A</Col>
+      <Col debug xs={4}>Column B</Col>
+      <Col debug xs={4}>Column C</Col>
+    </Col>
+  </Row>
+</Container>
+```
