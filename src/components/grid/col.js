@@ -7,6 +7,7 @@ const Col = styled.div`
   flex: 1 0 auto;
   max-width: 100%;
   display: flex;
+  flex-direction: column;
  
   ${p => !p.noGutter && css`
     padding-right: ${p => config(p).gutterWidth / 2}px;
@@ -26,14 +27,14 @@ const Col = styled.div`
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ d + 'Offset' ] && `margin-left: ${(p[ 'offset-' + d ] / config(p).columns) * 100}%`};
+      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns) * 100}%`};
     `)}
   `}
 
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      flex-direction: ${p[ d + 'Reverse' ] ? `column-reverse` : `column`};
+      ${p[ d + 'Reverse' ] && `flex-direction: column-reverse`};
     `)}
   `}
 
