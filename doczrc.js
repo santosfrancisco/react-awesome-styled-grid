@@ -14,5 +14,6 @@ export default {
   },
   themeConfig: {
     codemirrorTheme: 'dracula'
-  }
+  },
+  dest: 'docs'
 }
