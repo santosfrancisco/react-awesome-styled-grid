@@ -14,7 +14,7 @@ npm i react-awesome-styled-grid
 
 ## Documentation
 
-Click [here](https://santosfrancisco.github.io/react-awesome-styled-grid/) for documentation
+Click [here](https://awesome-styled-grid.netlify.com/) for documentation
 
 ## Basic usage
 
