@@ -8,12 +8,18 @@ const Row = styled.div`
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
-  flex-wrap: wrap;
 
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
       ${p[ d + 'Reverse' ] && `flex-direction: row-reverse;`}
+    `)}
+  `}
+
+    ${p => css`
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[ d + 'Wrap' ] && `flex-wrap: wrap;`}
     `)}
   `}
 
@@ -25,17 +31,17 @@ const Row = styled.div`
 
 Row.displayName = 'Row'
 
-const numberOrString = PropTypes.oneOfType([
-  PropTypes.string,
-  PropTypes.number
-])
-
 Row.propTypes = {
-  xsReverse: numberOrString,
-  smReverse: numberOrString,
-  mdReverse: numberOrString,
-  lgReverse: numberOrString,
-  xlReverse: numberOrString,
+  xsReverse: PropTypes.bool,
+  smReverse: PropTypes.bool,
+  mdReverse: PropTypes.bool,
+  lgReverse: PropTypes.bool,
+  xlReverse: PropTypes.bool,
+  xsWrap: PropTypes.bool,
+  smWrap: PropTypes.bool,
+  mdWrap: PropTypes.bool,
+  lgWrap: PropTypes.bool,
+  xlWrap: PropTypes.bool,
   children: PropTypes.node,
   debug: PropTypes.bool
 }
