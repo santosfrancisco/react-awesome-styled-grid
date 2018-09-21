@@ -4,7 +4,7 @@
 
 # React Awesome Styled Grid
 
-A grid system for React using styled-components
+A responsive grid system for React using styled-components
 
 ## Installation
 
@@ -40,6 +40,7 @@ run ```yarn docz dev``` or ```npm run docz:dev``` to run Docz on port 4000
 
 * [Styled-components](https://github.com/styled-components) - Visual primitives for the component age.
 * [Docz](https:docz.site) - It's never been easier to document your things
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/santosfrancisco/react-awesome-styled-grid/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
