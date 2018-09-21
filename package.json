@@ -1,7 +1,7 @@
 {
   "name": "react-awesome-styled-grid",
-  "version": "1.1.0",
-  "description": "A grid system layout for React using styled-components",
+  "version": "1.1.1",
+  "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.umd.js",
   "files": ["lib"],
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/santosfrancisco/react-awesome-styled-grid/issues"
   },
-  "homepage": "https://github.com/santosfrancisco/react-awesome-styled-grid#readme",
+  "homepage": "https://awesome-styled-grid.netlify.com/",
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
