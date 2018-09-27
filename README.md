@@ -19,7 +19,7 @@ Click [here](https://awesome-styled-grid.netlify.com/) for documentation
 ## Basic usage
 
 ```js
-import { Container, Rol, Col } from 'react-awesome-styled-grid'
+import { Container, Row, Col } from 'react-awesome-styled-grid'
 
 const MyCoolComponent = () => (
   <Container>

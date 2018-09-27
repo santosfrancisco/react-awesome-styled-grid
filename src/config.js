@@ -2,6 +2,7 @@ import { css } from 'styled-components'
 
 const CUSTOM_CONF = 'awesomegrid'
 export const DIMENSIONS = ['xs', 'sm', 'md', 'lg', 'xl']
+export const BREAKPOINTS = [1, 576, 768, 992, 1200] // breakpoints in px
 
 export const BASE_CONF = {
   columns: 12,
@@ -15,11 +16,11 @@ export const BASE_CONF = {
     xl: 1140 // px
   },
   breakpoints: {
-    xs: 1, // px
-    sm: 576, // px
-    md: 768, // px
-    lg: 992, // px
-    xl: 1200 // px
+    xs: BREAKPOINTS[0],
+    sm: BREAKPOINTS[1],
+    md: BREAKPOINTS[2],
+    lg: BREAKPOINTS[3],
+    xl: BREAKPOINTS[4]
   }
 }
 

@@ -7,7 +7,9 @@ import { Playground } from 'docz'
 import { Container, Row, Col } from '../'
 import { ThemeProvider } from 'styled-components'
 
-# Using a custom configuration
+# Custom configuration
+
+## Using a custom configuration
 
 To use a custom config, import the **ThemeProvider** 
 from Styled-components ```import { ThemeProvider } from 'styled-components'```, 
@@ -30,7 +32,6 @@ Try changing any property in customConf below and see what happens.
       xl: 1140 // px
     },
     breakpoints: {
-      xs: 1, // px
       sm: 576, // px
       md: 768, // px
       lg: 992, // px
@@ -65,4 +66,14 @@ Try changing any property in customConf below and see what happens.
   }}
 </Playground>
 
-    
+
+## Default configuration
+
+| prop         | type   | default value                           | description                                  |
+|--------------|--------|-----------------------------------------|----------------------------------------------|
+| columns      | number | 12                                      | number of columns on grid                    |
+| gutterWidth  | number | 16                                      | gutter width in pixels                       |
+| paddingWidth | number | 12                                      | size of outer padding on container in pixels |
+| mediaQuery   | string | 'only screen'                           | media type of media query                    |
+| container    | shape  | { sm: 540, md: 720, lg: 960, xl: 1140 } | size of containers in pixel                  |
+| breakpoints  | shape  | { sm: 576, md: 768, lg: 992, xl: 1200 } | breakpoints in pixel                         |
