@@ -4,7 +4,9 @@
   "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.umd.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "rollup -c",
     "docz:dev": "docz dev",
@@ -27,6 +29,7 @@
   },
   "homepage": "https://awesome-styled-grid.netlify.com/",
   "dependencies": {
+    "lodash.throttle": "^4.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "styled-components": "^3.4.2"
