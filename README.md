@@ -1,6 +1,7 @@
 [![npm version](https://badge.fury.io/js/react-awesome-styled-grid.svg)](https://www.npmjs.com/package/react-awesome-styled-grid)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![codecov](https://codecov.io/gh/camilaibs/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/camilaibs/react-awesome-styled-grid)
 
 # React Awesome Styled Grid
 
