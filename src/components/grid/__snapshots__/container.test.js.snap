@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render default style correctly 1`] = `
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16;
+  padding-left: 16;
+}
+
+@media only screen and (min-width:576px) {
+  .c0 {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .c0 {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .c0 {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .c0 {
+    max-width: 1140px;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
