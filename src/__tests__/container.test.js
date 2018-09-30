@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DIMENSIONS, BASE_CONF } from '../../config'
-import Container from './container'
+import { DIMENSIONS, BASE_CONF } from '../config'
+import Container from '../components/grid/container'
 import 'jest-styled-components'
 
 describe('<Container />', () => {
