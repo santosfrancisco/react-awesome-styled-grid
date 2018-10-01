@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DIMENSIONS, BASE_CONF } from '../config'
-import Row from '../components/grid/row'
+import { DIMENSIONS, BASE_CONF } from '../../config'
+import Row from '../grid/row'
 import 'jest-styled-components'
 
 describe('<Row />', () => {

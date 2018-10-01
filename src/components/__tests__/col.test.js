@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DIMENSIONS, BASE_CONF } from '../config'
-import Col from '../components/grid/col'
+import { DIMENSIONS, BASE_CONF } from '../../config'
+import Col from '../grid/col'
 import 'jest-styled-components'
 
 describe('<Col />', () => {
