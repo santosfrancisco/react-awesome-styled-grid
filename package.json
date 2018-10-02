@@ -11,9 +11,9 @@
     "build": "rollup -c",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "test": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "codecov": "jest && codecov"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
