@@ -11,7 +11,7 @@
     "build": "rollup -c",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "test": "jest",
+    "test": "./node_modules/.bin/jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
