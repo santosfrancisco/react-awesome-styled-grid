@@ -42,13 +42,12 @@ class Visible extends Component {
         return lg
       case 'xl':
         return xl
-      default:
-        return false
     }
   }
 
   render () {
     const { children } = this.props
+
     return (
       <React.Fragment>
         {this.isVisible() && children}
