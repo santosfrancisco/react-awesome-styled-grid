@@ -1,4 +1,4 @@
-import { DIMENSIONS, BREAKPOINTS } from '../../config'
+import config, { DIMENSIONS } from '../../config'
 
 export function getViewPort () {
   if (typeof window !== 'undefined' && window.innerWidth) {
@@ -7,8 +7,10 @@ export function getViewPort () {
   return null
 };
 
-const theBreakpoints = BREAKPOINTS
+const theBreakpoints = config().breakpoints
+console.log('TCL: theBreakpoints', theBreakpoints);
 const theScreenClasses = DIMENSIONS
+console.log('TCL: theScreenClasses', theScreenClasses);
 
 export function getScreenClass () {
   let screenClass

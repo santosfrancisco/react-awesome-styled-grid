@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled, {
+  css
+} from 'styled-components'
 
-import config, { DIMENSIONS } from '../../config'
+import config, {
+  DIMENSIONS
+} from '../../config'
 
-const Container = styled.div`
+const Container = styled.div `
   margin-right: auto;
   margin-left: auto;
   padding-right: ${p => config(p).paddingWidth};
@@ -12,14 +16,16 @@ const Container = styled.div`
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
     config(p).container[d] && config(p).media[d]`
-        max-width: ${p => config(p).container[d]}px;
-      `
-  )}
+      ${p => config(p).container[d] === 'full' 
+        ? `max-width: 100%;`
+        : `${config(p).container[d]}px;`}
+      }`
+    )}
   `}
 
   ${({debug}) => debug && css`
-    background-color: #5901ad40;
-    outline: #fff solid 1px;
+    background - color: #5901ad40;
+    outline: # fff solid 1 px;
   `}
 `
 

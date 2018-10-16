@@ -15,25 +15,25 @@ const Col = styled.div`
   `}
 
   ${p => css`
-    ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
+    ${DIMENSIONS.map((d, idx) =>
+    config(p).breakpoints[idx] && config(p).media[idx]`
       ${p => p[d] && `
-        flex: 0 0 ${(p[d] / config(p).columns) * 100}%;
-        max-width: ${(p[d] / config(p).columns) * 100}%;
+        flex: 0 0 ${(p[d] / config(p).columns[idx]) * 100}%;
+        max-width: ${(p[d] / config(p).columns[idx]) * 100}%;
       `}
     `)}
   `}
 
   ${p => css`
-    ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns) * 100}%`};
+    ${DIMENSIONS.map((d, idx) =>
+    config(p).breakpoints[idx] && config(p).media[idx]`
+      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns[idx]) * 100}%`};
     `)}
   `}
 
   ${p => css`
-    ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
+    ${DIMENSIONS.map((d, idx) =>
+    config(p).breakpoints[idx] && config(p).media[idx]`
       ${p[ d + 'Reverse' ] && `flex-direction: column-reverse`};
     `)}
   `}
