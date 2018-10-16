@@ -17,7 +17,7 @@ const Row = styled.div`
     `)}
   `}
 
-  ${({debug}) => debug && css`
+  ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;
   `}

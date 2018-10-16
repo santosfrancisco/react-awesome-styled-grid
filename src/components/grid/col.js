@@ -8,37 +8,42 @@ const Col = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
- 
-  ${p => !p.noGutter && css`
-    padding-right: ${p => config(p).gutterWidth / 2}px;
-    padding-left: ${p => config(p).gutterWidth / 2}px;
-  `}
 
-  ${p => css`
-    ${DIMENSIONS.map((d, idx) =>
-    config(p).breakpoints[idx] && config(p).media[idx]`
-      ${p => p[d] && `
-        flex: 0 0 ${(p[d] / config(p).columns[idx]) * 100}%;
-        max-width: ${(p[d] / config(p).columns[idx]) * 100}%;
+  ${p => !p.noGutter && css`
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[d] && `
+        padding-right: ${config(p).gutterWidth[d] / 2}rem;
+        padding-left: ${config(p).gutterWidth[d] / 2}rem;
       `}
     `)}
   `}
 
   ${p => css`
-    ${DIMENSIONS.map((d, idx) =>
-    config(p).breakpoints[idx] && config(p).media[idx]`
-      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns[idx]) * 100}%`};
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[d] && `
+        flex: 0 0 ${(p[d] / config(p).columns[d]) * 100}%;
+        max-width: ${(p[d] / config(p).columns[d]) * 100}%;
+      `}
     `)}
   `}
 
   ${p => css`
-    ${DIMENSIONS.map((d, idx) =>
-    config(p).breakpoints[idx] && config(p).media[idx]`
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns[d]) * 100}%`};
+    `)}
+  `}
+
+  ${p => css`
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
       ${p[ d + 'Reverse' ] && `flex-direction: column-reverse`};
     `)}
   `}
 
-  ${({debug}) => debug && css`
+  ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;
   `}
@@ -68,8 +73,6 @@ Col.propTypes = {
   lgReverse: PropTypes.bool,
   xlReverse: PropTypes.bool,
   noGutter: PropTypes.bool,
-  gutterWidth: PropTypes.number,
-  columns: PropTypes.number,
   children: PropTypes.node,
   debug: PropTypes.bool
 }

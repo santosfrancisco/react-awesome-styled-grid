@@ -7,24 +7,34 @@ import config, {
   DIMENSIONS
 } from '../../config'
 
-const Container = styled.div `
+const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
-  padding-right: ${p => config(p).paddingWidth};
-  padding-left: ${p => config(p).paddingWidth};
+  
+
+  ${p => css`
+    ${DIMENSIONS.map(d =>
+    config(p).container[ d ] && config(p).media[ d ]`
+        ${config(p).container[ d ] === 'full'
+          ? null
+          : `padding: 0 ${config(p).paddingWidth[ d ]}rem;`
+        }
+    `)}
+  `}
+  
 
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
-    config(p).container[d] && config(p).media[d]`
-      ${p => config(p).container[d] === 'full' 
+    config(p).container[ d ] && config(p).media[ d ]`
+      ${p => config(p).container[d] === 'full'
         ? `max-width: 100%;`
-        : `${config(p).container[d]}px;`}
-      }`
-    )}
+        : `max-width: ${config(p).container[ d ]}rem;`}
+      }
+    `)}
   `}
 
-  ${({debug}) => debug && css`
-    background - color: #5901ad40;
+  ${({ debug }) => debug && css`
+    background-color: #5901ad40;
     outline: # fff solid 1 px;
   `}
 `
