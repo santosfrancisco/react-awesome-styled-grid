@@ -3,6 +3,7 @@ import { css } from 'styled-components'
 const CUSTOM_CONF = 'awesomegrid'
 export const DIMENSIONS = ['xs', 'sm', 'md', 'lg', 'xl']
 export const BASE_CONF = {
+  mediaQuery: 'only screen',
   columns: {
     xs: 4,
     sm: 8,
@@ -37,8 +38,7 @@ export const BASE_CONF = {
     md: 64, // 1024px
     lg: 90, // 1440px
     xl: 120 // 1920px
-  },
-  mediaQuery: 'only screen'
+  }
 }
 
 const configs = []

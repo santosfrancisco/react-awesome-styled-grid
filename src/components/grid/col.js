@@ -12,10 +12,8 @@ const Col = styled.div`
   ${p => !p.noGutter && css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      ${p[d] && `
-        padding-right: ${config(p).gutterWidth[d] / 2}rem;
-        padding-left: ${config(p).gutterWidth[d] / 2}rem;
-      `}
+      padding-right: ${config(p).gutterWidth[d] / 2}rem;
+      padding-left: ${config(p).gutterWidth[d] / 2}rem;
     `)}
   `}
 
@@ -23,7 +21,7 @@ const Col = styled.div`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
       ${p[d] && `
-        flex: 0 0 ${(p[d] / config(p).columns[d]) * 100}%;
+        flex: 1 1 ${(p[d] / config(p).columns[d]) * 100}%;
         max-width: ${(p[d] / config(p).columns[d]) * 100}%;
       `}
     `)}

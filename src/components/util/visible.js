@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScreenClass } from '../util/screens'
+import throttle from 'lodash.throttle'
 
 class Visible extends Component {
   constructor () {
     super()
     this.state = {screen: 'xs'}
-    this.setScreen = this.setScreen.bind(this)
   }
   componentDidMount () {
     this.setScreen()
@@ -15,14 +15,14 @@ class Visible extends Component {
       window.addEventListener('resize', this.setScreen, false)
     }
   }
-  setScreen () {
+  setScreen = throttle(() => {
     let lastScreenClass = this.state.screen
     const actualScreenClass = getScreenClass()
     if (!lastScreenClass || (lastScreenClass !== actualScreenClass)) {
       lastScreenClass = actualScreenClass
       this.setState({screen: actualScreenClass})
     }
-  }
+  }, 200)
 
   componentWillUnmount () {
     window.removeEventListener('orientationchange', this.setScreen)

@@ -6,9 +6,10 @@ import config, { DIMENSIONS } from '../../config'
 const Row = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   flex-direction: row;
   flex-wrap: wrap;
+
 
   ${p => css`
     ${DIMENSIONS.map(d =>

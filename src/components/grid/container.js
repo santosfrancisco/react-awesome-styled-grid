@@ -10,15 +10,11 @@ import config, {
 const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
-  
 
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-        ${config(p).container[ d ] === 'full'
-          ? null
-          : `padding: 0 ${config(p).paddingWidth[ d ]}rem;`
-        }
+      padding: 0 ${config(p).paddingWidth[ d ]}rem;
     `)}
   `}
   
@@ -26,10 +22,7 @@ const Container = styled.div`
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-      ${p => config(p).container[d] === 'full'
-        ? `max-width: 100%;`
-        : `max-width: ${config(p).container[ d ]}rem;`}
-      }
+      ${typeof config(p).container[d] === 'number' ? `max-width: ${config(p).container[ d ]}rem;` : `max-width: 100%;`}
     `)}
   `}
 
@@ -42,7 +35,6 @@ const Container = styled.div`
 Container.displayName = 'Container'
 
 Container.propTypes = {
-  paddingWidth: PropTypes.number,
   fluid: PropTypes.bool,
   children: PropTypes.node,
   debug: PropTypes.bool

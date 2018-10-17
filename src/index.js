@@ -3,4 +3,11 @@ import Row from './components/grid/row'
 import Col from './components/grid/col'
 import Visible from './components/util/visible'
 
-export { Container, Row, Col, Visible }
+import { getScreenClass, getViewPort } from './components/util/screens'
+
+const util = {
+  getScreenClass,
+  getViewPort
+}
+
+export { Container, Row, Col, Visible, util }
