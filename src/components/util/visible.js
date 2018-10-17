@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScreenClass } from '../util/screens'
 import throttle from 'lodash.throttle'
+import { withTheme } from 'styled-components'
 
 class Visible extends Component {
   constructor () {
@@ -17,7 +18,7 @@ class Visible extends Component {
   }
   setScreen = throttle(() => {
     let lastScreenClass = this.state.screen
-    const actualScreenClass = getScreenClass()
+    const actualScreenClass = getScreenClass(this.props)
     if (!lastScreenClass || (lastScreenClass !== actualScreenClass)) {
       lastScreenClass = actualScreenClass
       this.setState({screen: actualScreenClass})
@@ -67,4 +68,4 @@ Visible.propTypes = {
   children: PropTypes.node
 }
 
-export default Visible
+export default withTheme(Visible)
