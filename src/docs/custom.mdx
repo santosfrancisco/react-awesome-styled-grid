@@ -4,7 +4,7 @@ route: /custom
 order: 1
 ---
 import { Playground } from 'docz'
-import { Container, Row, Col } from '../'
+import { Container, Row, Col, ScreenBadge, util } from '../'
 import { ThemeProvider } from 'styled-components'
 
 # Custom configuration
@@ -62,6 +62,7 @@ Try changing any property in customConf below and see what happens.
     <ThemeProvider theme={{awesomegrid: customConf}}>
       <Container>
         <Row>
+          <ScreenBadge />
           <Col debug xs={4} sm={5} md={3}>
             <span role="img" aria-label="so cool">
               xs={4} sm={5} md={3}
