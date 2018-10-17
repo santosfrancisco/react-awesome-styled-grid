@@ -21,43 +21,64 @@ Try changing any property in customConf below and see what happens.
 <Playground>
 {() => {
   const customConf = {
-    columns: 12,
-    gutterWidth: 16, // px
-    paddingWidth: 16, // px
-    mediaQuery: 'only screen',
-    container: {
-      sm: 540, // px
-      md: 720, // px
-      lg: 960, // px
-      xl: 1140 // px
-    },
-    breakpoints: {
-      sm: 576, // px
-      md: 768, // px
-      lg: 992, // px
-      xl: 1200 // px
-    }
+  mediaQuery: 'only screen',
+  columns: {
+    xs: 4,
+    sm: 8,
+    md: 8,
+    lg: 12,
+    xl: 12
+  },
+  gutterWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5
+  },
+  paddingWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5
+  },
+  container: {
+    xs: 'full', // 'full' = max-width: 100%
+    sm: 'full', // 'full' = max-width: 100%
+    md: 'full', // 'full' = max-width: 100%
+    lg: 90, // max-width: 1440px
+    xl: 90 // max-width: 1440px
+  },
+  breakpoints: {
+    xs: 1,
+    sm: 48, // 768px
+    md: 64, // 1024px
+    lg: 90, // 1440px
+    xl: 120 // 1920px
   }
+}
   return (
     <ThemeProvider theme={{awesomegrid: customConf}}>
       <Container>
         <Row>
-          <Col debug xs={4} sm={6} md={9}>
+          <Col debug xs={4} sm={5} md={3}>
             <span role="img" aria-label="so cool">
-              xs={1} sm={3} md={6} lg={6}
+              xs={4} sm={5} md={3}
             </span>
           </Col>
-          <Col debug noGutter>
-            <Col debug>inside another Col</Col>
-            <Col debug>inside another Col</Col>
+          <Col debug xs={4} sm={3} md={5}>
+            <span role="img" aria-label="so cool">
+              xs={4} sm={3} md={9}
+            </span>
           </Col>
         </Row>
         <Row>
-          <Col debug xs={12} sm={6} md={10} lg={6}>
-            xs={12} sm={6} md={10} lg={6}
+          <Col debug xs={2} sm={6} md={5} lg={6}>
+            xs={2} sm={6} md={5} lg={6}
           </Col>
-          <Col debug xs={12} sm={6} md={2} lg={6}>
-            xs={12} sm={6} md={2} lg={6}
+          <Col debug xs={2} sm={2} md={3} lg={6}>
+            xs={2} sm={2} md={7} lg={6}
           </Col>
         </Row>
       </Container>
@@ -67,13 +88,13 @@ Try changing any property in customConf below and see what happens.
 </Playground>
 
 
-## Default configuration
+## Default values
 
-| prop         | type   | default value                           | description                                  |
-|--------------|--------|-----------------------------------------|----------------------------------------------|
-| columns      | number | 12                                      | number of columns on grid                    |
-| gutterWidth  | number | 16                                      | gutter width in pixels                       |
-| paddingWidth | number | 12                                      | size of outer padding on container in pixels |
-| mediaQuery   | string | 'only screen'                           | media type of media query                    |
-| container    | shape  | { sm: 540, md: 720, lg: 960, xl: 1140 } | size of containers in pixel                  |
-| breakpoints  | shape  | { sm: 576, md: 768, lg: 992, xl: 1200 } | breakpoints in pixel                         |
+| prop         | type   | default value                                          | description                               |
+|--------------|--------|--------------------------------------------------------|-------------------------------------------|
+| columns      | number | { xs: 4 sm: 8, md: 12, lg: 12, xl: 12 }                | number of columns on grid                 |
+| gutterWidth  | number | { xs: 1 sm: 1, md: 1.5, lg: 1.5, xl: 1.5}              | gutter width in rem                       |
+| paddingWidth | number | { xs: 1 sm: 1, md: 1.5, lg: 1.5, xl: 1.5}              | size of outer padding on container in rem |
+| mediaQuery   | string | 'only screen'                                          | media type of media query                 |
+| container    | shape  | { xs: 'full', sm: 'full', md: 'full', lg: 90, xl: 90 } | size of containers in rem                 |
+| breakpoints  | shape  | { xs: 1, sm: 48, md: 64, lg: 90, xl: 120 }             | breakpoints in rem                        |

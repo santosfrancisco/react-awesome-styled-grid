@@ -38,20 +38,19 @@ and from ```md```, the size will be 6 columns)
 ```js
 <Container>
   <Row>
-    <Col debug xs={4} sm={6} md={9}>
-      xs={4} sm={6} md={9}
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
     </Col>
-    <Col debug noGutter>
-      <Col debug>inside another Col</Col>
-      <Col debug>inside another Col</Col>
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
   </Row>
   <Row>
-    <Col debug xs={12} sm={6} md={10} lg={6}>
-      xs={12} sm={6} md={10} lg={6}
+    <Col debug xs={1} sm={4} md={3} lg={4}>
+      xs={1} sm={4} md={3} lg={4}
     </Col>
-    <Col debug xs={12} sm={6} md={2} lg={6}>
-      xs={12} sm={6} md={2} lg={6}
+    <Col debug xs={3} sm={4} md={5} lg={8}>
+      xs={3} sm={4} md={5} lg={8}
     </Col>
   </Row>
 </Container>
@@ -76,17 +75,18 @@ and from ```md```, the size will be 6 columns)
 
 ```js
 <Container>
-  <Row><Col debug xs={1} xsOffset={11}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={10}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={9}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={8}>&nbsp;</Col></Row>
-  <Row><Col debug xs={5} xsOffset={7}>&nbsp;</Col></Row>
-  <Row><Col debug xs={6} xsOffset={6}>&nbsp;</Col></Row>
-  <Row><Col debug xs={7} xsOffset={5}>&nbsp;</Col></Row>
-  <Row><Col debug xs={8} xsOffset={4}>&nbsp;</Col></Row>
-  <Row><Col debug xs={9} xsOffset={3}>&nbsp;</Col></Row>
-  <Row><Col debug xs={10} xsOffset={2}>&nbsp;</Col></Row>
-  <Row><Col debug xs={11} xsOffset={1}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={1} lgOffset={11}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={2} lgOffset={10}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} xsOffset={3} sm={2} smOffset={6} lg={3} lgOffset={9}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} xsOffset={2} sm={3} smOffset={5} lg={4} lgOffset={8}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} xsOffset={2} sm={4} smOffset={4} lg={5} lgOffset={7}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} xsOffset={2} sm={5} smOffset={3} lg={6} lgOffset={6}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={7} lgOffset={5}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={8} lgOffset={4}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} xsOffset={1} sm={6} smOffset={2} lg={9} lgOffset={3}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} xsOffset={0} sm={7} smOffset={1} lg={10} lgOffset={2}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={11} lgOffset={1}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={12} lgOffset={0}>&nbsp;</Col></Row>
 </Container>
 ```
 ## Row reverse
@@ -161,16 +161,24 @@ Show a element only on specific media
 
 <div>
   <Row>
-    <Visible xs sm><Col debug>Visible only on XS and SM screens</Col></Visible>
-    <Visible md lg xl><Col debug>Visible only on MD, LG and XL screens</Col></Visible>
+    <Visible xs sm>
+      <Col debug>Visible only on XS and SM screens</Col>
+    </Visible>
+    <Visible md lg xl>
+      <Col debug>Visible only on MD, LG and XL screens</Col>
+    </Visible>
   </Row>
 </div>
 
 ```js
 <div>
   <Row>
-    <Visible xs sm><Col debug>Visible only on XS and SM screens</Col></Visible>
-    <Visible md lg xl><Col debug>Visible only on MD, LG and XL screens</Col></Visible>
+    <Visible xs sm>
+      <Col debug>Visible only on XS and SM screens</Col>
+    </Visible>
+    <Visible md lg xl>
+      <Col debug>Visible only on MD, LG and XL screens</Col>
+    </Visible>
   </Row>
 </div>
 ```

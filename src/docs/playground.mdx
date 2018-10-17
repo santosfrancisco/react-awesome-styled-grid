@@ -5,19 +5,26 @@ order: 0
 ---
 
 import { Playground } from 'docz'
-import { Container, Row, Col } from '../'
+import { Container, Row, Col, Visible, util } from '../'
 
 # Playground
 😎 Have fun!
 
 <Playground>
-  <Container>
+{()=>{
+  let text = 'Variables can set here'
+  return (
+    <Container>
+    <p>{text}</p>
     <Row>
-      <Col debug xs={4} sm={2} md={3} lg={2} xl={4}><div>Column 1</div></Col>
-      <Col debug xs={4} sm={2} md={1} lg={4} xl={2}><div>Column 2</div></Col>
-      <Col debug xs={4} sm={2} md={1} lg={4} xl={2}><div>Column 3</div></Col>
-      <Col debug xs={4} sm={2} md={3} lg={2} xl={4}><div>Column 4</div></Col>
+      <Col debug xs={4} sm={2} md={3} lg={2} xl={4}>Column 1</Col>
+      <Col debug xs={4} sm={2} md={1} lg={4} xl={2}>Column 2</Col>
+      <Col debug xs={4} sm={2} md={1} lg={4} xl={2}>Column 3</Col>
+      <Col debug xs={4} sm={2} md={3} lg={2} xl={4}>Column 4</Col>
     </Row>
   </Container>
+  )
+}}
+  
 </Playground>
     
