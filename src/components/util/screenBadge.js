@@ -8,10 +8,10 @@ import config, {
 
 const ScreenBadge = styled.div`
     z-index: 10;
-    position: absolute;
+    position: fixed;
     font-size: 1.5rem;
     font-weight: bold;
-    left: 10px;
+    right: 10px;
     bottom: 10px;
     width: 50px;
     height: 30px;
