@@ -31,11 +31,10 @@
     "url": "https://github.com/santosfrancisco/react-awesome-styled-grid/issues"
   },
   "homepage": "https://awesome-styled-grid.netlify.com/",
-  "dependencies": {
-    "lodash.throttle": "^4.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "styled-components": "^3.4.2"
+  "peerDependencies": {
+    "react": ">=0.14.0 <17.0.0",
+    "styled-components": ">= 3",
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -63,12 +62,15 @@
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.1",
     "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.12.1",
     "rollup": "^0.66.0",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^6.0.0"
+    "rollup-plugin-uglify": "^6.0.0",
+    "styled-components": "^4.0.2"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
