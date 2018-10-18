@@ -14,7 +14,8 @@ const Container = styled.div`
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-      padding: 0 ${config(p).paddingWidth[ d ]}rem;
+      padding-left: ${config(p).paddingWidth[ d ]}rem;
+      padding-right: ${config(p).paddingWidth[ d ]}rem;
     `)}
   `}
   

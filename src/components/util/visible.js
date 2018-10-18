@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScreenClass } from '../util/screens'
-import throttle from 'lodash.throttle'
+import throttle from './throttle'
 import { withTheme } from 'styled-components'
 
 class Visible extends Component {
