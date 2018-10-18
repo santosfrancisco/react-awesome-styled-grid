@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/react-awesome-styled-grid.svg)](https://www.npmjs.com/package/react-awesome-styled-grid)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![codecov](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid)
@@ -65,8 +65,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/15852005?v=4" width="100px;"/><br /><sub><b>Francisco Santos</b></sub>](http://devchico.com)<br />[💻](https://github.com/santosfrancisco/react-awesome-styled-grid/commits?author=santosfrancisco "Code") [📖](https://github.com/santosfrancisco/react-awesome-styled-grid/commits?author=santosfrancisco "Documentation") [👀](#review-santosfrancisco "Reviewed Pull Requests") |
-| :---: |
+| [<img src="https://avatars3.githubusercontent.com/u/15852005?v=4" width="100px;"/><br /><sub><b>Francisco Santos</b></sub>](http://devchico.com)<br />[💻](https://github.com/santosfrancisco/react-awesome-styled-grid/commits?author=santosfrancisco "Code") [📖](https://github.com/santosfrancisco/react-awesome-styled-grid/commits?author=santosfrancisco "Documentation") [👀](#review-santosfrancisco "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/6290749?v=4" width="100px;"/><br /><sub><b>Camila Belo</b></sub>](http://camilaibs.wix.com/blog)<br />[⚠️](https://github.com/santosfrancisco/react-awesome-styled-grid/commits?author=camilaibs "Tests") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

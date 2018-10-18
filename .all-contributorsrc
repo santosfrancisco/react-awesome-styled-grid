@@ -19,6 +19,15 @@
         "doc",
         "review"
       ]
+    },
+    {
+      "login": "camilaibs",
+      "name": "Camila Belo",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6290749?v=4",
+      "profile": "http://camilaibs.wix.com/blog",
+      "contributions": [
+        "test"
+      ]
     }
   ]
 }
