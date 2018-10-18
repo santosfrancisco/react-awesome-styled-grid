@@ -13,7 +13,9 @@
     "docz:build": "docz build",
     "test": "./node_modules/.bin/jest --runInBand",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -32,9 +34,9 @@
   },
   "homepage": "https://awesome-styled-grid.netlify.com/",
   "peerDependencies": {
+    "prop-types": "^15.6.0",
     "react": ">=0.14.0 <17.0.0",
-    "styled-components": ">= 3",
-    "prop-types": "^15.6.0"
+    "styled-components": ">= 3"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -44,6 +46,7 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "all-contributors-cli": "^5.4.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
