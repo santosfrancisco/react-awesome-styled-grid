@@ -4,7 +4,7 @@ import { getScreenClass } from '../util/screens'
 import throttle from './throttle'
 import { withTheme } from 'styled-components'
 
-class Visible extends Component {
+class Hidden extends Component {
   static defaultProps = {
     xs: false,
     sm: false,
@@ -37,7 +37,7 @@ class Visible extends Component {
     window.removeEventListener('resize', this.setScreen)
   }
 
-  isVisible () {
+  isHidden () {
     const { xs, sm, md, lg, xl } = this.props
     switch (this.state.screen) {
       case 'xs':
@@ -51,14 +51,14 @@ class Visible extends Component {
       case 'xl':
         return xl
       default:
-        return false
+        return true
     }
   }
 
   render () {
     const { children } = this.props
 
-    if (!this.isVisible()) return false
+    if (this.isHidden()) return false
     return (
       <React.Fragment>
         {children}
@@ -67,9 +67,9 @@ class Visible extends Component {
   }
 }
 
-Visible.displayName = 'Visible'
+Hidden.displayName = 'Hidden'
 
-Visible.propTypes = {
+Hidden.propTypes = {
   xs: PropTypes.bool,
   sm: PropTypes.bool,
   md: PropTypes.bool,
@@ -78,4 +78,4 @@ Visible.propTypes = {
   children: PropTypes.node
 }
 
-export default withTheme(Visible)
+export default withTheme(Hidden)
