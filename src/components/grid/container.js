@@ -29,7 +29,7 @@ const Container = styled.div`
 
   ${({ debug }) => debug && css`
     background-color: #5901ad40;
-    outline: # fff solid 1 px;
+    outline: #fff solid 1px;
   `}
 `
 

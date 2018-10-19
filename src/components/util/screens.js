@@ -7,13 +7,14 @@ export function getViewPort () {
   return null
 }
 
-export function getScreenClass (props) {
+export function getScreenClass (props = {}) {
   const screenClasses = DIMENSIONS
   const breakpoints = config(props).breakpoints
 
   const rootFont = typeof window !== 'undefined'
-    ? window.getComputedStyle(document.querySelector('html')).getPropertyValue('font-size').replace('px', '')
+    ? window.getComputedStyle(document.querySelector('html')).getPropertyValue('font-size').replace('px', '') || 16
     : 16
+
   const pxBreakpoints = Object.values(breakpoints).map(bp => bp * rootFont)
 
   let screenClass
