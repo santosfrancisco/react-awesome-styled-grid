@@ -20,11 +20,19 @@ describe('<Col />', () => {
   it('should have default gutter', () => {
     const tree = renderer.create(<Col />).toJSON()
 
-    const { gutterWidth } = BASE_CONF
+    const { gutterWidth, breakpoints } = BASE_CONF
 
-    const defaultGutter = `${gutterWidth / 2}px`
-    expect(tree).toHaveStyleRule('padding-right', defaultGutter)
-    expect(tree).toHaveStyleRule('padding-left', defaultGutter)
+
+    DIMENSIONS.forEach(d => {
+
+      const media = {
+        media: `only screen and (min-width: ${breakpoints[d]}rem)`
+      }
+
+      const defaultGutter = `${gutterWidth[d] / 2}rem`
+      expect(tree).toHaveStyleRule('padding-right', defaultGutter, media)
+      expect(tree).toHaveStyleRule('padding-left', defaultGutter, media)
+    })
   })
 
   it('should have the specified size', () => {
@@ -41,13 +49,13 @@ describe('<Col />', () => {
     const { breakpoints, columns } = BASE_CONF
 
     DIMENSIONS.forEach(d => {
-      const propotionalSize = props[d] / columns * 100
+      const propotionalSize = props[d] / columns[d] * 100
 
       const media = {
-        media: `only screen and (min-width: ${breakpoints[d]}px)`
+        media: `only screen and (min-width: ${breakpoints[d]}rem)`
       }
 
-      expect(tree).toHaveStyleRule('flex', `0 0 ${propotionalSize}%`, media)
+      expect(tree).toHaveStyleRule('flex', `1 1 ${propotionalSize}%`, media)
       expect(tree).toHaveStyleRule('max-width', `${propotionalSize}%`, media)
     })
   })
@@ -69,8 +77,8 @@ describe('<Col />', () => {
       const prop = `${d}Offset`
 
       expect(tree).toHaveStyleRule(
-        'margin-left', `${props[prop] / columns * 100}%`, {
-          media: `only screen and (min-width: ${breakpoints[d]}px)`
+        'margin-left', `${props[prop] / columns[d] * 100}%`, {
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
         }
       )
     })
@@ -84,7 +92,7 @@ describe('<Col />', () => {
     DIMENSIONS.forEach(d => {
       expect(tree).toHaveStyleRule(
         'flex-direction', `column-reverse`, {
-          media: `only screen and (min-width: ${breakpoints[d]}px)`
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
         }
       )
     })

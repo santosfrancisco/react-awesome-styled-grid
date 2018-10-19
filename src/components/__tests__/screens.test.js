@@ -1,4 +1,4 @@
-import { BREAKPOINTS, DIMENSIONS } from '../../config'
+import config, { DIMENSIONS } from '../../config'
 import { getViewPort, getScreenClass } from '../util/screens'
 
 describe('screens', () => {
@@ -8,8 +8,8 @@ describe('screens', () => {
   })
 
   it('should return window inner width', () => {
-    global.window.innerWidth = 576
-    expect(getViewPort()).toBe(576)
+    global.window.innerWidth = 768
+    expect(getViewPort()).toBe(768)
   })
 
   it('should return undefined screen class', () => {
@@ -18,8 +18,8 @@ describe('screens', () => {
   })
 
   it('should return the correct screen class', () => {
-    BREAKPOINTS.forEach((b, i) => {
-      global.window.innerWidth = b
+    Object.values(config().breakpoints).forEach((b, i) => {
+      global.window.innerWidth = b * 16
       expect(getScreenClass()).toBe(DIMENSIONS[i])
     })
   })

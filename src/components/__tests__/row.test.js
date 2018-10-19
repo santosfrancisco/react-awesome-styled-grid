@@ -18,7 +18,7 @@ describe('<Row />', () => {
     DIMENSIONS.forEach(d => {
       expect(tree).toHaveStyleRule(
         'flex-direction', `row-reverse`, {
-          media: `only screen and (min-width: ${breakpoints[d]}px)`
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
         }
       )
     })
@@ -26,7 +26,7 @@ describe('<Row />', () => {
 
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Row debug />).toJSON()
-    expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
+    expect(tree).toHaveStyleRule('background-color', '#5901ad40')
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
 })
