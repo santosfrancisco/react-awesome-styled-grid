@@ -9,11 +9,12 @@ const Row = styled.div`
   flex: 1 0 auto;
   flex-direction: row;
   flex-wrap: wrap;
-
-
+  
   ${p => css`
     ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
+    config(p).container[ d ] && config(p).media[ d ]`
+      margin-left: -${config(p).gutterWidth[d] / 2}rem;
+      margin-right: -${config(p).gutterWidth[d] / 2}rem;
       ${p[ d + 'Reverse' ] && `flex-direction: row-reverse;`}
     `)}
   `}
