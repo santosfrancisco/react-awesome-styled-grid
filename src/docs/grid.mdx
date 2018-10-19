@@ -4,7 +4,7 @@ route: /usage
 order: 3
 ---
 
-import { Container, Row, Col, Visible } from '../'
+import { Container, Row, Col, Visible, Hidden, ScreenBadge } from '../'
 
 # Usage
 
@@ -135,7 +135,7 @@ and from ```md```, the size will be 6 columns)
 
 ## Visible
 
-Show a element only on specific media
+Show a element only in a specific screen size
 
 ### Example using only text
 
@@ -181,4 +181,64 @@ Show a element only on specific media
     </Visible>
   </Row>
 </div>
+```
+
+## Hidden
+
+Hides a element only in a specific screen size
+
+### Example using only text
+
+<div>
+  <Hidden><div>This text is hidden only on: XS</div></Hidden>
+  <Hidden sm><div>This text is hidden only on: SM</div></Hidden>
+  <Hidden md><div>This text is hidden only on: MD</div></Hidden>
+  <Hidden lg><div>This text is hidden only on: LG</div></Hidden>
+  <Hidden xl><div>This text is hidden only on: XL</div></Hidden>
+</div>
+
+```js
+<div>
+  <Hidden xs><div>This text is hidden only on: XS</div></Hidden>
+  <Hidden sm><div>This text is hidden only on: SM</div></Hidden>
+  <Hidden md><div>This text is hidden only on: MD</div></Hidden>
+  <Hidden lg><div>This text is hidden only on: LG</div></Hidden>
+  <Hidden xl><div>This text is hidden only on: XL</div></Hidden>
+</div>
+```
+
+### Example using an Row with Col
+
+<div>
+  <Row>
+    <Hidden xs sm>
+      <Col debug>Hidden only on XS and SM screens</Col>
+    </Hidden>
+    <Hidden md lg xl>
+      <Col debug>Hidden only on MD, LG and XL screens</Col>
+    </Hidden>
+  </Row>
+</div>
+
+```js
+<div>
+  <Row>
+    <Hidden xs sm>
+      <Col debug>Hidden only on XS and SM screens</Col>
+    </Hidden>
+    <Hidden md lg xl>
+      <Col debug>Hidden only on MD, LG and XL screens</Col>
+    </Hidden>
+  </Row>
+</div>
+```
+
+## ScreenBadge
+
+Displays a badge in the lower right corner with the current screen for debug
+
+<ScreenBadge />
+
+```js
+  <ScreenBadge />
 ```
