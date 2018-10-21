@@ -16,5 +16,5 @@ export default {
     codemirrorTheme: 'dracula'
   },
   dest: 'docs',
-  base: '/docs'
+  base: '/docs/'
 }
