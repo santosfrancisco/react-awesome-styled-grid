@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScreenClass } from '../util/screens'
-import throttle from './throttle'
 import { withTheme } from 'styled-components'
 
-class Hidden extends Component {
+export class Hidden extends Component {
   static defaultProps = {
     xs: false,
     sm: false,
@@ -19,8 +18,8 @@ class Hidden extends Component {
   componentWillMount () {
     this.setScreen()
     if (typeof window !== 'undefined') {
-      window.addEventListener('orientationchange', throttle(this.setScreen, 200), false)
-      window.addEventListener('resize', throttle(this.setScreen, 200), false)
+      window.addEventListener('orientationchange', this.setScreen, false)
+      window.addEventListener('resize', this.setScreen, false)
     }
   }
   setScreen = () => {
@@ -35,7 +34,7 @@ class Hidden extends Component {
   componentWillUnmount () {
     window.removeEventListener('orientationchange', this.setScreen)
     window.removeEventListener('resize', this.setScreen)
-  }
+}
 
   isHidden () {
     const { xs, sm, md, lg, xl } = this.props

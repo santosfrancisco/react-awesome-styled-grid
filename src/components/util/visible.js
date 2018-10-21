@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScreenClass } from '../util/screens'
-import throttle from './throttle'
 import { withTheme } from 'styled-components'
 
-class Visible extends Component {
+export class Visible extends Component {
   static defaultProps = {
     xs: false,
     sm: false,
@@ -19,8 +18,8 @@ class Visible extends Component {
   componentWillMount () {
     this.setScreen()
     if (typeof window !== 'undefined') {
-      window.addEventListener('orientationchange', throttle(this.setScreen, 200), false)
-      window.addEventListener('resize', throttle(this.setScreen, 200), false)
+      window.addEventListener('orientationchange', this.setScreen, false)
+      window.addEventListener('resize', this.setScreen, false)
     }
   }
   setScreen = () => {
