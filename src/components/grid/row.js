@@ -15,8 +15,15 @@ const Row = styled.div`
     config(p).container[ d ] && config(p).media[ d ]`
       margin-left: -${config(p).gutterWidth[d] / 2}rem;
       margin-right: -${config(p).gutterWidth[d] / 2}rem;
-      ${p[ d + 'Reverse' ] && `flex-direction: row-reverse;`}
     `)}
+  `}
+
+  ${p => p.reverse && css`
+    ${Array.isArray(p.reverse)
+    ? DIMENSIONS.map(d =>
+      config(p).breakpoints[d] && config(p).media[d]`
+      flex-direction:${p.reverse.indexOf(d) !== -1 ? `row-reverse` : `row`};`)
+    : 'flex-direction: row-reverse;'}
   `}
 
   ${({ debug }) => debug && css`
@@ -27,12 +34,13 @@ const Row = styled.div`
 
 Row.displayName = 'Row'
 
+const boolOrArray = PropTypes.oneOfType([
+  PropTypes.bool,
+  PropTypes.array
+])
+
 Row.propTypes = {
-  xsReverse: PropTypes.bool,
-  smReverse: PropTypes.bool,
-  mdReverse: PropTypes.bool,
-  lgReverse: PropTypes.bool,
-  xlReverse: PropTypes.bool,
+  reverse: boolOrArray,
   children: PropTypes.node,
   debug: PropTypes.bool
 }
