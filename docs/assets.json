@@ -1,11 +1,11 @@
 {
-  "vendors.js": "/docs/static/js/vendors.cc699f7a.js",
-  "app.js": "/docs/static/js/app.d65fa56a.js",
-  "src-docs-custom.js": "/docs/static/js/src-docs-custom.d7bb583b.js",
-  "src-docs-grid.js": "/docs/static/js/src-docs-grid.320af7e0.js",
-  "src-docs-index.js": "/docs/static/js/src-docs-index.52e8ad1d.js",
-  "src-docs-playground.js": "/docs/static/js/src-docs-playground.67536ebd.js",
-  "src-docs-props.js": "/docs/static/js/src-docs-props.54e55545.js",
-  "runtime~app.js": "/docs/static/js/runtime~app.bf1a3a591f4a7484033a.js",
-  "index.html": "/docs/index.html"
+  "vendors.js": "/static/js/vendors.c4f6879e.js",
+  "app.js": "/static/js/app.49568293.js",
+  "src-docs-custom.js": "/static/js/src-docs-custom.d7bb583b.js",
+  "src-docs-grid.js": "/static/js/src-docs-grid.d507059f.js",
+  "src-docs-index.js": "/static/js/src-docs-index.0c1dd292.js",
+  "src-docs-playground.js": "/static/js/src-docs-playground.67536ebd.js",
+  "src-docs-props.js": "/static/js/src-docs-props.49034286.js",
+  "runtime~app.js": "/static/js/runtime~app.6fd87f65807b957dc52f.js",
+  "index.html": "/index.html"
 }
