@@ -22,11 +22,19 @@ Resizes your window to see the responsive magic happening 😎
     </Col>
   </Row>
   <Row>
-    <Col debug xs={1} sm={4} md={3} lg={4}>
-      xs={1} sm={4} md={3} lg={4}
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
-    <Col debug xs={3} sm={4} md={5} lg={8}>
-      xs={3} sm={4} md={5} lg={8}
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
+    </Col>
+  </Row>
+  <Row>
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
+    </Col>
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
   </Row>
 </Container>
@@ -58,65 +66,92 @@ and from ```md```, the size will be 6 columns)
 
 ## Offset
 
+### Using number
+
+if you enter a number, the number of columns of the screen xs will be used as base. in this example, 2 columns of 4 will be used for both offset and column size, ie 50%.
+
 <Container>
-  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={1} lgOffset={11}>&nbsp;</Col></Row>
-  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={2} lgOffset={10}>&nbsp;</Col></Row>
-  <Row><Col debug xs={1} xsOffset={3} sm={2} smOffset={6} lg={3} lgOffset={9}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={3} smOffset={5} lg={4} lgOffset={8}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={4} smOffset={4} lg={5} lgOffset={7}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={5} smOffset={3} lg={6} lgOffset={6}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={7} lgOffset={5}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={8} lgOffset={4}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={6} smOffset={2} lg={9} lgOffset={3}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={7} smOffset={1} lg={10} lgOffset={2}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={11} lgOffset={1}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={12} lgOffset={0}>&nbsp;</Col></Row>
+  <Row>
+    <Col debug xs={2} offset={2}>50% offset</Col>
+  </Row>
+</Container>
+
+### Using object
+
+in this case, the ```offset``` prop must receive an object with the screens and their respective values.
+
+<Container>
+  <Row><Col debug xs={1} sm={1} lg={1} offset={{ xs:3, sm:7, lg:11}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={2} offset={{ xs:3, sm:7, lg:10}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={2} lg={3} offset={{ xs:3, sm:6, lg:9}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={3} lg={4} offset={{ xs:2, sm:5, lg:8}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={4} lg={5} offset={{ xs:2, sm:4, lg:7}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={5} lg={6} offset={{ xs:2, sm:3, lg:6}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={7} offset={{ xs:1, sm:3, lg:5}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={8} offset={{ xs:1, sm:3, lg:4}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={6} lg={9} offset={{ xs:1, sm:2, lg:3}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={7} lg={10} offset={{ xs:0, sm:1, lg:2}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 
 ```js
 <Container>
-  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={1} lgOffset={11}>&nbsp;</Col></Row>
-  <Row><Col debug xs={1} xsOffset={3} sm={1} smOffset={7} lg={2} lgOffset={10}>&nbsp;</Col></Row>
-  <Row><Col debug xs={1} xsOffset={3} sm={2} smOffset={6} lg={3} lgOffset={9}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={3} smOffset={5} lg={4} lgOffset={8}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={4} smOffset={4} lg={5} lgOffset={7}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={2} sm={5} smOffset={3} lg={6} lgOffset={6}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={7} lgOffset={5}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={5} smOffset={3} lg={8} lgOffset={4}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={1} sm={6} smOffset={2} lg={9} lgOffset={3}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={7} smOffset={1} lg={10} lgOffset={2}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={11} lgOffset={1}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={0} sm={8} smOffset={0} lg={12} lgOffset={0}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={1} offset={{ xs:3, sm:7, lg:11}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={2} offset={{ xs:3, sm:7, lg:10}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={2} lg={3} offset={{ xs:3, sm:6, lg:9}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={3} lg={4} offset={{ xs:2, sm:5, lg:8}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={4} lg={5} offset={{ xs:2, sm:4, lg:7}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={5} lg={6} offset={{ xs:2, sm:3, lg:6}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={7} offset={{ xs:1, sm:3, lg:5}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={8} offset={{ xs:1, sm:3, lg:4}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={6} lg={9} offset={{ xs:1, sm:2, lg:3}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={7} lg={10} offset={{ xs:0, sm:1, lg:2}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 ```
 ## Row reverse
 
+```reverse``` receives an array with the screens that will have the flow reversed. if it is passed as boolean, the stream will be inverted at all breakpoints
+
 <Container>
-  <Row mdReverse>
-    <Col debug xs={4}>Column A</Col>
-    <Col debug xs={4}>Column B</Col>
-    <Col debug xs={4}>Column C</Col>
+  <Row reverse={['md']}>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
+  </Row>
+  <Row reverse>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
   </Row>
 </Container>
 
 ```js
 <Container>
-  <Row mdReverse>
-    <Col debug xs={4}>Column A</Col>
-    <Col debug xs={4}>Column B</Col>
-    <Col debug xs={4}>Column C</Col>
+  <Row reverse={['md']}>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
+  </Row>
+  <Row reverse>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
   </Row>
 </Container>
 ```
 
 ## Column reverse
 
+```reverse``` receives an array with the screens that will have the flow reversed. if it is passed as boolean, the stream will be inverted at all breakpoints
+
 <Container>
   <Row>
-    <Col noGutter mdReverse>
-      <Col debug xs={4}>Column A</Col>
-      <Col debug xs={4}>Column B</Col>
-      <Col debug xs={4}>Column C</Col>
+    <Col noGutter reverse={['md', 'lg']}>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
+    </Col>
+        <Col noGutter reverse>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
     </Col>
   </Row>
 </Container>
@@ -124,10 +159,15 @@ and from ```md```, the size will be 6 columns)
 ```js
 <Container>
   <Row>
-    <Col noGutter mdReverse>
-      <Col debug xs={4}>Column A</Col>
-      <Col debug xs={4}>Column B</Col>
-      <Col debug xs={4}>Column C</Col>
+    <Col noGutter reverse={['md', 'lg']}>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
+    </Col>
+        <Col noGutter reverse>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
     </Col>
   </Row>
 </Container>

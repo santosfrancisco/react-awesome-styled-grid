@@ -21,6 +21,13 @@ Click [here](https://awesome-styled-grid.netlify.com/) for documentation
 
 ## Basic usage
 
+This grid system is based on [Google Material Design](https://material.io/design/layout/responsive-layout-grid.html). 
+
+Number of columns: **xs**: 4, **sm**: 8, **md**: 8, **lg**: 12, **xl**: 12
+  
+Breakpoints size: **xs**: 1rem, **sm**: 48rem, **md**: 64rem, **lg**: 90rem, **xl**: 120rem
+
+> for a custom configuration, [see this section](https://awesome-styled-grid.netlify.com/custom) of documentation
 ```js
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 
@@ -42,16 +49,12 @@ run ```yarn docz dev``` or ```npm run docz:dev``` to run Docz on port 4000
 ## Built With
 
 * [Styled-components](https://github.com/styled-components) - Visual primitives for the component age.
-* [Docz](https:docz.site) - It's never been easier to document your things
+* [Docz](https:://docz.site) - It's never been easier to document your things
+* [Rollup](https://rollupjs.org/guide/en) - Rollup is a module bundler for JavaScript
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/santosfrancisco/react-awesome-styled-grid/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Authors
-
-* **Francisco Santos** - *Initial work* - [santosfrancisco](https://github.com/santosfrancisco)
-* **Camila Belo** - [camilaibs](https://github.com/santosfrancisco)
 
 See also the list of [contributors](https://github.com/santosfrancisco/react-awesome-styled-grid/contributors) who participated in this project.
 

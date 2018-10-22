@@ -5,7 +5,6 @@ order: 4
 ---
 # Getting Started
 [![npm version](https://badge.fury.io/js/react-awesome-styled-grid.svg)](https://www.npmjs.com/package/react-awesome-styled-grid)
-[![codecov](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid)
 
 > A responsive grid system for React using styled-components
 
@@ -17,14 +16,23 @@ npm i react-awesome-styled-grid
 
 ## Basic usage
 
+This grid system is based on [Google Material Design](https://material.io/design/layout/responsive-layout-grid.html). 
+
+Number of columns: **xs**: 4, **sm**: 8, **md**: 8, **lg**: 12, **xl**: 12
+  
+Breakpoints size: **xs**: 1rem, **sm**: 48rem, **md**: 64rem, **lg**: 90rem, **xl**: 120rem
+
+> for a custom configuration, [see this section](/custom)
+  
+
 ```js
 import { Container, Row, Col } from 'react-awesome-styled-grid'
 
 const MyCoolComponent = () => (
   <Container>
     <Row>
-      <Col xs={4} md={2} >Col A</Col>
-      <Col xs={6} md={10}>Col B</Col>
+      <Col xs={4} md={2}>Col A</Col>
+      <Col xs={4} md={6}>Col B</Col>
     </Row>
   </Container>
 )

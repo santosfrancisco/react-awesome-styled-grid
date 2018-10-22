@@ -15,37 +15,26 @@ order: 2
 | children  | node    | content                    |
 
 ## Row
-| prop      | type    | description                                          |
-|-----------|---------|------------------------------------------------------|
-| xsReverse | boolean | reverses the direction of the row on screens >= *xs* |
-| smReverse | boolean | reverses the direction of the row on screens >= *sm* |
-| mdReverse | boolean | reverses the direction of the row on screens >= *md* |
-| lgReverse | boolean | reverses the direction of the row on screens >= *lg* |
-| xlReverse | boolean | reverses the direction of the row on screens >= *xl* |
-| debug     | boolean | enables debug                                        |
-| children  | node    | content                                              |
+| prop      | type            | description                                          |
+|-----------|-----------------|------------------------------------------------------|
+| reverse   | number or array | reverses the direction of the row                    |
+| debug     | boolean         | enables debug                                        |
+| children  | node            | content                                              |
 
 ## Col
 
-| prop      | type             | description                                              |
-|-----------|------------------|----------------------------------------------------------|
-| xs        | number or string | sets the number of columns on screens *xs*               |
-| sm        | number or string | sets the number of columns on screens *sm*               |
-| md        | number or string | sets the number of columns on screens *md*               |
-| lg        | number or string | sets the number of columns on screens *lg*               |
-| xl        | number or string | sets the number of columns on screens *xl*               |
-| xsOffset  | number or string | sets the number of the offset columns on screens >= *xs* |
-| smOffset  | number or string | sets the number of the offset columns on screens >= *sm* |
-| mdOffset  | number or string | sets the number of the offset columns on screens >= *md* |
-| lgOffset  | number or string | sets the number of the offset columns on screens >= *lg* |
-| xlOffset  | number or string | sets the number of the offset columns on screens >= *xl* |
-| xsReverse | boolean          | reverses the direction of the column on screens >= *xs*  |
-| smReverse | boolean          | reverses the direction of the column on screens >= *sm*  |
-| mdReverse | boolean          | reverses the direction of the column on screens >= *md*  |
-| lgReverse | boolean          | reverses the direction of the column on screens >= *lg*  |
-| noGutter  | boolean          | removes the gutter                                       |
-| debug     | boolean          | enables debug                                            |
-| children  | node             | content                                                  |
+| prop      | type             | description                                |
+|-----------|------------------|--------------------------------------------|
+| xs        | number or string | sets the number of columns on screens *xs* |
+| sm        | number or string | sets the number of columns on screens *sm* |
+| md        | number or string | sets the number of columns on screens *md* |
+| lg        | number or string | sets the number of columns on screens *lg* |
+| xl        | number or string | sets the number of columns on screens *xl* |
+| offset    | number or object | sets the number of the offset columns      |
+| reverse   | number or array  | reverses the direction of the column       |
+| noGutter  | boolean          | removes the gutter                         |
+| debug     | boolean          | enables debug                              |
+| children  | node             | content                                    |
 
 ## Visible
 | prop     | type    | description                                          |
