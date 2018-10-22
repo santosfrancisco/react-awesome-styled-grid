@@ -62,11 +62,13 @@ describe('<Col />', () => {
 
   it('should have a offset space for each media', () => {
     const props = {
-      xsOffset: 1, 
-      smOffset: 2, 
-      mdOffset: 3, 
-      lgOffset: 4, 
-      xlOffset: 5
+      offset: {
+        xs: 1,
+        sm: 2,
+        md: 3,
+        lg: 4,
+        xl: 5
+      }
     }
 
     const tree = renderer.create(<Col {...props} />).toJSON()
@@ -74,10 +76,8 @@ describe('<Col />', () => {
     const { breakpoints, columns } = BASE_CONF
 
     DIMENSIONS.forEach(d => {
-      const prop = `${d}Offset`
-
       expect(tree).toHaveStyleRule(
-        'margin-left', `${props[prop] / columns[d] * 100}%`, {
+        'margin-left', `${props.offset[d] / columns[d] * 100}%`, {
           media: `only screen and (min-width: ${breakpoints[d]}rem)`
         }
       )
@@ -85,17 +85,10 @@ describe('<Col />', () => {
   })
 
   it('should have a reverse direction for each media', () => {
-    const tree = renderer.create(<Col xsReverse smReverse mdReverse lgReverse xlReverse />).toJSON()
+    const tree = renderer.create(<Col reverse />).toJSON()
 
-    const { breakpoints } = BASE_CONF
-
-    DIMENSIONS.forEach(d => {
-      expect(tree).toHaveStyleRule(
-        'flex-direction', `column-reverse`, {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      )
-    })
+    expect(tree).toHaveStyleRule(
+      'flex-direction', `column-reverse`)
   })
 
   it('should have different style when it`s debug props is true', () => {
