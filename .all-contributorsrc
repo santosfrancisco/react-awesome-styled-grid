@@ -1,0 +1,33 @@
+{
+  "projectName": "react-awesome-styled-grid",
+  "projectOwner": "santosfrancisco",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "santosfrancisco",
+      "name": "Francisco Santos",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15852005?v=4",
+      "profile": "http://devchico.com",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
+    },
+    {
+      "login": "camilaibs",
+      "name": "Camila Belo",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6290749?v=4",
+      "profile": "http://camilaibs.wix.com/blog",
+      "contributions": [
+        "test"
+      ]
+    }
+  ]
+}

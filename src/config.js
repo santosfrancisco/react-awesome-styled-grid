@@ -2,25 +2,42 @@ import { css } from 'styled-components'
 
 const CUSTOM_CONF = 'awesomegrid'
 export const DIMENSIONS = ['xs', 'sm', 'md', 'lg', 'xl']
-export const BREAKPOINTS = [1, 576, 768, 992, 1200] // breakpoints in px
-
 export const BASE_CONF = {
-  columns: 12,
-  gutterWidth: 16, // px
-  paddingWidth: 16, // px
   mediaQuery: 'only screen',
+  columns: {
+    xs: 4,
+    sm: 8,
+    md: 8,
+    lg: 12,
+    xl: 12
+  },
+  gutterWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5
+  },
+  paddingWidth: {
+    xs: 1,
+    sm: 1,
+    md: 1.5,
+    lg: 1.5,
+    xl: 1.5
+  },
   container: {
-    sm: 540, // px
-    md: 720, // px
-    lg: 960, // px
-    xl: 1140 // px
+    xs: 'full', // 'full' = max-width: 100%
+    sm: 'full', // 'full' = max-width: 100%
+    md: 'full', // 'full' = max-width: 100%
+    lg: 90, // max-width: 1440px
+    xl: 90 // max-width: 1440px
   },
   breakpoints: {
-    xs: BREAKPOINTS[0],
-    sm: BREAKPOINTS[1],
-    md: BREAKPOINTS[2],
-    lg: BREAKPOINTS[3],
-    xl: BREAKPOINTS[4]
+    xs: 1,
+    sm: 48, // 768px
+    md: 64, // 1024px
+    lg: 90, // 1440px
+    xl: 120 // 1920px
   }
 }
 
@@ -31,15 +48,7 @@ const resolveConfig = props => {
 
   const conf = {
     ...BASE_CONF,
-    ...themeConf,
-    container: {
-      ...BASE_CONF.container,
-      ...themeConf.container
-    },
-    breakpoints: {
-      ...BASE_CONF.breakpoints,
-      ...themeConf.breakpoints
-    }
+    ...themeConf
   }
 
   conf.media = Object.keys(conf.breakpoints).reduce((media, breakpoint) => {
@@ -47,7 +56,7 @@ const resolveConfig = props => {
     media[breakpoint] = makeMedia(
       [
         conf.mediaQuery,
-        breakpoint !== 0 && `(min-width: ${breakpointWidth}px)`
+        breakpoint !== 0 && `(min-width: ${breakpointWidth}rem)`
       ]
         .filter(Boolean)
         .join(' and ')
@@ -58,7 +67,7 @@ const resolveConfig = props => {
   return conf
 }
 
-export default function config (props) {
+export default function config (props = {}) {
   const customConf = hasCustomConf(props)
   if (configs[0] === customConf) {
     return configs[1]

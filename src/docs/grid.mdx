@@ -4,7 +4,7 @@ route: /usage
 order: 3
 ---
 
-import { Container, Row, Col, Visible } from '../'
+import { Container, Row, Col, Visible, Hidden, ScreenBadge } from '../'
 
 # Usage
 
@@ -14,20 +14,27 @@ Resizes your window to see the responsive magic happening 😎
 
 <Container>
   <Row>
-    <Col debug xs={4} sm={6} md={9}>
-      xs={4} sm={6} md={9}
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
     </Col>
-    <Col debug noGutter>
-      <Col debug>inside another Col</Col>
-      <Col debug>inside another Col</Col>
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
   </Row>
   <Row>
-    <Col debug xs={12} sm={6} md={10} lg={6}>
-      xs={12} sm={6} md={10} lg={6}
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
-    <Col debug xs={12} sm={6} md={2} lg={6}>
-      xs={12} sm={6} md={2} lg={6}
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
+    </Col>
+  </Row>
+  <Row>
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
+    </Col>
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
   </Row>
 </Container>
@@ -39,20 +46,19 @@ and from ```md```, the size will be 6 columns)
 ```js
 <Container>
   <Row>
-    <Col debug xs={4} sm={6} md={9}>
-      xs={4} sm={6} md={9}
+    <Col debug xs={2} sm={6} md={2} lg={6}>
+      xs={2} sm={6} md={2} lg={6}
     </Col>
-    <Col debug noGutter>
-      <Col debug>inside another Col</Col>
-      <Col debug>inside another Col</Col>
+    <Col debug xs={2} sm={2} md={6} lg={6}>
+      xs={2} sm={2} md={6} lg={6}
     </Col>
   </Row>
   <Row>
-    <Col debug xs={12} sm={6} md={10} lg={6}>
-      xs={12} sm={6} md={10} lg={6}
+    <Col debug xs={1} sm={4} md={3} lg={4}>
+      xs={1} sm={4} md={3} lg={4}
     </Col>
-    <Col debug xs={12} sm={6} md={2} lg={6}>
-      xs={12} sm={6} md={2} lg={6}
+    <Col debug xs={3} sm={4} md={5} lg={8}>
+      xs={3} sm={4} md={5} lg={8}
     </Col>
   </Row>
 </Container>
@@ -60,63 +66,92 @@ and from ```md```, the size will be 6 columns)
 
 ## Offset
 
+### Using number
+
+if you enter a number, the number of columns of the screen xs will be used as base. in this example, 2 columns of 4 will be used for both offset and column size, ie 50%.
+
 <Container>
-  <Row><Col debug xs={1} xsOffset={11}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={10}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={9}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={8}>&nbsp;</Col></Row>
-  <Row><Col debug xs={5} xsOffset={7}>&nbsp;</Col></Row>
-  <Row><Col debug xs={6} xsOffset={6}>&nbsp;</Col></Row>
-  <Row><Col debug xs={7} xsOffset={5}>&nbsp;</Col></Row>
-  <Row><Col debug xs={8} xsOffset={4}>&nbsp;</Col></Row>
-  <Row><Col debug xs={9} xsOffset={3}>&nbsp;</Col></Row>
-  <Row><Col debug xs={10} xsOffset={2}>&nbsp;</Col></Row>
-  <Row><Col debug xs={11} xsOffset={1}>&nbsp;</Col></Row>
+  <Row>
+    <Col debug xs={2} offset={2}>50% offset</Col>
+  </Row>
+</Container>
+
+### Using object
+
+in this case, the ```offset``` prop must receive an object with the screens and their respective values.
+
+<Container>
+  <Row><Col debug xs={1} sm={1} lg={1} offset={{ xs:3, sm:7, lg:11}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={2} offset={{ xs:3, sm:7, lg:10}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={2} lg={3} offset={{ xs:3, sm:6, lg:9}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={3} lg={4} offset={{ xs:2, sm:5, lg:8}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={4} lg={5} offset={{ xs:2, sm:4, lg:7}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={5} lg={6} offset={{ xs:2, sm:3, lg:6}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={7} offset={{ xs:1, sm:3, lg:5}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={8} offset={{ xs:1, sm:3, lg:4}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={6} lg={9} offset={{ xs:1, sm:2, lg:3}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={7} lg={10} offset={{ xs:0, sm:1, lg:2}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 
 ```js
 <Container>
-  <Row><Col debug xs={1} xsOffset={11}>&nbsp;</Col></Row>
-  <Row><Col debug xs={2} xsOffset={10}>&nbsp;</Col></Row>
-  <Row><Col debug xs={3} xsOffset={9}>&nbsp;</Col></Row>
-  <Row><Col debug xs={4} xsOffset={8}>&nbsp;</Col></Row>
-  <Row><Col debug xs={5} xsOffset={7}>&nbsp;</Col></Row>
-  <Row><Col debug xs={6} xsOffset={6}>&nbsp;</Col></Row>
-  <Row><Col debug xs={7} xsOffset={5}>&nbsp;</Col></Row>
-  <Row><Col debug xs={8} xsOffset={4}>&nbsp;</Col></Row>
-  <Row><Col debug xs={9} xsOffset={3}>&nbsp;</Col></Row>
-  <Row><Col debug xs={10} xsOffset={2}>&nbsp;</Col></Row>
-  <Row><Col debug xs={11} xsOffset={1}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={1} offset={{ xs:3, sm:7, lg:11}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={1} lg={2} offset={{ xs:3, sm:7, lg:10}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={1} sm={2} lg={3} offset={{ xs:3, sm:6, lg:9}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={3} lg={4} offset={{ xs:2, sm:5, lg:8}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={4} lg={5} offset={{ xs:2, sm:4, lg:7}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={2} sm={5} lg={6} offset={{ xs:2, sm:3, lg:6}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={7} offset={{ xs:1, sm:3, lg:5}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={5} lg={8} offset={{ xs:1, sm:3, lg:4}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={3} sm={6} lg={9} offset={{ xs:1, sm:2, lg:3}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={7} lg={10} offset={{ xs:0, sm:1, lg:2}}>&nbsp;</Col></Row>
+  <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 ```
 ## Row reverse
 
+```reverse``` receives an array with the screens that will have the flow reversed. if it is passed as boolean, the stream will be inverted at all breakpoints
+
 <Container>
-  <Row mdReverse>
-    <Col debug xs={4}>Column A</Col>
-    <Col debug xs={4}>Column B</Col>
-    <Col debug xs={4}>Column C</Col>
+  <Row reverse={['md']}>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
+  </Row>
+  <Row reverse>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
   </Row>
 </Container>
 
 ```js
 <Container>
-  <Row mdReverse>
-    <Col debug xs={4}>Column A</Col>
-    <Col debug xs={4}>Column B</Col>
-    <Col debug xs={4}>Column C</Col>
+  <Row reverse={['md']}>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
+  </Row>
+  <Row reverse>
+    <Col debug xs={2}>Column A</Col>
+    <Col debug xs={2}>Column B</Col>
   </Row>
 </Container>
 ```
 
 ## Column reverse
 
+```reverse``` receives an array with the screens that will have the flow reversed. if it is passed as boolean, the stream will be inverted at all breakpoints
+
 <Container>
   <Row>
-    <Col noGutter mdReverse>
-      <Col debug xs={4}>Column A</Col>
-      <Col debug xs={4}>Column B</Col>
-      <Col debug xs={4}>Column C</Col>
+    <Col noGutter reverse={['md', 'lg']}>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
+    </Col>
+        <Col noGutter reverse>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
     </Col>
   </Row>
 </Container>
@@ -124,10 +159,15 @@ and from ```md```, the size will be 6 columns)
 ```js
 <Container>
   <Row>
-    <Col noGutter mdReverse>
-      <Col debug xs={4}>Column A</Col>
-      <Col debug xs={4}>Column B</Col>
-      <Col debug xs={4}>Column C</Col>
+    <Col noGutter reverse={['md', 'lg']}>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
+    </Col>
+        <Col noGutter reverse>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column A</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column B</div>
+      <div style={{backgroundColor: '#5901ad40', outline: '1px solid #fff'}}>Column C</div>
     </Col>
   </Row>
 </Container>
@@ -135,7 +175,7 @@ and from ```md```, the size will be 6 columns)
 
 ## Visible
 
-Show a element only on specific media
+Show a element only in a specific screen size
 
 ### Example using only text
 
@@ -159,18 +199,86 @@ Show a element only on specific media
 
 ### Example using an Row with Col
 
-<div>
+<Container>
   <Row>
-    <Visible xs sm><Col debug>Visible only on XS and SM screens</Col></Visible>
-    <Visible md lg xl><Col debug>Visible only on MD, LG and XL screens</Col></Visible>
+    <Visible xs sm>
+      <Col debug>Visible only on XS and SM screens</Col>
+    </Visible>
+    <Visible md lg xl>
+      <Col debug>Visible only on MD, LG and XL screens</Col>
+    </Visible>
   </Row>
+</Container>
+
+```js
+<Container>
+  <Row>
+    <Visible xs sm>
+      <Col debug>Visible only on XS and SM screens</Col>
+    </Visible>
+    <Visible md lg xl>
+      <Col debug>Visible only on MD, LG and XL screens</Col>
+    </Visible>
+  </Row>
+</Container>
+```
+
+## Hidden
+
+Hides a element only in a specific screen size
+
+### Example using only text
+
+<div>
+  <Hidden xs><div>This text is hidden only on: XS</div></Hidden>
+  <Hidden sm><div>This text is hidden only on: SM</div></Hidden>
+  <Hidden md><div>This text is hidden only on: MD</div></Hidden>
+  <Hidden lg><div>This text is hidden only on: LG</div></Hidden>
+  <Hidden xl><div>This text is hidden only on: XL</div></Hidden>
 </div>
 
 ```js
 <div>
-  <Row>
-    <Visible xs sm><Col debug>Visible only on XS and SM screens</Col></Visible>
-    <Visible md lg xl><Col debug>Visible only on MD, LG and XL screens</Col></Visible>
-  </Row>
+  <Hidden xs><div>This text is hidden only on: XS</div></Hidden>
+  <Hidden sm><div>This text is hidden only on: SM</div></Hidden>
+  <Hidden md><div>This text is hidden only on: MD</div></Hidden>
+  <Hidden lg><div>This text is hidden only on: LG</div></Hidden>
+  <Hidden xl><div>This text is hidden only on: XL</div></Hidden>
 </div>
+```
+
+### Example using an Row with Col
+
+<Container>
+  <Row>
+    <Hidden xs sm>
+      <Col debug>Hidden only on XS and SM screens</Col>
+    </Hidden>
+    <Hidden md lg xl>
+      <Col debug>Hidden only on MD, LG and XL screens</Col>
+    </Hidden>
+  </Row>
+</Container>
+
+```js
+<Container>
+  <Row>
+    <Hidden xs sm>
+      <Col debug>Hidden only on XS and SM screens</Col>
+    </Hidden>
+    <Hidden md lg xl>
+      <Col debug>Hidden only on MD, LG and XL screens</Col>
+    </Hidden>
+  </Row>
+</Container>
+```
+
+## ScreenBadge
+
+Displays a badge in the lower right corner with the current screen for debug
+
+<ScreenBadge />
+
+```js
+  <ScreenBadge />
 ```

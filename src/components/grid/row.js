@@ -6,18 +6,27 @@ import config, { DIMENSIONS } from '../../config'
 const Row = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
   flex-direction: row;
   flex-wrap: wrap;
-
+  
   ${p => css`
     ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ d + 'Reverse' ] && `flex-direction: row-reverse;`}
+    config(p).container[ d ] && config(p).media[ d ]`
+      margin-left: -${config(p).gutterWidth[d] / 2}rem;
+      margin-right: -${config(p).gutterWidth[d] / 2}rem;
     `)}
   `}
 
-  ${({debug}) => debug && css`
+  ${p => p.reverse && css`
+    ${Array.isArray(p.reverse)
+    ? DIMENSIONS.map(d =>
+      config(p).breakpoints[d] && config(p).media[d]`
+      flex-direction:${p.reverse.indexOf(d) !== -1 ? `row-reverse` : `row`};`)
+    : 'flex-direction: row-reverse;'}
+  `}
+
+  ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;
   `}
@@ -25,12 +34,13 @@ const Row = styled.div`
 
 Row.displayName = 'Row'
 
+const boolOrArray = PropTypes.oneOfType([
+  PropTypes.bool,
+  PropTypes.array
+])
+
 Row.propTypes = {
-  xsReverse: PropTypes.bool,
-  smReverse: PropTypes.bool,
-  mdReverse: PropTypes.bool,
-  lgReverse: PropTypes.bool,
-  xlReverse: PropTypes.bool,
+  reverse: boolOrArray,
   children: PropTypes.node,
   debug: PropTypes.bool
 }

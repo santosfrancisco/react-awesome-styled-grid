@@ -4,31 +4,70 @@ exports[`<Container /> should render default style correctly 1`] = `
 .c0 {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 16;
-  padding-left: 16;
 }
 
-@media only screen and (min-width:576px) {
+@media only screen and (min-width:1rem) {
   .c0 {
-    max-width: 540px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:48rem) {
   .c0 {
-    max-width: 720px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-@media only screen and (min-width:992px) {
+@media only screen and (min-width:64rem) {
   .c0 {
-    max-width: 960px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:90rem) {
   .c0 {
-    max-width: 1140px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width:120rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width:1rem) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48rem) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64rem) {
+  .c0 {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:90rem) {
+  .c0 {
+    max-width: 90rem;
+  }
+}
+
+@media only screen and (min-width:120rem) {
+  .c0 {
+    max-width: 90rem;
   }
 }
 

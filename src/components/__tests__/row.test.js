@@ -11,22 +11,15 @@ describe('<Row />', () => {
   })
 
   it('should have a reverse direction for each media', () => {
-    const tree = renderer.create(<Row xsReverse smReverse mdReverse lgReverse xlReverse />).toJSON()
+    const tree = renderer.create(<Row reverse />).toJSON()
 
-    const { breakpoints } = BASE_CONF
-
-    DIMENSIONS.forEach(d => {
-      expect(tree).toHaveStyleRule(
-        'flex-direction', `row-reverse`, {
-          media: `only screen and (min-width: ${breakpoints[d]}px)`
-        }
-      )
-    })
+    expect(tree).toHaveStyleRule(
+      'flex-direction', `row-reverse`)
   })
 
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Row debug />).toJSON()
-    expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
+    expect(tree).toHaveStyleRule('background-color', '#5901ad40')
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
 })

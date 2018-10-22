@@ -5,19 +5,33 @@ order: 0
 ---
 
 import { Playground } from 'docz'
-import { Container, Row, Col } from '../'
+import { Container, Row, Col, Visible, Hidden, ScreenBadge, util } from '../'
 
 # Playground
 😎 Have fun!
 
 <Playground>
-  <Container>
+{()=>{
+  let text = 'Variables can set here'
+  return (
+    <Container>
+    <ScreenBadge />
+    <p>{text}</p>
     <Row>
-      <Col xs={12} sm={4} md={3} lg={2} xl={4} debug>Column 1</Col>
-      <Col xs={12} sm={2} md={3} lg={4} xl={2} debug>Column 2</Col>
-      <Col xs={12} sm={4} md={3} lg={4} xl={2} debug>Column 3</Col>
-      <Col xs={12} sm={2} md={3} lg={2} xl={4} debug>Column 4</Col>
+      <Col debug xs={4} md={2} lg={3}>Column 1</Col>
+      <Col debug xs={4} md={2} lg={3}>Column 2</Col>
+      <Col debug xs={4} md={2} lg={3}>Column 3</Col>
+      <Col debug xs={4} md={2} lg={3}>Column 4</Col>
+    </Row>
+    <Row>
+      <Visible xs><Col debug xs={4}>Visible XS</Col></Visible>
+      <Visible md><Col debug xs={4}>Visible MD</Col></Visible>
+      <Hidden xs><Col debug xs={4}>Hidden XS</Col></Hidden>
+      <Hidden md><Col debug xs={4}>Hidden MD</Col></Hidden>
     </Row>
   </Container>
+  )
+}}
+  
 </Playground>
     

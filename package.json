@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-styled-grid",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.umd.js",
@@ -13,7 +13,9 @@
     "docz:build": "docz build",
     "test": "./node_modules/.bin/jest --runInBand",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "repository": {
     "type": "git",
@@ -31,11 +33,10 @@
     "url": "https://github.com/santosfrancisco/react-awesome-styled-grid/issues"
   },
   "homepage": "https://awesome-styled-grid.netlify.com/",
-  "dependencies": {
-    "lodash.throttle": "^4.1.1",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "styled-components": "^3.4.2"
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": ">=0.14.0 <17.0.0",
+    "styled-components": ">= 3"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -45,9 +46,12 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "all-contributors-cli": "^5.4.1",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "docz": "^0.12.5",
     "docz-theme-default": "^0.12.5",
     "eslint": "^5.3.0",
@@ -61,12 +65,15 @@
     "jest": "^23.6.0",
     "jest-styled-components": "^6.2.1",
     "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-test-renderer": "^16.5.2",
     "regenerator-runtime": "^0.12.1",
     "rollup": "^0.66.0",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-uglify": "^6.0.0"
+    "rollup-plugin-uglify": "^6.0.0",
+    "styled-components": "^4.0.2"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

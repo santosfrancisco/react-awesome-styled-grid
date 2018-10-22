@@ -8,37 +8,43 @@ const Col = styled.div`
   max-width: 100%;
   display: flex;
   flex-direction: column;
- 
+
   ${p => !p.noGutter && css`
-    padding-right: ${p => config(p).gutterWidth / 2}px;
-    padding-left: ${p => config(p).gutterWidth / 2}px;
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+      padding-right: ${config(p).gutterWidth[d] / 2}rem;
+      padding-left: ${config(p).gutterWidth[d] / 2}rem;
+    `)}
   `}
 
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      ${p => p[d] && `
-        flex: 0 0 ${(p[d] / config(p).columns) * 100}%;
-        max-width: ${(p[d] / config(p).columns) * 100}%;
+      ${p[d] && `
+        flex: 1 1 ${(p[d] / config(p).columns[d]) * 100}%;
+        max-width: ${(p[d] / config(p).columns[d]) * 100}%;
       `}
     `)}
   `}
 
-  ${p => css`
+  ${p => p.offset && css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ d + 'Offset' ] && `margin-left: ${(p[ d + 'Offset' ] / config(p).columns) * 100}%`};
+    ${typeof p.offset === 'object'
+    ? p.offset[d] !== undefined && `margin-left: ${p.offset[d] > 0 ? (p.offset[d] / config(p).columns[d]) * 100 : 0}%`
+    : `margin-left: ${(p.offset / config(p).columns['xs']) * 100}%`};
     `)}
   `}
 
-  ${p => css`
-    ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
-      ${p[ d + 'Reverse' ] && `flex-direction: column-reverse`};
-    `)}
+  ${p => p.reverse && css`
+    ${Array.isArray(p.reverse)
+    ? DIMENSIONS.map(d =>
+      config(p).breakpoints[d] && config(p).media[d]`
+      flex-direction:${p.reverse.indexOf(d) !== -1 ? `column-reverse` : `column`};`)
+    : 'flex-direction: column-reverse;'}
   `}
 
-  ${({debug}) => debug && css`
+  ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;
   `}
@@ -51,25 +57,25 @@ const numberOrString = PropTypes.oneOfType([
   PropTypes.number
 ])
 
+const numberOrObject = PropTypes.oneOfType([
+  PropTypes.bool,
+  PropTypes.object
+])
+
+const boolOrArray = PropTypes.oneOfType([
+  PropTypes.bool,
+  PropTypes.array
+])
+
 Col.propTypes = {
   xs: numberOrString,
   sm: numberOrString,
   md: numberOrString,
   lg: numberOrString,
   xl: numberOrString,
-  xsOffset: numberOrString,
-  smOffset: numberOrString,
-  mdOffset: numberOrString,
-  lgOffset: numberOrString,
-  xlOffset: numberOrString,
-  xsReverse: PropTypes.bool,
-  smReverse: PropTypes.bool,
-  mdReverse: PropTypes.bool,
-  lgReverse: PropTypes.bool,
-  xlReverse: PropTypes.bool,
+  offSet: numberOrObject,
+  reverse: boolOrArray,
   noGutter: PropTypes.bool,
-  gutterWidth: PropTypes.number,
-  columns: PropTypes.number,
   children: PropTypes.node,
   debug: PropTypes.bool
 }
