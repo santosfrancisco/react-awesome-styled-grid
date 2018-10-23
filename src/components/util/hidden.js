@@ -49,8 +49,6 @@ export class Hidden extends Component {
         return lg
       case 'xl':
         return xl
-      default:
-        return true
     }
   }
 
