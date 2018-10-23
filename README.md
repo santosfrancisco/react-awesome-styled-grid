@@ -5,14 +5,22 @@
 [![codecov](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid)
 [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid)
 
-# React Awesome Styled Grid
+# React Awesome Styled Grid 😎
 
 A responsive grid system for React using styled-components
 
 ## Installation
 
 ```bash
-npm i react-awesome-styled-grid
+npm i --save react-awesome-styled-grid
+```
+
+## Dependencies
+
+**styled-components** is a peerDependency and must be installed separately.
+
+```bash
+npm i --save styled-components
 ```
 
 ## Documentation

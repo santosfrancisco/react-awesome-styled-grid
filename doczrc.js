@@ -15,5 +15,6 @@ export default {
   themeConfig: {
     codemirrorTheme: 'dracula'
   },
-  dest: 'docs'
+  dest: 'docs',
+  base: '/react-awesome-styled-grid'
 }
