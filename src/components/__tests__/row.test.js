@@ -17,6 +17,20 @@ describe('<Row />', () => {
       'flex-direction', `row-reverse`)
   })
 
+  it('should have a reverse direction for each media', () => {
+    const tree = renderer.create(<Row reverse={['md']} />).toJSON()
+
+    expect(tree).toHaveStyleRule(
+      'flex-direction', `row`)
+  })
+
+  it('should have a reverse direction for specific screen', () => {
+    const tree = renderer.create(<Row reverse={['md', 'lg']} />).toJSON()
+
+    expect(tree).toHaveStyleRule(
+      'flex-direction', `row`)
+  })
+
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Row debug />).toJSON()
     expect(tree).toHaveStyleRule('background-color', '#5901ad40')
