@@ -49,8 +49,6 @@ export class Visible extends Component {
         return lg
       case 'xl':
         return xl
-      default:
-        return false
     }
   }
 
