@@ -91,6 +91,13 @@ describe('<Col />', () => {
       'flex-direction', `column-reverse`)
   })
 
+  it('should have a reverse direction for each media', () => {
+    const tree = renderer.create(<Col reverse={['md', 'lg']} />).toJSON()
+
+    expect(tree).toHaveStyleRule(
+      'flex-direction', `column`)
+  })
+
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Col debug />).toJSON()
     expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
