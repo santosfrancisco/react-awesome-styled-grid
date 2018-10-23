@@ -1,11 +1,11 @@
 {
-  "vendors.js": "/react-awesome-styled-grid/static/js/vendors.643991c1.js",
-  "app.js": "/react-awesome-styled-grid/static/js/app.ddc53f04.js",
-  "src-docs-custom.js": "/react-awesome-styled-grid/static/js/src-docs-custom.191f3d48.js",
-  "src-docs-grid.js": "/react-awesome-styled-grid/static/js/src-docs-grid.4af999b2.js",
-  "src-docs-index.js": "/react-awesome-styled-grid/static/js/src-docs-index.0c1dd292.js",
-  "src-docs-playground.js": "/react-awesome-styled-grid/static/js/src-docs-playground.9fa29e57.js",
-  "src-docs-props.js": "/react-awesome-styled-grid/static/js/src-docs-props.49034286.js",
-  "runtime~app.js": "/react-awesome-styled-grid/static/js/runtime~app.c6c4bf4b6bf59ae79d2f.js",
-  "index.html": "/react-awesome-styled-grid/index.html"
+  "vendors.js": "/static/js/vendors.b4467006.js",
+  "app.js": "/static/js/app.3ae9989a.js",
+  "src-docs-custom.js": "/static/js/src-docs-custom.191f3d48.js",
+  "src-docs-grid.js": "/static/js/src-docs-grid.4af999b2.js",
+  "src-docs-index.js": "/static/js/src-docs-index.0c1dd292.js",
+  "src-docs-playground.js": "/static/js/src-docs-playground.9fa29e57.js",
+  "src-docs-props.js": "/static/js/src-docs-props.49034286.js",
+  "runtime~app.js": "/static/js/runtime~app.19128dc366de3c8eea6f.js",
+  "index.html": "/index.html"
 }

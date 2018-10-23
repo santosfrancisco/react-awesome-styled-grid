@@ -16,5 +16,5 @@ export default {
     codemirrorTheme: 'dracula'
   },
   dest: 'docs',
-  base: '/react-awesome-styled-grid'
+  propsParse: false
 }
