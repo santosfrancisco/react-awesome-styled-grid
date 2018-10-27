@@ -1,8 +1,11 @@
+import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import config, { DIMENSIONS } from '../../config'
 
-const Col = styled.div`
+const Col = styled(({ className, children }) => (
+  <div className={className}>{children}</div>
+))`
   box-sizing: border-box;
   flex: 1 0 auto;
   max-width: 100%;

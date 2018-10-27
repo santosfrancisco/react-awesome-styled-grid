@@ -9,7 +9,8 @@ export class Visible extends Component {
     sm: false,
     md: false,
     lg: false,
-    xl: false
+    xl: false,
+    theme: {}
   }
   constructor () {
     super()

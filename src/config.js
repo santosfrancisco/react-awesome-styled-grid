@@ -56,7 +56,7 @@ const resolveConfig = props => {
     media[breakpoint] = makeMedia(
       [
         conf.mediaQuery,
-        breakpoint !== 0 && `(min-width: ${breakpointWidth}rem)`
+        breakpointWidth >= 0 && `(min-width: ${breakpointWidth}rem)`
       ]
         .filter(Boolean)
         .join(' and ')
