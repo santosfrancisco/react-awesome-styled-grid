@@ -44,7 +44,7 @@ order: 3
 | md       | boolean | indicates that past content will only be displayed on the screen *md* |
 | lg       | boolean | indicates that past content will only be displayed on the screen *lg* |
 | xl       | boolean | indicates that past content will only be displayed on the screen *xl* |
-| children | boolean | content                                                               |
+| children | node    | content                                                               |
 
 ## Hidden
 | prop     | type    | description                                          |
@@ -54,4 +54,9 @@ order: 3
 | md       | boolean | indicates that past content will only be hidden on the screen *md* |
 | lg       | boolean | indicates that past content will only be hidden on the screen *lg* |
 | xl       | boolean | indicates that past content will only be hidden on the screen *xl* |
-| children | boolean | content                                                            |
+| children | node    | content    
+
+## ScreenClass
+| prop     | type    | description                                          |
+|----------|---------|------------------------------------------------------|
+| render   | func    | the function that will be rendered receiving the current screen as a parameter |

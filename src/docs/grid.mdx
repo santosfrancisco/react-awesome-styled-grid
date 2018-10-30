@@ -4,9 +4,13 @@ route: /usage
 order: 4
 ---
 
-import { Container, Row, Col, Visible, Hidden, ScreenBadge } from '../'
+import { Container, Row, Col, Visible, Hidden, ScreenClass, ScreenBadge } from '../'
 
 # Usage
+
+```js
+import { Container, Row, Col, Visible, Hidden, ScreenClass, ScreenBadge } from '../'
+```
 
 Resizes your window to see the responsive magic happening 😎
 
@@ -269,6 +273,31 @@ Hides a element only in a specific screen size
     <Hidden md lg xl>
       <Col debug>Hidden only on MD, LG and XL screens</Col>
     </Hidden>
+  </Row>
+</Container>
+```
+
+
+## ScreenClass
+
+ScreenClass receive a prop named `render` and renders this by passing the current screen as parameter
+
+<Container>
+  <Row>
+    <Col debug><ScreenClass render={(screen) => (
+        <p style={{ color: ['sm', 'md'].includes(screen) ? 'red' : 'purple' }}>Hello! Actual screen is {screen}</p>
+      )} />
+    </Col>
+  </Row>
+</Container>
+
+```js
+<Container>
+  <Row>
+    <Col debug><ScreenClass render={(screen) => (
+        <p style={{ color: ['sm', 'md'].includes(screen) ? 'red' : 'purple' }}>Hello! Actual screen is {screen}</p>
+      )} />
+    </Col>
   </Row>
 </Container>
 ```
