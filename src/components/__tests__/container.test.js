@@ -10,22 +10,22 @@ describe('<Container />', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('should haven`t a max-width when it is a fluid container', () => {
+  it('should have a max-width when it is a fluid container', () => {
     const tree = renderer.create(<Container fluid />).toJSON()
-    expect(tree).toHaveStyleRule('max-width', undefined)
+    expect(tree).toHaveStyleRule('max-width', '100%')
   })
 
-  it('should have a max-width when it is not a fluid container', () => {
+  it('should have a width when it is not a fluid container', () => {
     const tree = renderer.create(<Container />).toJSON()
 
     const { breakpoints, container } = BASE_CONF
 
     DIMENSIONS.forEach(d => {
       if (d === DIMENSIONS[0]) {
-        expect(tree).toHaveStyleRule('max-width', undefined)
+        expect(tree).toHaveStyleRule('max-width', '100%')
       } else {
         expect(tree).toHaveStyleRule(
-          'max-width', `${typeof container[d] === 'number' ? `${container[d]}rem` : `100%`}`, {
+          'width', `${typeof container[d] === 'number' ? `${container[d]}rem` : `100%`}`, {
             media: `only screen and (min-width: ${breakpoints[d]}rem)`
           }
         )
