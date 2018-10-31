@@ -10,6 +10,7 @@ import config, {
 const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
+  width: 100%;
 
   ${p => css`
     ${DIMENSIONS.map(d =>
@@ -23,7 +24,7 @@ const Container = styled.div`
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-      ${typeof config(p).container[d] === 'number' ? `max-width: ${config(p).container[ d ]}rem;` : `max-width: 100%;`}
+      ${typeof config(p).container[d] === 'number' && `width: ${config(p).container[ d ]}rem;`}
     `)}
   `}
 
