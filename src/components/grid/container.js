@@ -11,6 +11,7 @@ const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
+  box-sizing: border-box;
 
   ${p => css`
     ${DIMENSIONS.map(d =>
