@@ -39,12 +39,12 @@
     "styled-components": ">= 3"
   },
   "devDependencies": {
-    "@babel/cli": "7.1.0",
-    "@babel/core": "7.1.2",
-    "@babel/plugin-external-helpers": "7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.0.0",
-    "@babel/plugin-transform-runtime": "7.1.0",
-    "@babel/preset-env": "7.0.0",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-external-helpers": "7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
+    "@babel/plugin-transform-runtime": "7.4.4",
+    "@babel/preset-env": "7.4.4",
     "@babel/preset-react": "7.0.0",
     "all-contributors-cli": "5.4.1",
     "babel-core": "7.0.0-bridge.0",
