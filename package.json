@@ -50,7 +50,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "23.6.0",
-    "babel-loader": "8.0.2",
+    "babel-loader": "8.0.5",
     "babel-plugin-transform-class-properties": "6.24.1",
     "docz": "0.12.5",
     "docz-theme-default": "0.12.5",
