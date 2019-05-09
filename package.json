@@ -52,7 +52,7 @@
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.5",
     "babel-plugin-transform-class-properties": "6.24.1",
-    "docz": "0.12.5",
+    "docz": "1.2.0",
     "docz-theme-default": "0.12.5",
     "eslint": "5.16.0",
     "eslint-config-standard": "11.0.0",
