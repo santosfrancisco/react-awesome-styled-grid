@@ -5,6 +5,14 @@ export default {
   port: 4000,
   protocol: 'http',
   indexHtml: 'public/index.html',
+  menu: [
+    'Getting Started',
+    'Usage',
+    'Table of props',
+    'Utilities',
+    'Playground',
+    'Custom configuration'
+  ],
   htmlContext: {
     head: {
       links: [{
@@ -17,5 +25,6 @@ export default {
   themeConfig: {
     codemirrorTheme: 'dracula'
   },
+  showPlaygroundEditor: true,
   propsParse: false
 }

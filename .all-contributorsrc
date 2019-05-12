@@ -28,6 +28,25 @@
       "contributions": [
         "test"
       ]
+    },
+    {
+      "login": "Fabioh",
+      "name": "Fábio Henrique Gabriele",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/10605659?v=4",
+      "profile": "https://github.com/Fabioh",
+      "contributions": [
+        "test"
+      ]
+    },
+    {
+      "login": "BernardoMariano",
+      "name": "Bernardo Mariano",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3067157?v=4",
+      "profile": "https://github.com/BernardoMariano",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "commitConvention": "none"
 }

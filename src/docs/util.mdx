@@ -1,7 +1,6 @@
 ---
 name: Utilities
 route: /util
-order: 2
 ---
 
 # Utilities
@@ -11,6 +10,11 @@ order: 2
 To use in your css the media queries with the same breakpoints of the grid,
 just import the config as in the example below. If you are not using a
 custom config, it is not mandatory to pass *props* to config
+
+> **Tip:** since react-awesome-styled-grid is mobile-first grid,
+the css inserted without media querie is applied in mobile resolution.
+The next media querie (e.g. SM ```config().media['sm']```), will apply css on the
+devices with resolutions above of 48 rem (768px), and so on...
 
 ```js
 import React from 'react'
