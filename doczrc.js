@@ -26,5 +26,6 @@ export default {
     codemirrorTheme: 'dracula'
   },
   showPlaygroundEditor: true,
-  propsParse: false
+  propsParse: false,
+  base: '/react-awesome-styled-grid'
 }
