@@ -36,4 +36,11 @@ describe('<Row />', () => {
     expect(tree).toHaveStyleRule('background-color', '#5901ad40')
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
+
+  it('should pass every props', () => {
+    const tree = renderer.create(<Row id='uniqueID' lol='anotherprop' />)
+    const testInstance = tree.root
+    expect(testInstance.findByType(Row).props.id).toBe('uniqueID')
+    expect(testInstance.findByType(Row).props.lol).toBe('anotherprop')
+  })
 })

@@ -103,4 +103,11 @@ describe('<Col />', () => {
     expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
+
+  it('should pass every props', () => {
+    const tree = renderer.create(<Col id='uniqueID' lol='anotherprop' />)
+    const testInstance = tree.root
+    expect(testInstance.findByType(Col).props.id).toBe('uniqueID')
+    expect(testInstance.findByType(Col).props.lol).toBe('anotherprop')
+  })
 })

@@ -38,4 +38,11 @@ describe('<Container />', () => {
     expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
+
+  it('should pass every props', () => {
+    const tree = renderer.create(<Container id='uniqueID' lol='anotherprop' />)
+    const testInstance = tree.root
+    expect(testInstance.findByType(Container).props.id).toBe('uniqueID')
+    expect(testInstance.findByType(Container).props.lol).toBe('anotherprop')
+  })
 })
