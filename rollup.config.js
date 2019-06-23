@@ -1,17 +1,16 @@
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
+import pkg from './package.json'
 
-const globals = {react: 'React', 'styled-components': 'styled', 'prop-types': 'PropTypes'}
-const external = ['styled-components', 'prop-types', 'react']
-const name = 'react-awesome-styled-grid'
+const globals = { react: 'React', 'styled-components': 'styled', 'prop-types': 'PropTypes' }
 
 export default [{
   input: 'src/index.js',
   output: {
-    file: 'lib/react-awesome-styled-grid.cjs.js',
+    file: pkg.main,
     format: 'cjs',
-    name,
+    name: pkg.name,
     globals
   },
   plugins: [
@@ -21,14 +20,16 @@ export default [{
       plugins: [['@babel/plugin-transform-runtime', { useESModules: false }], '@babel/plugin-external-helpers']
     })
   ],
-  external
+  external: [
+    ...Object.keys(pkg.peerDependencies || {})
+  ]
 },
 {
   input: 'src/index.js',
   output: {
-    file: 'lib/react-awesome-styled-grid.es.js',
+    file: pkg.module,
     format: 'es',
-    name,
+    name: pkg.name,
     globals
   },
   plugins: [
@@ -37,16 +38,18 @@ export default [{
       exclude: 'node_modules/**',
       runtimeHelpers: true,
       plugins: [['@babel/plugin-transform-runtime', { useESModules: true }], '@babel/plugin-external-helpers']
-    }),
+    })
   ],
-  external
+  external: [
+    ...Object.keys(pkg.peerDependencies || {})
+  ]
 },
 {
   input: 'src/index.js',
   output: {
-    file: 'lib/react-awesome-styled-grid.js',
+    file: pkg.browser,
     format: 'umd',
-    name,
+    name: pkg.name,
     globals
   },
   plugins: [
@@ -57,5 +60,7 @@ export default [{
     '@babel/plugin-external-helpers',
     uglify()
   ],
-  external
+  external: [
+    ...Object.keys(pkg.peerDependencies || {})
+  ]
 }]

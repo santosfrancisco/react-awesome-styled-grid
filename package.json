@@ -3,7 +3,8 @@
   "version": "2.2.6",
   "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
-  "module": "lib/react-awesome-styled-grid.umd.js",
+  "module": "lib/react-awesome-styled-grid.es.js",
+  "browser": "lib/react-awesome-styled-grid.js",
   "files": [
     "lib"
   ],
