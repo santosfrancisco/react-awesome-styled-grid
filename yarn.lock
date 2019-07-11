@@ -3825,9 +3825,9 @@ eslint-config-standard-react@7.0.2:
   dependencies:
     eslint-config-standard-jsx "^6.0.1"
 
-eslint-config-standard@12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-12.0.0.tgz#638b4c65db0bd5a41319f96bba1f15ddad2107d9"
+eslint-config-standard@13.0.1:
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-13.0.1.tgz#c9c6ffe0cfb8a51535bc5c7ec9f70eafb8c6b2c0"
 
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
