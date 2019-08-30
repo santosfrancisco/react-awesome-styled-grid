@@ -5,6 +5,7 @@
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.es.js",
   "browser": "lib/react-awesome-styled-grid.js",
+  "types": "types/index.d.ts",
   "files": [
     "lib"
   ],
@@ -47,6 +48,7 @@
     "@babel/plugin-transform-runtime": "7.4.4",
     "@babel/preset-env": "7.4.4",
     "@babel/preset-react": "7.0.0",
+    "@types/react": "^16.9.2",
     "all-contributors-cli": "6.4.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
@@ -74,7 +76,8 @@
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-node-resolve": "4.2.4",
     "rollup-plugin-uglify": "6.0.2",
-    "styled-components": "4.2.0"
+    "styled-components": "4.2.0",
+    "typescript": "^3.5.3"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
