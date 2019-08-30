@@ -7,7 +7,8 @@
   "browser": "lib/react-awesome-styled-grid.js",
   "types": "types/index.d.ts",
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "scripts": {
     "build": "rollup -c",
