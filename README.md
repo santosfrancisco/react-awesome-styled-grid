@@ -4,6 +4,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![codecov](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid)
 [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/47a9c7f7-444d-4df9-bc7b-10cb06265ed7/deploy-status)](https://app.netlify.com/sites/awesome-styled-grid/deploys)
 
 # React Awesome Styled Grid 😎
 
