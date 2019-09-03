@@ -6,6 +6,11 @@
 [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/47a9c7f7-444d-4df9-bc7b-10cb06265ed7/deploy-status)](https://app.netlify.com/sites/awesome-styled-grid/deploys)
 
+| Build History |
+| :--------- |
+| [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid) |
+| [![Build history](https://buildstats.info/travisci/chart/santosfrancisco/react-awesome-styled-grid?branch=master&includeBuildsFromPullRequest=false)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid) |
+
 # React Awesome Styled Grid 😎
 
 A responsive grid system for React using styled-components
