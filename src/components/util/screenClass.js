@@ -11,7 +11,7 @@ export class ScreenClass extends Component {
     super()
     this.state = {screen: 'xs'}
   }
-  componentWillMount () {
+  componentDidMount () {
     this.setScreen()
     if (typeof window !== 'undefined') {
       window.addEventListener('orientationchange', this.setScreen, false)
