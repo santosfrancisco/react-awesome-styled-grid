@@ -1,6 +1,6 @@
 {
-  "name": "react-awesome-styled-grid-lifecycle-fix",
-  "version": "2.3.2",
+  "name": "react-awesome-styled-grid",
+  "version": "2.3.1",
   "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.es.js",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zero0Halo/react-awesome-styled-grid-lifecycle-fix"
+    "url": "git+https://github.com/santosfrancisco/react-awesome-styled-grid.git"
   },
   "keywords": [
     "react",
@@ -33,9 +33,9 @@
   "author": "Francisco Santos",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zero0Halo/react-awesome-styled-grid-lifecycle-fix/issues"
+    "url": "https://github.com/santosfrancisco/react-awesome-styled-grid/issues"
   },
-  "homepage": "https://github.com/zero0Halo/react-awesome-styled-grid-lifecycle-fix",
+  "homepage": "https://awesome-styled-grid.netlify.com/",
   "peerDependencies": {
     "prop-types": "^15.6.0",
     "react": ">=0.14.0 <17.0.0",
