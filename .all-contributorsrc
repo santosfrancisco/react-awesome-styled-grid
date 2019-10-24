@@ -55,6 +55,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "zero0Halo",
+      "name": "Steve Swanson",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2113956?v=4",
+      "profile": "https://github.com/zero0Halo",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "commitConvention": "none"
