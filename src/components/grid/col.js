@@ -1,4 +1,3 @@
-import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import config, { DIMENSIONS } from '../../config'
@@ -8,7 +7,6 @@ const Col = styled.div`
   flex: 1 0 auto;
   max-width: 100%;
   display: flex;
-  flex-direction: column;
 
   ${p => !p.noGutter && css`
     ${DIMENSIONS.map(d =>
@@ -39,12 +37,24 @@ const Col = styled.div`
 
   ${p => p.reverse && css`
     ${Array.isArray(p.reverse)
-    ? DIMENSIONS.map(d =>
-      config(p).breakpoints[d] && config(p).media[d]`
-      flex-direction:${p.reverse.indexOf(d) !== -1 ? `column-reverse` : `column`};`)
+    ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`
+        flex-direction: ${p.reverse.indexOf(d) !== -1 ? 'column-reverse' : 'column'};
+      `)
     : 'flex-direction: column-reverse;'}
   `}
 
+  ${p => p.align && css`
+    ${typeof p.align === 'object'
+    ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.align[d] && `align-items: ${p.align[d]}`}`)
+    : `align-items: ${p.align};`}
+  `}
+  
+  ${p => p.justify && css`
+    ${typeof p.justify === 'object'
+    ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.justify[d] && `justify-content: ${p.justify[d]}`}`)
+    : `justify-content: ${p.justify};`}
+  `}
+  
   ${({ debug }) => debug && css`
     background-color: #5901ad40;
     outline: #fff solid 1px;
@@ -56,6 +66,11 @@ Col.displayName = 'Col'
 const numberOrString = PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.number
+])
+
+const stringOrObject = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.object
 ])
 
 const numberOrObject = PropTypes.oneOfType([
@@ -74,6 +89,8 @@ Col.propTypes = {
   md: numberOrString,
   lg: numberOrString,
   xl: numberOrString,
+  align: stringOrObject,
+  justify: stringOrObject,
   offSet: numberOrObject,
   reverse: boolOrArray,
   noGutter: PropTypes.bool,

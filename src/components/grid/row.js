@@ -7,8 +7,8 @@ const Row = styled.div`
   box-sizing: border-box;
   display: flex;
   flex: 1 0 auto;
-  flex-direction: row;
   flex-wrap: wrap;
+  max-width: 100%;
   
   ${p => css`
     ${DIMENSIONS.map(d =>
@@ -22,8 +22,21 @@ const Row = styled.div`
     ${Array.isArray(p.reverse)
     ? DIMENSIONS.map(d =>
       config(p).breakpoints[d] && config(p).media[d]`
-      flex-direction:${p.reverse.indexOf(d) !== -1 ? `row-reverse` : `row`};`)
+        flex-direction: ${p.reverse.indexOf(d) !== -1 ? `row-reverse` : `row`};
+      `)
     : 'flex-direction: row-reverse;'}
+  `}
+
+  ${p => p.align && css`
+    ${typeof p.align === 'object'
+    ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.align[d] && `align-items: ${p.align[d]}`}`)
+    : `align-items: ${p.align};`}
+  `}
+  
+  ${p => p.justify && css`
+    ${typeof p.justify === 'object'
+    ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.justify[d] && `justify-content: ${p.justify[d]}`}`)
+    : `justify-content: ${p.justify};`}
   `}
 
   ${({ debug }) => debug && css`
@@ -39,8 +52,15 @@ const boolOrArray = PropTypes.oneOfType([
   PropTypes.array
 ])
 
+const stringOrObject = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.object
+])
+
 Row.propTypes = {
   reverse: boolOrArray,
+  align: stringOrObject,
+  justify: stringOrObject,
   children: PropTypes.node,
   debug: PropTypes.bool
 }
