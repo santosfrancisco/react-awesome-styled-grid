@@ -14,11 +14,13 @@ route: /props
 | children  | node    | content                    |
 
 ## Row
-| prop      | type            | description                                          |
-|-----------|-----------------|------------------------------------------------------|
-| reverse   | number or array | reverses the direction of the row                    |
-| debug     | boolean         | enables debug                                        |
-| children  | node            | content                                              |
+| prop      | type             | description                          |
+|-----------|------------------|--------------------------------------|
+| justify   | string or object | align the content horizontally       |
+| align     | string or object | align the content vertically         |
+| reverse   | number or array  | reverses the direction of the row    |
+| debug     | boolean          | enables debug                        |
+| children  | node             | content                              |
 
 ## Col
 
@@ -29,6 +31,8 @@ route: /props
 | md        | number or string | sets the number of columns on screens *md* |
 | lg        | number or string | sets the number of columns on screens *lg* |
 | xl        | number or string | sets the number of columns on screens *xl* |
+| justify   | string or object | align the content horizontally             |
+| align     | string or object | align the content vertically               |
 | offset    | number or object | sets the number of the offset columns      |
 | reverse   | number or array  | reverses the direction of the column       |
 | noGutter  | boolean          | removes the gutter                         |
