@@ -56,8 +56,7 @@
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.5",
     "babel-plugin-transform-class-properties": "6.24.1",
-    "docz": "1.2.0",
-    "docz-theme-default": "1.2.0",
+    "docz": "2.0.0",
     "eslint": "5.16.0",
     "eslint-config-standard": "12.0.0",
     "eslint-config-standard-react": "7.0.2",
@@ -82,6 +81,10 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testPathIgnorePatterns" : [
+      "<rootDir>/.docz",
+      "<rootDir>/src/gatsby-theme-docz/"
+    ]
   }
 }
