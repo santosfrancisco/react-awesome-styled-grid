@@ -8,7 +8,7 @@ import { Container, Row, Col, Visible, Hidden, ScreenClass, ScreenBadge } from '
 # Usage
 
 ```js
-import { Container, Row, Col, Visible, Hidden, ScreenClass, ScreenBadge } from '../'
+import { Container, Row, Col, Visible, Hidden, ScreenClass, ScreenBadge } from 'react-awesome-styled-grid'
 ```
 
 Resizes your window to see the responsive magic happening 😎
@@ -112,6 +112,165 @@ in this case, the ```offset``` prop must receive an object with the screens and 
   <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 ```
+## Alignment
+
+The props `align` and `justify` allow you to centralize `Row` or `Col` content using the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+and [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) values from flexbox api
+
+### Align
+
+The prop `align` receives a string or a object with the screens and their respective values and will align the content vertically.
+
+Accepted values:
+
+***align***: `stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;`
+
+#### Using string
+
+Just pass a valid value from flexbox api to `align` prop
+
+<Container>
+  <Row style={{height: 80}} debug align='center'>
+    <Col debug xs={1}>😎</Col>
+    <Col debug xs={1}>🤩</Col>
+    <Col debug xs={1}>😱</Col>
+    <Col debug xs={1}>😍</Col>
+  </Row>
+  <Row>
+    <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at bottom</Col>
+  </Row>
+</Container>
+
+```js
+  <Container>
+    <Row style={{height: 80}} debug align='center'>
+      <Col debug xs={1}>😎</Col>
+      <Col debug xs={1}>🤩</Col>
+      <Col debug xs={1}>😱</Col>
+      <Col debug xs={1}>😍</Col>
+    </Row>
+    <Row>
+      <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at bottom</Col>
+    </Row>
+  </Container>
+```
+
+### Using object
+
+in this case, the `align` prop must receive an object with the screens and their respective values.
+
+> 💡**Tip!** When passed an object, since this grid is mobile-first, if a value is entered for a screen (i.e XS),
+the other screens (SM, MD, LG and XL) will inherit these values ​​if not set.
+With that in mind, if you enter `align={{xs: 'center', lg: 'flex-end'}}`, we'll have ***XS***
+to ***MD*** with align set to center and ***LG*** to ***XL*** set to flex-end.
+
+<Container>
+  <Row style={{height: 80}} debug align={{xs: 'center', lg: 'flex-end'}}>
+    <Col debug xs={1}>😎</Col>
+    <Col debug xs={1}>🤩</Col>
+    <Col debug xs={1}>😱</Col>
+    <Col debug xs={1}>😍</Col>
+  </Row>
+  <Row>
+    <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at bottom, LG to XL is centered</Col>
+  </Row>
+</Container>
+
+```js
+  <Container>
+    <Row style={{height: 80}} debug align={{xs: 'center', lg: 'flex-end'}}>
+      <Col debug xs={1}>😎</Col>
+      <Col debug xs={1}>🤩</Col>
+      <Col debug xs={1}>😱</Col>
+      <Col debug xs={1}>😍</Col>
+    </Row>
+    <Row>
+      <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at bottom, LG to XL is centered</Col>
+    </Row>
+  </Container>
+```
+
+### Justify
+
+The prop `justify` receives a string or a object with the screens and their respective values and will align the content horizontally.
+
+Accepted values:
+
+***justify***: `flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;`
+
+#### Using string
+
+Just pass a valid value from flexbox api to `justify` prop
+
+<Container>
+  <Row debug justify='center'>
+    <Col debug justify='center' xs={1}>😎</Col>
+    <Col debug justify='center' xs={1}>🤩</Col>
+  </Row>
+  <Row debug justify='space-between'>
+    <Col debug justify='center' xs={1}>😱</Col>
+    <Col debug justify='center' xs={1}>😍</Col>
+  </Row>
+  <Row>
+    <Col style={{height: 80}} debug xs={4} justify='center'>Horizontally centered</Col>
+  </Row>
+</Container>
+
+```js
+  <Container>
+    <Row debug justify='center'>
+      <Col debug justify='center' xs={1}>😎</Col>
+      <Col debug justify='center' xs={1}>🤩</Col>
+    </Row>
+    <Row debug justify='space-between'>
+      <Col debug justify='center' xs={1}>😱</Col>
+      <Col debug justify='center' xs={1}>😍</Col>
+    </Row>
+    <Row>
+      <Col style={{height: 80}} debug xs={4} justify='center'>Horizontally centered</Col>
+    </Row>
+  </Container>
+```
+
+### Using object
+
+in this case, the `justify` prop must receive an object with the screens and their respective values.
+
+> 💡**Tip!** When passed an object, since this grid is mobile-first, if a value is entered for a screen (i.e XS),
+the other screens (SM, MD, LG and XL) will inherit these values ​​if not set.
+With that in mind, if you enter `justify={{xs: 'center', lg: 'space-between'}}`, we'll have ***XS***
+to ***MD*** with justify set to center and ***LG*** to ***XL*** set to space-between.
+
+<Container>
+  <Row debug justify={{xs: 'center', lg: 'space-between'}}>
+    <Col debug justify='center' xs={1}>😎</Col>
+    <Col debug justify='center' xs={1}>🤩</Col>
+  </Row>
+  <Row debug justify={{xs: 'space-between', lg: 'center'}}>
+    <Col debug justify='center' xs={1}>😱</Col>
+    <Col debug justify='center' xs={1}>😍</Col>
+  </Row>
+  <Row>
+    <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at end of row </Col>
+  </Row>
+</Container>
+
+```js
+  <Container>
+    <Row debug justify={{xs: 'center', lg: 'space-between'}}>
+      <Col debug justify='center' xs={1}>😎</Col>
+      <Col debug justify='center' xs={1}>🤩</Col>
+    </Row>
+    <Row debug justify={{xs: 'space-between', lg: 'center'}}>
+      <Col debug justify='center' xs={1}>😱</Col>
+      <Col debug justify='center' xs={1}>😍</Col>
+    </Row>
+    <Row>
+      <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at end of row </Col>
+    </Row>
+  </Container>
+```
+
 ## Row reverse
 
 ```reverse``` receives an array with the screens that will have the flow reversed. if it is passed as boolean, the stream will be inverted at all breakpoints

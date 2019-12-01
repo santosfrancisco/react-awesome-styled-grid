@@ -1,18 +1,21 @@
 import * as React from 'react';
 
 type IGridBreakpoints = 'xs' | 'sx' | 'md' | 'lg' | 'xl';
-type IGridXSSizes = 1 | 2 | 3 | 4 | '1' | '2' | '3' | '4';
-type IGridSMSizes = IGridXSSizes | 5 | 6 | 7 | 8 | '5' | '6' | '7' | '8';
-type IGridMDSizes = IGridSMSizes;
-type IGridLGSizes = IGridMDSizes | 9 | 10 | 11 | 12 | '9' | '10' | '11' | '12';
-type IGridXLSizes = IGridLGSizes;
+
+interface IAlignOrJustifyOptions {
+  xs?: string;
+  sm?: string;
+  md?: string;
+  lg?: string;
+  xl?: string;
+}
 
 interface IOffsetOptions {
-  xs?: IGridXSSizes;
-  sm?: IGridSMSizes;
-  md?: IGridMDSizes;
-  lg?: IGridLGSizes;
-  xl?: IGridXLSizes;
+  xs?: number;
+  sm?: number;
+  md?: number;
+  lg?: number;
+  xl?: number;
 }
 
 interface IGridContainerProps {
@@ -22,24 +25,48 @@ interface IGridContainerProps {
 }
 
 interface IGridRowProps {
-  reverse?: number | IGridBreakpoints[];
+  reverse?: boolean | IGridBreakpoints[];
+  align?: string | object;
+  justify?: string | object;
   debug?: boolean;
   children: React.ReactNode;
 }
 
 interface IGridColProps {
-  xs?: IGridXSSizes;
-  sm?: IGridSMSizes;
-  md?: IGridMDSizes;
-  lg?: IGridLGSizes;
-  xl?: IGridXLSizes;
+  xs?: number | string;
+  sm?: number | string;
+  md?: number | string;
+  lg?: number | string;
+  xl?: number | string;
   offset?: number | IOffsetOptions;
-  reverse?: number | IGridBreakpoints[];
+  reverse?: boolean | IGridBreakpoints[];
+  align?: string | IAlignOrJustifyOptions;
+  justify?: string | IAlignOrJustifyOptions;
   noGutter?: boolean;
   debug?: boolean;
+  children: React.ReactNode;
+}
+
+interface IVisibleProps {
+  xs?: boolean;
+  sm?: boolean;
+  md?: boolean;
+  lg?: boolean;
+  xl?: boolean;
+  children: React.ReactNode;
+}
+
+interface IHiddenProps {
+  xs?: boolean;
+  sm?: boolean;
+  md?: boolean;
+  lg?: boolean;
+  xl?: boolean;
   children: React.ReactNode;
 }
 
 export const Container: React.FC<IGridContainerProps>;
 export const Row: React.FC<IGridRowProps>;
 export const Col: React.FC<IGridColProps>;
+export const Visible: React.CElement<IVisibleProps>;
+export const Hidden: React.CElement<IHiddenProps>;

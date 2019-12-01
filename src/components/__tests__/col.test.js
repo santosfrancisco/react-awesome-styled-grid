@@ -22,9 +22,7 @@ describe('<Col />', () => {
 
     const { gutterWidth, breakpoints } = BASE_CONF
 
-
     DIMENSIONS.forEach(d => {
-
       const media = {
         media: `only screen and (min-width: ${breakpoints[d]}rem)`
       }
@@ -37,10 +35,10 @@ describe('<Col />', () => {
 
   it('should have the specified size', () => {
     const props = {
-      xs: 1, 
-      sm: 2, 
-      md: 3, 
-      lg: 4, 
+      xs: 1,
+      sm: 2,
+      md: 3,
+      lg: 4,
       xl: 5
     }
 
@@ -91,16 +89,75 @@ describe('<Col />', () => {
       'flex-direction', `column-reverse`)
   })
 
-  it('should have a reverse direction for each media', () => {
-    const tree = renderer.create(<Col reverse={['md', 'lg']} />).toJSON()
+  it('should have the css rule justify-content center', () => {
+    const props = {
+      justify: 'center'
+    }
+    const tree = renderer.create(<Col {...props} />).toJSON()
 
-    expect(tree).toHaveStyleRule(
-      'flex-direction', `column`)
+    expect(tree).toHaveStyleRule('justify-content', 'center')
+  })
+
+  it('should have the css rule justify-content center only in MD screen', () => {
+    const props = {
+      justify: {
+        md: 'center'
+      }
+    }
+
+    const tree = renderer.create(<Col {...props} />).toJSON()
+
+    const { breakpoints } = BASE_CONF
+
+    DIMENSIONS.forEach(d => {
+      expect(tree).toHaveStyleRule(
+        'justify-content', props.justify[d], {
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
+        }
+      )
+    })
+  })
+
+  it('should have the css rule align-items center', () => {
+    const props = {
+      align: 'center'
+    }
+    const tree = renderer.create(<Col {...props} />).toJSON()
+
+    expect(tree).toHaveStyleRule('align-items', 'center')
+  })
+
+  it('should have the css rule align-items center only in MD screen', () => {
+    const props = {
+      align: {
+        md: 'center'
+      }
+    }
+
+    const tree = renderer.create(<Col {...props} />).toJSON()
+
+    const { breakpoints } = BASE_CONF
+
+    DIMENSIONS.forEach(d => {
+      expect(tree).toHaveStyleRule(
+        'align-items', props.align[d], {
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
+        }
+      )
+    })
+  })
+
+  it('should have a reverse direction for each media', () => {
+    const tree = renderer.create(<Col reverse={['md']} />).toJSON()
+    const { breakpoints } = BASE_CONF
+    expect(tree).toHaveStyleRule('flex-direction', 'column-reverse', {
+      media: `only screen and (min-width: ${breakpoints['md']}rem)`
+    })
   })
 
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Col debug />).toJSON()
-    expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
+    expect(tree).toHaveStyleRule('background-color', '#5901ad40')
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
 
