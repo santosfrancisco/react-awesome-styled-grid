@@ -8,7 +8,6 @@ const Row = styled.div`
   display: flex;
   flex: 1 0 auto;
   flex-wrap: wrap;
-  max-width: 100%;
   
   ${p => css`
     ${DIMENSIONS.map(d =>
