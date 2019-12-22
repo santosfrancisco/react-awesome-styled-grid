@@ -82,7 +82,7 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "testPathIgnorePatterns" : [
+    "testPathIgnorePatterns": [
       "<rootDir>/.docz",
       "<rootDir>/src/gatsby-theme-docz/"
     ]
