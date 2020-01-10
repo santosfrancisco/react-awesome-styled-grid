@@ -20,7 +20,7 @@ const Container = styled.div`
       padding-right: ${config(p).paddingWidth[ d ]}rem;
     `)}
   `}
-  
+
 
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>

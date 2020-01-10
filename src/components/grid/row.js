@@ -31,7 +31,7 @@ const Row = styled.div`
     ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.align[d] && `align-items: ${p.align[d]}`}`)
     : `align-items: ${p.align};`}
   `}
-  
+
   ${p => p.justify && css`
     ${typeof p.justify === 'object'
     ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`${p.justify[d] && `justify-content: ${p.justify[d]}`}`)
