@@ -1,14 +1,14 @@
-
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import config, { DIMENSIONS } from '../../config'
+import { createElementForStyle } from '../../helpers/createElementForStyle'
 
-const Row = styled.div`
+const Row = styled(createElementForStyle)`
   box-sizing: border-box;
   display: flex;
   flex: 1 0 auto;
   flex-wrap: wrap;
-  
+
   ${p => css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
@@ -56,12 +56,17 @@ const stringOrObject = PropTypes.oneOfType([
   PropTypes.object
 ])
 
+Row.defaultProps = {
+  component: 'div'
+}
+
 Row.propTypes = {
   reverse: boolOrArray,
   align: stringOrObject,
   justify: stringOrObject,
   children: PropTypes.node,
-  debug: PropTypes.bool
+  debug: PropTypes.bool,
+  component: PropTypes.elementType
 }
 
 export default Row

@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import config, { DIMENSIONS } from '../../config'
+import { createElementForStyle } from '../../helpers/createElementForStyle'
 
-const Col = styled.div`
+const Col = styled(createElementForStyle)`
   box-sizing: border-box;
   flex: 1 0 auto;
   max-width: 100%;
@@ -83,6 +84,10 @@ const boolOrArray = PropTypes.oneOfType([
   PropTypes.array
 ])
 
+Col.defaultProps = {
+  component: 'div'
+}
+
 Col.propTypes = {
   xs: numberOrString,
   sm: numberOrString,
@@ -95,7 +100,8 @@ Col.propTypes = {
   reverse: boolOrArray,
   noGutter: PropTypes.bool,
   children: PropTypes.node,
-  debug: PropTypes.bool
+  debug: PropTypes.bool,
+  component: PropTypes.elementType
 }
 
 export default Col

@@ -2,12 +2,13 @@ import PropTypes from 'prop-types'
 import styled, {
   css
 } from 'styled-components'
+import { createElementForStyle } from '../../helpers/createElementForStyle'
 
 import config, {
   DIMENSIONS
 } from '../../config'
 
-const Container = styled.div`
+const Container = styled(createElementForStyle)`
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
@@ -37,10 +38,15 @@ const Container = styled.div`
 
 Container.displayName = 'Container'
 
+Container.defaultProps = {
+  component: 'div'
+}
+
 Container.propTypes = {
   fluid: PropTypes.bool,
   children: PropTypes.node,
-  debug: PropTypes.bool
+  debug: PropTypes.bool,
+  component: PropTypes.elementType
 }
 
 export default Container
