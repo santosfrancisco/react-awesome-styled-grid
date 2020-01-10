@@ -6,8 +6,20 @@ import 'jest-styled-components'
 
 describe('<Row />', () => {
   it('should render default style correctly', () => {
-    const tree = renderer.create(<Row />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const tree = renderer.create(<Row />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('div')
+
+    expect(element.type).toBe('div')
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
+
+  it('should render a custom element', () => {
+    const tree = renderer.create(<Row component='section' />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('section')
+
+    expect(element.type).toBe('section')
   })
 
   it('should have a reverse direction for each media', () => {

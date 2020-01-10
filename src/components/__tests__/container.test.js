@@ -6,8 +6,20 @@ import 'jest-styled-components'
 
 describe('<Container />', () => {
   it('should render default style correctly', () => {
-    const tree = renderer.create(<Container />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const tree = renderer.create(<Container />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('div')
+
+    expect(element.type).toBe('div')
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
+
+  it('should render a custom element', () => {
+    const tree = renderer.create(<Container component='main' />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('main')
+
+    expect(element.type).toBe('main')
   })
 
   it('should have a max-width when it is a fluid container', () => {
@@ -35,7 +47,7 @@ describe('<Container />', () => {
 
   it('should have different style when it`s debug props is true', () => {
     const tree = renderer.create(<Container debug />).toJSON()
-    expect(tree).toHaveStyleRule('background-color', '#5901ad40')  
+    expect(tree).toHaveStyleRule('background-color', '#5901ad40')
     expect(tree).toHaveStyleRule('outline', '#fff solid 1px')
   })
 

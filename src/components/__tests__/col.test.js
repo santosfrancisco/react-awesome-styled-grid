@@ -6,8 +6,20 @@ import 'jest-styled-components'
 
 describe('<Col />', () => {
   it('should render default style correctly', () => {
-    const tree = renderer.create(<Col />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const tree = renderer.create(<Col />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('div')
+
+    expect(element.type).toBe('div')
+    expect(tree.toJSON()).toMatchSnapshot()
+  })
+
+  it('should render a custom element', () => {
+    const tree = renderer.create(<Col component='section' />)
+    const testInstance = tree.root
+    const element = testInstance.findByType('section')
+
+    expect(element.type).toBe('section')
   })
 
   it('should have no gutter', () => {
