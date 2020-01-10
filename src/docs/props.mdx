@@ -7,37 +7,40 @@ route: /props
 
 ## Container
 
-| prop      | type    | description                |
-|-----------|---------|--------------------------- |
-| fluid     | boolean | makes container full-width |
-| debug     | boolean | enables debug              |
-| children  | node    | content                    |
+| prop      | type         | description                                 |
+|-----------|--------------|-------------------------------------------- |
+| fluid     | boolean      | makes container full-width                  |
+| debug     | boolean      | enables debug                               |
+| children  | node         | content                                     |
+| component | element type | create a custom element or default is `div` |
 
 ## Row
-| prop      | type             | description                          |
-|-----------|------------------|--------------------------------------|
-| justify   | string or object | align the content horizontally       |
-| align     | string or object | align the content vertically         |
-| reverse   | number or array  | reverses the direction of the row    |
-| debug     | boolean          | enables debug                        |
-| children  | node             | content                              |
+| prop      | type             | description                             |
+|-----------|------------------|---------------------------------------- |
+| justify   | string or object | align the content horizontally          |
+| align     | string or object | align the content vertically            |
+| reverse   | number or array  | reverses the direction of the row       |
+| debug     | boolean          | enables debug                           |
+| children  | node             | content                                 |
+| component | element type | create a custom element or default is `div` |
 
 ## Col
 
-| prop      | type             | description                                |
-|-----------|------------------|--------------------------------------------|
-| xs        | number or string | sets the number of columns on screens *xs* |
-| sm        | number or string | sets the number of columns on screens *sm* |
-| md        | number or string | sets the number of columns on screens *md* |
-| lg        | number or string | sets the number of columns on screens *lg* |
-| xl        | number or string | sets the number of columns on screens *xl* |
-| justify   | string or object | align the content horizontally             |
-| align     | string or object | align the content vertically               |
-| offset    | number or object | sets the number of the offset columns      |
-| reverse   | number or array  | reverses the direction of the column       |
-| noGutter  | boolean          | removes the gutter                         |
-| debug     | boolean          | enables debug                              |
-| children  | node             | content                                    |
+| prop      | type             | description                                 |
+|-----------|------------------|-------------------------------------------- |
+| xs        | number or string | sets the number of columns on screens *xs*  |
+| sm        | number or string | sets the number of columns on screens *sm*  |
+| md        | number or string | sets the number of columns on screens *md*  |
+| lg        | number or string | sets the number of columns on screens *lg*  |
+| xl        | number or string | sets the number of columns on screens *xl*  |
+| justify   | string or object | align the content horizontally              |
+| align     | string or object | align the content vertically                |
+| offset    | number or object | sets the number of the offset columns       |
+| reverse   | number or array  | reverses the direction of the column        |
+| noGutter  | boolean          | removes the gutter                          |
+| debug     | boolean          | enables debug                               |
+| children  | node             | content                                     |
+| component | element type     | create a custom element or default is `div` |
 
 ## Visible
 | prop     | type    | description                                          |
@@ -57,7 +60,7 @@ route: /props
 | md       | boolean | indicates that past content will only be hidden on the screen *md* |
 | lg       | boolean | indicates that past content will only be hidden on the screen *lg* |
 | xl       | boolean | indicates that past content will only be hidden on the screen *xl* |
-| children | node    | content    
+| children | node    | content
 
 ## ScreenClass
 | prop     | type    | description                                          |
