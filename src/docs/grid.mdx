@@ -117,9 +117,12 @@ in this case, the ```offset``` prop must receive an object with the screens and 
 The props `align` and `justify` allow you to centralize `Row` or `Col` content using the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
 and [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) values from flexbox api
 
+> The `align` and `justify` props work according to the axis and direction of `flex-items`.
+This means that in the `Col`, the horizontal alignment is changed by prop `align` and the vertical alignment is changed by prop `justify`.
+
 ### Align
 
-The prop `align` receives a string or a object with the screens and their respective values and will align the content vertically.
+The prop `align` receives a string or a object with the screens and their respective values and will align the content ***vertically*** in the `Row` and will align ***horizontally*** in the `Col`.
 
 Accepted values:
 
@@ -137,7 +140,7 @@ Just pass a valid value from flexbox api to `align` prop
     <Col debug xs={1}>😍</Col>
   </Row>
   <Row>
-    <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at bottom</Col>
+    <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at end of row</Col>
   </Row>
 </Container>
 
@@ -150,7 +153,7 @@ Just pass a valid value from flexbox api to `align` prop
       <Col debug xs={1}>😍</Col>
     </Row>
     <Row>
-      <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at bottom</Col>
+      <Col style={{height: 80}} debug xs={4} align='flex-end'>Aligned at end of row</Col>
     </Row>
   </Container>
 ```
@@ -172,7 +175,7 @@ to ***MD*** with align set to center and ***LG*** to ***XL*** set to flex-end.
     <Col debug xs={1}>😍</Col>
   </Row>
   <Row>
-    <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at bottom, LG to XL is centered</Col>
+    <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at end of row, LG to XL is centered</Col>
   </Row>
 </Container>
 
@@ -185,14 +188,14 @@ to ***MD*** with align set to center and ***LG*** to ***XL*** set to flex-end.
       <Col debug xs={1}>😍</Col>
     </Row>
     <Row>
-      <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at bottom, LG to XL is centered</Col>
+      <Col style={{height: 80}} debug xs={4} align={{xs: 'flex-end', lg: 'center'}}>XS to MD alignd at end of row, LG to XL is centered</Col>
     </Row>
   </Container>
 ```
 
 ### Justify
 
-The prop `justify` receives a string or a object with the screens and their respective values and will align the content horizontally.
+The prop `justify` receives a string or a object with the screens and their respective values and will align the content ***horizontally*** in the `Row` and will align ***vertically*** in the `Col`.
 
 Accepted values:
 
@@ -212,7 +215,7 @@ Just pass a valid value from flexbox api to `justify` prop
     <Col debug justify='center' xs={1}>😍</Col>
   </Row>
   <Row>
-    <Col style={{height: 80}} debug xs={4} justify='center'>Horizontally centered</Col>
+    <Col style={{height: 80}} debug xs={4} justify='center'>Vertically centered</Col>
   </Row>
 </Container>
 
@@ -227,7 +230,7 @@ Just pass a valid value from flexbox api to `justify` prop
       <Col debug justify='center' xs={1}>😍</Col>
     </Row>
     <Row>
-      <Col style={{height: 80}} debug xs={4} justify='center'>Horizontally centered</Col>
+      <Col style={{height: 80}} debug xs={4} justify='center'>Vertically centered</Col>
     </Row>
   </Container>
 ```
@@ -251,7 +254,7 @@ to ***MD*** with justify set to center and ***LG*** to ***XL*** set to space-bet
     <Col debug justify='center' xs={1}>😍</Col>
   </Row>
   <Row>
-    <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at end of row </Col>
+    <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at bottom </Col>
   </Row>
 </Container>
 
@@ -266,7 +269,7 @@ to ***MD*** with justify set to center and ***LG*** to ***XL*** set to space-bet
       <Col debug justify='center' xs={1}>😍</Col>
     </Row>
     <Row>
-      <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at end of row </Col>
+      <Col style={{height: 80}} debug xs={4} justify={{xs: 'center', lg: 'flex-end'}}>XS to MD is centered and LG to XL at bottom </Col>
     </Row>
   </Container>
 ```
