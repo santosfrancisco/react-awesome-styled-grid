@@ -6,7 +6,7 @@ import config, { DIMENSIONS } from '../../config'
 const Row = styled.div`
   box-sizing: border-box;
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   flex-wrap: wrap;
   
   ${p => css`
