@@ -7,6 +7,7 @@ const Col = styled.div`
   flex: 1 0 auto;
   max-width: 100%;
   display: flex;
+  flex-direction: column;
 
   ${p => !p.noGutter && css`
     ${DIMENSIONS.map(d =>
