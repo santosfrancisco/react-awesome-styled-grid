@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type IGridBreakpoints = 'xs' | 'sx' | 'md' | 'lg' | 'xl';
+type IGridBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 interface IAlignOrJustifyOptions {
   xs?: string;
