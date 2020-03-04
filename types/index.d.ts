@@ -18,21 +18,23 @@ interface IOffsetOptions {
   xl?: number;
 }
 
-interface IGridContainerProps {
-  debug?: boolean;
-  fluid?:boolean;
+interface IGrid {
   children: React.ReactNode;
+  style?: React.CSSProperties;
+  debug?: boolean;
 }
 
-interface IGridRowProps {
+interface IGridContainerProps extends IGrid {
+  fluid?:boolean;
+}
+
+interface IGridRowProps extends IGrid {
   reverse?: boolean | IGridBreakpoints[];
   align?: string | object;
   justify?: string | object;
-  debug?: boolean;
-  children: React.ReactNode;
 }
 
-interface IGridColProps {
+interface IGridColProps extends IGrid {
   xs?: number | string;
   sm?: number | string;
   md?: number | string;
@@ -43,8 +45,6 @@ interface IGridColProps {
   align?: string | IAlignOrJustifyOptions;
   justify?: string | IAlignOrJustifyOptions;
   noGutter?: boolean;
-  debug?: boolean;
-  children: React.ReactNode;
 }
 
 interface IVisibleProps {
