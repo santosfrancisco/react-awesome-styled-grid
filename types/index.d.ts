@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ThemeProps } from 'styled-components';
 
 type IGridBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -65,8 +66,26 @@ interface IHiddenProps {
   children: React.ReactNode;
 }
 
+interface IConfig {
+  mediaQuery: string;
+  columns: Record<IGridBreakpoints, number>;
+  gutterWidth: Record<IGridBreakpoints, number>;
+  paddingWidth: Record<IGridBreakpoints, number>;
+  container: Record<IGridBreakpoints, number>;
+  breakPoints: Record<IGridBreakpoints, number>;
+}
+
+type IConfigProps = ThemeProps<{awesomegrid: Partial<IConfig>}>;
+
+interface IUtil {
+  getScreenClass: (props?: IConfigProps) => IGridBreakpoints;
+  getViewPort: () => number | null;
+}
+
 export const Container: React.FC<IGridContainerProps>;
 export const Row: React.FC<IGridRowProps>;
 export const Col: React.FC<IGridColProps>;
 export const Visible: React.CElement<IVisibleProps>;
 export const Hidden: React.CElement<IHiddenProps>;
+export const config: (props: IConfigProps) => IConfig;
+export const util: IUtil;
