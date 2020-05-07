@@ -1,45 +1,35 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import useEventListener from '@use-it/event-listener'
 import PropTypes from 'prop-types'
-import { getScreenClass } from '../util/screens'
 import { withTheme } from 'styled-components'
+import { getScreenClass } from '../util/screens'
 
-export class Hidden extends Component {
-  static defaultProps = {
-    xs: false,
-    sm: false,
-    md: false,
-    lg: false,
-    xl: false,
-    theme: {}
-  }
-  constructor () {
-    super()
-    this.state = {screen: 'xs'}
-  }
-  componentDidMount () {
-    this.setScreen()
-    if (typeof window !== 'undefined') {
-      window.addEventListener('orientationchange', this.setScreen, false)
-      window.addEventListener('resize', this.setScreen, false)
+export const Hidden = ({
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  theme,
+  children
+}) => {
+  const [currentScreen, setCurrentScreen] = useState('xs')
+
+  const setScreen = () => {
+    const newScreen = getScreenClass({ theme })
+    if (currentScreen !== newScreen) {
+      setCurrentScreen(newScreen)
     }
   }
-  setScreen = () => {
-    let lastScreenClass = this.state.screen
-    const actualScreenClass = getScreenClass(this.props)
-    if (!lastScreenClass || (lastScreenClass !== actualScreenClass)) {
-      lastScreenClass = actualScreenClass
-      this.setState({screen: actualScreenClass})
-    }
-  }
+  useEffect(() => {
+    setScreen()
+  }, [])
 
-  componentWillUnmount () {
-    window.removeEventListener('orientationchange', this.setScreen)
-    window.removeEventListener('resize', this.setScreen)
-}
+  useEventListener('orientationchange', setScreen)
+  useEventListener('resize', setScreen)
 
-  isHidden () {
-    const { xs, sm, md, lg, xl } = this.props
-    switch (this.state.screen) {
+  const isHidden = () => {
+    switch (currentScreen) {
       case 'xs':
         return xs
       case 'sm':
@@ -52,28 +42,38 @@ export class Hidden extends Component {
         return xl
     }
   }
-
-  render () {
-    const { children } = this.props
-
-    if (this.isHidden()) return false
-    return (
-      <React.Fragment>
-        {children}
-      </React.Fragment>
-    )
-  }
+  if (isHidden()) return false
+  return (
+    <React.Fragment>
+      {children}
+    </React.Fragment>
+  )
 }
 
 Hidden.displayName = 'Hidden'
 
-Hidden.propTypes = {
+export const defaultProps = {
+  xs: false,
+  sm: false,
+  md: false,
+  lg: false,
+  xl: false,
+  children: null,
+  theme: {}
+}
+
+export const propTypes = {
   xs: PropTypes.bool,
   sm: PropTypes.bool,
   md: PropTypes.bool,
   lg: PropTypes.bool,
   xl: PropTypes.bool,
+  theme: PropTypes.object,
   children: PropTypes.node
 }
+
+Hidden.defaultProps = defaultProps
+
+Hidden.propTypes = propTypes
 
 export default withTheme(Hidden)
