@@ -85,7 +85,7 @@ interface IUtil {
 export const Container: React.FC<IGridContainerProps>;
 export const Row: React.FC<IGridRowProps>;
 export const Col: React.FC<IGridColProps>;
-export const Visible: React.CElement<IVisibleProps>;
-export const Hidden: React.CElement<IHiddenProps>;
+export const Visible: React.FC<IVisibleProps>;
+export const Hidden: React.FC<IHiddenProps>;
 export const config: (props: IConfigProps) => IConfig;
 export const util: IUtil;
