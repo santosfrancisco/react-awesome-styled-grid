@@ -1,5 +1,10 @@
 import * as React from 'react';
-import { ThemeProps } from 'styled-components';
+import * as CSS from "csstype";
+import {
+  ThemeProps,
+  ThemedCssFunction,
+  DefaultTheme
+} from 'styled-components';
 
 type IGridBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
@@ -67,6 +72,7 @@ interface IHiddenProps {
 }
 
 interface IConfig {
+  media: Record<IGridBreakpoints, ThemedCssFunction<DefaultTheme>>;
   mediaQuery: string;
   columns: Record<IGridBreakpoints, number>;
   gutterWidth: Record<IGridBreakpoints, number>;
