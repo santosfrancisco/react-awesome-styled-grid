@@ -19,11 +19,9 @@ const Col = styled.div`
 
   ${p => css`
     ${DIMENSIONS.map(d =>
-    config(p).breakpoints[d] && config(p).media[d]`
-      ${p[d] && `
-        flex: 1 1 ${(p[d] / config(p).columns[d]) * 100}%;
-        max-width: ${(p[d] / config(p).columns[d]) * 100}%;
-      `}
+    p[d] && config(p).breakpoints[d] && config(p).media[d]`
+      flex: 1 1 ${(p[d] / config(p).columns[d]) * 100}%;
+      max-width: ${(p[d] / config(p).columns[d]) * 100}%;
     `)}
   `}
 
