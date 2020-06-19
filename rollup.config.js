@@ -1,5 +1,5 @@
-import resolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
 import { uglify } from 'rollup-plugin-uglify'
 import pkg from './package.json'
 
@@ -15,10 +15,7 @@ export default [{
   },
   plugins: [
     resolve(),
-    babel({
-      exclude: 'node_modules/**',
-      plugins: [['@babel/plugin-transform-runtime', { useESModules: false }], '@babel/plugin-external-helpers']
-    })
+    babel({ babelHelpers: 'bundled' })
   ],
   external: [
     ...Object.keys(pkg.peerDependencies || {})
@@ -34,11 +31,7 @@ export default [{
   },
   plugins: [
     resolve(),
-    babel({
-      exclude: 'node_modules/**',
-      runtimeHelpers: true,
-      plugins: [['@babel/plugin-transform-runtime', { useESModules: true }], '@babel/plugin-external-helpers']
-    })
+    babel({ babelHelpers: 'bundled' })
   ],
   external: [
     ...Object.keys(pkg.peerDependencies || {})
@@ -54,10 +47,7 @@ export default [{
   },
   plugins: [
     resolve(),
-    babel({
-      exclude: 'node_modules/**'
-    }),
-    '@babel/plugin-external-helpers',
+    babel({ babelHelpers: 'bundled' }),
     uglify()
   ],
   external: [
