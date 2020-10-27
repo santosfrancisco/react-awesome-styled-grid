@@ -13,30 +13,36 @@ describe('<Row />', () => {
   it('should have a reverse direction for each media', () => {
     const tree = renderer.create(<Row reverse />).toJSON()
 
-    expect(tree).toHaveStyleRule(
-      'flex-direction', `row-reverse`)
+    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`)
+    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`)
   })
 
   it('should have a reverse direction for each media', () => {
     const tree = renderer.create(<Row reverse />).toJSON()
 
-    expect(tree).toHaveStyleRule(
-      'flex-direction', `row-reverse`)
+    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`)
+    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`)
   })
 
   it('should have a reverse direction for specific screen', () => {
     const tree = renderer.create(<Row reverse={['md', 'lg']} />).toJSON()
     const { breakpoints } = BASE_CONF
 
-    expect(tree).toHaveStyleRule(
-      'flex-direction', `row-reverse`, {
-        media: `only screen and (min-width: ${breakpoints['md']}rem)`
-      })
+    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`, {
+      media: `only screen and (min-width: ${breakpoints['md']}rem)`,
+    })
 
-    expect(tree).toHaveStyleRule(
-      'flex-direction', `row-reverse`, {
-        media: `only screen and (min-width: ${breakpoints['lg']}rem)`
-      })
+    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`, {
+      media: `only screen and (min-width: ${breakpoints['md']}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`, {
+      media: `only screen and (min-width: ${breakpoints['lg']}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`, {
+      media: `only screen and (min-width: ${breakpoints['lg']}rem)`,
+    })
   })
 
   it('should have different style when it`s debug props is true', () => {
@@ -46,7 +52,7 @@ describe('<Row />', () => {
   })
 
   it('should pass every props', () => {
-    const tree = renderer.create(<Row id='uniqueID' lol='anotherprop' />)
+    const tree = renderer.create(<Row id="uniqueID" lol="anotherprop" />)
     const testInstance = tree.root
     expect(testInstance.findByType(Row).props.id).toBe('uniqueID')
     expect(testInstance.findByType(Row).props.lol).toBe('anotherprop')
@@ -54,7 +60,7 @@ describe('<Row />', () => {
 
   it('should have the css rule justify-content center', () => {
     const props = {
-      justify: 'center'
+      justify: 'center',
     }
     const tree = renderer.create(<Row {...props} />).toJSON()
 
@@ -64,8 +70,8 @@ describe('<Row />', () => {
   it('should have the css rule justify-content center only in MD screen', () => {
     const props = {
       justify: {
-        md: 'center'
-      }
+        md: 'center',
+      },
     }
 
     const tree = renderer.create(<Row {...props} />).toJSON()
@@ -73,17 +79,15 @@ describe('<Row />', () => {
     const { breakpoints } = BASE_CONF
 
     DIMENSIONS.forEach(d => {
-      expect(tree).toHaveStyleRule(
-        'justify-content', props.justify[d], {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      )
+      expect(tree).toHaveStyleRule('justify-content', props.justify[d], {
+        media: `only screen and (min-width: ${breakpoints[d]}rem)`,
+      })
     })
   })
 
   it('should have the css rule align-items center', () => {
     const props = {
-      align: 'center'
+      align: 'center',
     }
     const tree = renderer.create(<Row {...props} />).toJSON()
 
@@ -93,8 +97,8 @@ describe('<Row />', () => {
   it('should have the css rule align-items center only in MD screen', () => {
     const props = {
       align: {
-        md: 'center'
-      }
+        md: 'center',
+      },
     }
 
     const tree = renderer.create(<Row {...props} />).toJSON()
@@ -102,11 +106,9 @@ describe('<Row />', () => {
     const { breakpoints } = BASE_CONF
 
     DIMENSIONS.forEach(d => {
-      expect(tree).toHaveStyleRule(
-        'align-items', props.align[d], {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      )
+      expect(tree).toHaveStyleRule('align-items', props.align[d], {
+        media: `only screen and (min-width: ${breakpoints[d]}rem)`,
+      })
     })
   })
 })

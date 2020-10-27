@@ -22,8 +22,12 @@ const Row = styled.div`
     ? DIMENSIONS.map(d =>
       config(p).breakpoints[d] && config(p).media[d]`
         flex-direction: ${p.reverse.indexOf(d) !== -1 ? `row-reverse` : `row`};
+        flex-wrap: wrap-reverse;
       `)
-    : 'flex-direction: row-reverse;'}
+    : `
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
+    `}
   `}
 
   ${p => p.align && css`
