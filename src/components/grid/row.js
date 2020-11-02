@@ -30,7 +30,7 @@ const Row = styled.div`
          ${
            p.reverse.indexOf(d) !== -1
              ? `
-             flex-direction: row-reverse
+             flex-direction: row-reverse;
              flex-wrap: wrap-reverse;
              `
              : `
