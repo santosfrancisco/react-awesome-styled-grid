@@ -28,20 +28,44 @@ describe('<Row />', () => {
     const tree = renderer.create(<Row reverse={['md', 'lg']} />).toJSON()
     const { breakpoints } = BASE_CONF
 
-    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`, {
-      media: `only screen and (min-width: ${breakpoints['md']}rem)`,
+    expect(tree).toHaveStyleRule('flex-direction', 'row', {
+      media: `only screen and (min-width: ${breakpoints.xs}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`, {
-      media: `only screen and (min-width: ${breakpoints['md']}rem)`,
+    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+      media: `only screen and (min-width: ${breakpoints.xs}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-direction', `row-reverse`, {
-      media: `only screen and (min-width: ${breakpoints['lg']}rem)`,
+    expect(tree).toHaveStyleRule('flex-direction', 'row', {
+      media: `only screen and (min-width: ${breakpoints.sm}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-wrap', `wrap-reverse`, {
-      media: `only screen and (min-width: ${breakpoints['lg']}rem)`,
+    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+      media: `only screen and (min-width: ${breakpoints.sm}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-direction', 'row-reverse', {
+      media: `only screen and (min-width: ${breakpoints.md}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-wrap', 'wrap-reverse', {
+      media: `only screen and (min-width: ${breakpoints.md}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-direction', 'row-reverse', {
+      media: `only screen and (min-width: ${breakpoints.lg}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-wrap', 'wrap-reverse', {
+      media: `only screen and (min-width: ${breakpoints.lg}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-direction', 'row', {
+      media: `only screen and (min-width: ${breakpoints.xl}rem)`,
+    })
+
+    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+      media: `only screen and (min-width: ${breakpoints.xl}rem)`,
     })
   })
 
