@@ -35,6 +35,7 @@ const Row = styled.div`
              `
              : `
                  flex-direction: row;
+                 flex-wrap: wrap;
                `
          };
         

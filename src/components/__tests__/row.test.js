@@ -32,7 +32,7 @@ describe('<Row />', () => {
       media: `only screen and (min-width: ${breakpoints.xs}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+    expect(tree).toHaveStyleRule('flex-wrap', 'wrap', {
       media: `only screen and (min-width: ${breakpoints.xs}rem)`,
     })
 
@@ -40,7 +40,7 @@ describe('<Row />', () => {
       media: `only screen and (min-width: ${breakpoints.sm}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+    expect(tree).toHaveStyleRule('flex-wrap', 'wrap', {
       media: `only screen and (min-width: ${breakpoints.sm}rem)`,
     })
 
@@ -64,7 +64,7 @@ describe('<Row />', () => {
       media: `only screen and (min-width: ${breakpoints.xl}rem)`,
     })
 
-    expect(tree).toHaveStyleRule('flex-wrap', undefined, {
+    expect(tree).toHaveStyleRule('flex-wrap', 'wrap', {
       media: `only screen and (min-width: ${breakpoints.xl}rem)`,
     })
   })
