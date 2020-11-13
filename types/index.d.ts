@@ -78,7 +78,7 @@ interface IConfig {
   gutterWidth: Record<IGridBreakpoints, number>;
   paddingWidth: Record<IGridBreakpoints, number>;
   container: Record<IGridBreakpoints, number>;
-  breakPoints: Record<IGridBreakpoints, number>;
+  breakpoints: Record<IGridBreakpoints, number>;
 }
 
 type IConfigProps = ThemeProps<{awesomegrid: Partial<IConfig>}>;
