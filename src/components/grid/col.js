@@ -34,6 +34,15 @@ const Col = styled.div`
     `)}
   `}
 
+  ${p => p.order && css`
+    ${DIMENSIONS.map(d =>
+    config(p).breakpoints[d] && config(p).media[d]`
+    ${typeof p.order === 'object'
+    ? p.order[d] !== undefined && `order: ${p.order[d] > 0 ? p.order[d] : 0}`
+    : ''};
+    `)}
+  `}
+
   ${p => p.reverse && css`
     ${Array.isArray(p.reverse)
     ? DIMENSIONS.map(d => config(p).breakpoints[d] && config(p).media[d]`
@@ -90,6 +99,7 @@ Col.propTypes = {
   xl: numberOrString,
   align: stringOrObject,
   justify: stringOrObject,
+  order: stringOrObject,
   offSet: numberOrObject,
   reverse: boolOrArray,
   noGutter: PropTypes.bool,
