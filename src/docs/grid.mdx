@@ -112,6 +112,43 @@ in this case, the ```offset``` prop must receive an object with the screens and 
   <Row><Col debug xs={4} sm={8} lg={11} offset={{ xs:0, sm:0, lg:1}}>&nbsp;</Col></Row>
 </Container>
 ```
+
+## Order
+
+### Using number
+
+If you enter a number, that number will apply to all screens.
+
+<Container>
+  <Row>
+    <Col debug xs={2} order={3}>order 3</Col>
+    <Col debug xs={2} order={1}>order 1</Col>
+  </Row>
+</Container>
+
+### Using object
+
+in this case, the ```order``` prop must receive an object with the screens and their respective values.
+
+<Container>
+  <Row>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 1, sm: 4, lg: 2 }}>xs=1, sm=4, lg=2</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 2, sm: 3, lg: 1 }}>xs=2, sm=3, lg=1</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 3, sm: 2, lg: 4 }}>xs=3, sm=2, lg=4</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 4, sm: 1, lg: 3 }}>xs=4, sm=1, lg=3</Col>
+  </Row>
+</Container>
+
+```js
+<Container>
+  <Row>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 1, sm: 4, lg: 2 }}>xs=1, sm=4, lg=2</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 2, sm: 3, lg: 1 }}>xs=2, sm=3, lg=1</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 3, sm: 2, lg: 4 }}>xs=3, sm=2, lg=4</Col>
+    <Col debug xs={2} sm={2} lg={2} order={{ xs: 4, sm: 1, lg: 3 }}>xs=4, sm=1, lg=3</Col>
+  </Row>
+</Container>
+```
 ## Alignment
 
 The props `align` and `justify` allow you to centralize `Row` or `Col` content using the [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)

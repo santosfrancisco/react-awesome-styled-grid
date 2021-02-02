@@ -38,8 +38,8 @@ const Col = styled.div`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
     ${typeof p.order === 'object'
-    ? p.order[d] !== undefined && `order: ${p.order[d] > 0 ? p.order[d] : 0}`
-    : ''};
+    ? p.order[d] !== undefined && `order: ${p.order[d]}`
+    : `order: ${p.order};`};
     `)}
   `}
 
