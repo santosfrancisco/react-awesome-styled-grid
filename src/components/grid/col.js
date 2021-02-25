@@ -34,7 +34,7 @@ const Col = styled.div`
     `)}
   `}
 
-  ${p => p.order && css`
+  ${p => p.order !== undefined && css`
     ${DIMENSIONS.map(d =>
     config(p).breakpoints[d] && config(p).media[d]`
     ${typeof p.order === 'object'
