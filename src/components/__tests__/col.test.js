@@ -82,6 +82,30 @@ describe('<Col />', () => {
     })
   })
 
+  it('should have a order space for each media', () => {
+    const props = {
+      order: {
+        xs: 5,
+        sm: 3,
+        md: 2,
+        lg: 6,
+        xl: 8
+      }
+    }
+
+    const tree = renderer.create(<Col {...props} />).toJSON()
+
+    const { breakpoints } = BASE_CONF
+
+    DIMENSIONS.forEach(d => {
+      expect(tree).toHaveStyleRule(
+        'order', `${props.order[d]}`, {
+          media: `only screen and (min-width: ${breakpoints[d]}rem)`
+        }
+      )
+    })
+  })
+
   it('should have a reverse direction for each media', () => {
     const tree = renderer.create(<Col reverse />).toJSON()
 

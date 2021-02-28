@@ -24,6 +24,14 @@ interface IOffsetOptions {
   xl?: number;
 }
 
+interface IOrderOptions {
+  xs?: number;
+  sm?: number;
+  md?: number;
+  lg?: number;
+  xl?: number;
+}
+
 interface IGrid {
   children: React.ReactNode;
   style?: React.CSSProperties;
@@ -47,6 +55,7 @@ interface IGridColProps extends IGrid {
   lg?: number | string;
   xl?: number | string;
   offset?: number | IOffsetOptions;
+  order?: number | IOrderOptions;
   reverse?: boolean | IGridBreakpoints[];
   align?: string | IAlignOrJustifyOptions;
   justify?: string | IAlignOrJustifyOptions;
