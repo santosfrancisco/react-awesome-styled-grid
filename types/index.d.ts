@@ -3,7 +3,7 @@ import * as CSS from "csstype";
 import {
   ThemeProps,
   ThemedCssFunction,
-  DefaultTheme
+  DefaultTheme,
 } from 'styled-components';
 
 type IGridBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -80,6 +80,10 @@ interface IHiddenProps {
   children: React.ReactNode;
 }
 
+interface IScreenClassProps {
+  render: (screen: IGridBreakpoints) => React.ReactNode;
+}
+
 interface IConfig {
   media: Record<IGridBreakpoints, ThemedCssFunction<DefaultTheme>>;
   mediaQuery: string;
@@ -101,6 +105,8 @@ export const Container: React.FC<IGridContainerProps>;
 export const Row: React.FC<IGridRowProps>;
 export const Col: React.FC<IGridColProps>;
 export const Visible: React.FC<IVisibleProps>;
+export const ScreenBadge: StyledComponent;
+export const ScreenClass: React.FC<IScreenClassProps>;
 export const Hidden: React.FC<IHiddenProps>;
 export const config: (props: IConfigProps) => IConfig;
 export const util: IUtil;

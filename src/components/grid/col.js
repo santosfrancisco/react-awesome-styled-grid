@@ -39,7 +39,7 @@ const Col = styled.div`
     config(p).breakpoints[d] && config(p).media[d]`
     ${typeof p.order === 'object'
     ? p.order[d] !== undefined && `order: ${p.order[d]}`
-    : `order: ${p.order};`};
+    : `order: ${p.order}`};
     `)}
   `}
 
@@ -82,7 +82,7 @@ const stringOrObject = PropTypes.oneOfType([
 ])
 
 const numberOrObject = PropTypes.oneOfType([
-  PropTypes.bool,
+  PropTypes.number,
   PropTypes.object
 ])
 
@@ -99,7 +99,7 @@ Col.propTypes = {
   xl: numberOrString,
   align: stringOrObject,
   justify: stringOrObject,
-  order: stringOrObject,
+  order: numberOrObject,
   offSet: numberOrObject,
   reverse: boolOrArray,
   noGutter: PropTypes.bool,
