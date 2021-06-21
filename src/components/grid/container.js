@@ -25,7 +25,7 @@ const Container = styled.div`
   ${p => !p.fluid && css`
     ${DIMENSIONS.map(d =>
     config(p).container[ d ] && config(p).media[ d ]`
-      ${typeof config(p).container[d] === 'number' ? `width: ${config(p).container[ d ]}rem;` : `width: 100%;`}
+      ${typeof config(p).container[d] === 'number' ? `max-width: ${config(p).container[ d ]}rem;` : `max-width: 100%;`}
     `)}
   `}
 
