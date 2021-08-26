@@ -25,7 +25,7 @@ describe('<Container />', () => {
         expect(tree).toHaveStyleRule('max-width', '100%')
       } else {
         expect(tree).toHaveStyleRule(
-          'width', `${typeof container[d] === 'number' ? `${container[d]}rem` : `100%`}`, {
+          'max-width', `${typeof container[d] === 'number' ? `${container[d]}rem` : `100%`}`, {
             media: `only screen and (min-width: ${breakpoints[d]}rem)`
           }
         )
