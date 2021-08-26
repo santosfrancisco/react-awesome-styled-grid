@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-styled-grid",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "A responsive grid system layout for React using styled-components",
   "main": "lib/react-awesome-styled-grid.cjs.js",
   "module": "lib/react-awesome-styled-grid.es.js",
