@@ -45,19 +45,19 @@ exports[`<Container /> should render default style correctly 1`] = `
 
 @media only screen and (min-width:1rem) {
   .c0 {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width:48rem) {
   .c0 {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width:64rem) {
   .c0 {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
