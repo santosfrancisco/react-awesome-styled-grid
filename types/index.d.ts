@@ -1,12 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 import * as CSS from "csstype";
-import {
-  ThemeProps,
-  ThemedCssFunction,
-  DefaultTheme,
-} from 'styled-components';
+import { ThemeProps, ThemedCssFunction, DefaultTheme } from "styled-components";
 
-type IGridBreakpoints = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+type IGridBreakpoints = "xs" | "sm" | "md" | "lg" | "xl";
 
 interface IAlignOrJustifyOptions {
   xs?: string;
@@ -39,7 +35,7 @@ interface IGrid {
 }
 
 interface IGridContainerProps extends IGrid {
-  fluid?:boolean;
+  fluid?: boolean;
 }
 
 interface IGridRowProps extends IGrid {
@@ -90,11 +86,11 @@ interface IConfig {
   columns: Record<IGridBreakpoints, number>;
   gutterWidth: Record<IGridBreakpoints, number>;
   paddingWidth: Record<IGridBreakpoints, number>;
-  container: Record<IGridBreakpoints, number>;
+  container: Record<IGridBreakpoints, number | string>;
   breakpoints: Record<IGridBreakpoints, number>;
 }
 
-type IConfigProps = ThemeProps<{awesomegrid: Partial<IConfig>}>;
+type IConfigProps = ThemeProps<{ awesomegrid: Partial<IConfig> }>;
 
 interface IUtil {
   getScreenClass: (props?: IConfigProps) => IGridBreakpoints;
@@ -105,7 +101,7 @@ export const Container: React.FC<IGridContainerProps>;
 export const Row: React.FC<IGridRowProps>;
 export const Col: React.FC<IGridColProps>;
 export const Visible: React.FC<IVisibleProps>;
-export const ScreenBadge: StyledComponent;
+export const ScreenBadge: React.FC;
 export const ScreenClass: React.FC<IScreenClassProps>;
 export const Hidden: React.FC<IHiddenProps>;
 export const config: (props: IConfigProps) => IConfig;
