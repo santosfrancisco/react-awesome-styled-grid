@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg fill="#33925d" height="800px" width="800px" version="1.1" id="react-awesom-styled-grid"
+	xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.308 492.308"
+	xml:space="preserve">
+	<g>
+		<g>
+			<path d="M260.923,0v231.385h231.385V0H260.923z M472.615,211.692h-192v-192h192V211.692z" />
+		</g>
+	</g>
+	<g>
+		<g>
+			<path d="M0,0v492.308h231.385V0H0z M211.692,472.615h-192V19.692h192V472.615z" />
+		</g>
+	</g>
+	<g>
+		<g>
+			<path d="M260.923,260.923v231.385h231.385V260.923H260.923z M472.615,472.615h-192v-192h192V472.615z" />
+		</g>
+	</g>
+</svg>

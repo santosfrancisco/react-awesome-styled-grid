@@ -1,108 +1,111 @@
+import { CUSTOM_CONF } from "../lib/config";
 import * as React from "react";
-import * as CSS from "csstype";
 import { ThemeProps, ThemedCssFunction, DefaultTheme } from "styled-components";
+export type GridBreakpoints = "xs" | "sm" | "md" | "lg" | "xl";
 
-type IGridBreakpoints = "xs" | "sm" | "md" | "lg" | "xl";
-
-interface IAlignOrJustifyOptions {
+export type AlignOrJustifyOptions = {
   xs?: string;
   sm?: string;
   md?: string;
   lg?: string;
   xl?: string;
-}
+};
 
-interface IOffsetOptions {
+export type OffsetOptions = {
   xs?: number;
   sm?: number;
   md?: number;
   lg?: number;
   xl?: number;
-}
+};
 
-interface IOrderOptions {
+export type OrderOptions = {
   xs?: number;
   sm?: number;
   md?: number;
   lg?: number;
   xl?: number;
-}
+};
 
-interface IGrid {
+export type Grid = {
   children: React.ReactNode;
   style?: React.CSSProperties;
   debug?: boolean;
-}
+};
 
-interface IGridContainerProps extends IGrid {
+export type GridContainerProps = Grid & {
   fluid?: boolean;
-}
+};
 
-interface IGridRowProps extends IGrid {
-  reverse?: boolean | IGridBreakpoints[];
+export type GridRowProps = Grid & {
+  reverse?: boolean | GridBreakpoints[];
   align?: string | object;
   justify?: string | object;
-}
+};
 
-interface IGridColProps extends IGrid {
+export type GridColProps = Grid & {
   xs?: number | string;
   sm?: number | string;
   md?: number | string;
   lg?: number | string;
   xl?: number | string;
-  offset?: number | IOffsetOptions;
-  order?: number | IOrderOptions;
-  reverse?: boolean | IGridBreakpoints[];
-  align?: string | IAlignOrJustifyOptions;
-  justify?: string | IAlignOrJustifyOptions;
+  offset?: number | OffsetOptions;
+  order?: number | OrderOptions;
+  reverse?: boolean | GridBreakpoints[];
+  align?: string | AlignOrJustifyOptions;
+  justify?: string | AlignOrJustifyOptions;
   noGutter?: boolean;
-}
+};
 
-interface IVisibleProps {
+export type VisibleProps = {
   xs?: boolean;
   sm?: boolean;
   md?: boolean;
   lg?: boolean;
   xl?: boolean;
   children: React.ReactNode;
-}
+};
 
-interface IHiddenProps {
+export type HiddenProps = {
   xs?: boolean;
   sm?: boolean;
   md?: boolean;
   lg?: boolean;
   xl?: boolean;
   children: React.ReactNode;
-}
+};
 
-interface IScreenClassProps {
-  render: (screen: IGridBreakpoints) => React.ReactNode;
-}
+export type ScreenClassProps = {
+  render: (screen: GridBreakpoints) => React.ReactNode;
+};
 
-interface IConfig {
-  media: Record<IGridBreakpoints, ThemedCssFunction<DefaultTheme>>;
+export type Media = Record<GridBreakpoints, ThemedCssFunction<DefaultTheme>>;
+
+export type Config = {
+  media: Media;
   mediaQuery: string;
-  columns: Record<IGridBreakpoints, number>;
-  gutterWidth: Record<IGridBreakpoints, number>;
-  paddingWidth: Record<IGridBreakpoints, number>;
-  container: Record<IGridBreakpoints, number | string>;
-  breakpoints: Record<IGridBreakpoints, number>;
-}
+  columns: Record<GridBreakpoints, number>;
+  gutterWidth: Record<GridBreakpoints, number>;
+  paddingWidth: Record<GridBreakpoints, number>;
+  container: Record<GridBreakpoints, number | string>;
+  breakpoints: Record<GridBreakpoints, number>;
+};
 
-type IConfigProps = ThemeProps<{ awesomegrid: Partial<IConfig> }>;
+export type AwesomeTheme = { [CUSTOM_CONF]: Partial<Config> };
 
-interface IUtil {
-  getScreenClass: (props?: IConfigProps) => IGridBreakpoints;
+export type ConfigProps = ThemeProps<AwesomeTheme>;
+
+export type Util = {
+  getScreenClass: (props?: ConfigProps) => GridBreakpoints;
   getViewPort: () => number | null;
-}
+};
 
-export const Container: React.FC<IGridContainerProps>;
-export const Row: React.FC<IGridRowProps>;
-export const Col: React.FC<IGridColProps>;
-export const Visible: React.FC<IVisibleProps>;
+export const Container: React.FC<GridContainerProps>;
+export const Row: React.FC<GridRowProps>;
+export const Col: React.FC<GridColProps>;
+export const Visible: React.FC<VisibleProps>;
 export const ScreenBadge: React.FC;
-export const ScreenClass: React.FC<IScreenClassProps>;
-export const Hidden: React.FC<IHiddenProps>;
-export const config: (props: IConfigProps) => IConfig;
-export const util: IUtil;
+export const ScreenClass: React.FC<ScreenClassProps>;
+export const Hidden: React.FC<HiddenProps>;
+export const config: (props?: ConfigProps) => Config;
+export const util: Util;

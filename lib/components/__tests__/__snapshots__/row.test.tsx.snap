@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row >children</Row> should render default style correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width:1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width:48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width:64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width:90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width:120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  children
+</div>
+`;

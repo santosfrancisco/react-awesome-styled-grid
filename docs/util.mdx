@@ -1,0 +1,64 @@
+---
+sidebar_position: 4
+name: Utilities
+---
+
+# Utilities
+
+## Media Queries
+
+To use in your css the media queries with the same breakpoints of the grid,
+just import the config as in the example below. If you are not using a
+custom config, it is not mandatory to pass _props_ to config
+
+> **Tip:** since react-awesome-styled-grid is mobile-first grid,
+> the css inserted without media querie is applied in mobile resolution.
+> The next media querie (e.g. SM `config().media['sm']`), will apply css on the
+> devices with resolutions above of 48 rem (768px), and so on...
+
+```js
+import React from "react";
+import styled from "styled-components";
+import { Container, Row, Col, config } from "react-awesome-styled-grid";
+
+export default styled(({ className, children }) => {
+  return (
+    <Container className={className}>
+      <Row>
+        <Col>{children}</Col>
+      </Row>
+    </Container>
+  );
+})`
+  // css here...
+
+  ${(props) => config(props).media["sm"]`
+    color: red;
+    // ...more css here
+  `}
+
+  ${(props) => config(props).media["md"]`
+    color: purple;
+    font-size: 1.5rem;
+    // ...more css here
+  `}
+`;
+```
+
+> **Your code**
+>
+> ```js
+> ${props => config(props).media['sm']`
+>  color: red;
+>  // ...more css here
+> `}
+> ```
+>
+> **Your output**
+>
+> ```css
+> @media only screen and (min-width: 48rem) {
+>   color: red;
+>   // ...more css here
+> }
+> ```

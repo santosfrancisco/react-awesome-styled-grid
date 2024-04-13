@@ -1,0 +1,66 @@
+---
+sidebar_position: 6
+name: Playground
+---
+
+import {
+  Container,
+  Row,
+  Col,
+  Visible,
+  Hidden,
+  ScreenClass,
+  ScreenBadge,
+  config,
+  util
+} from "../lib";
+
+# Playground
+
+😎 Have fun!
+
+```jsx live
+function Playground() {
+  return (
+    <Container>
+      <ScreenBadge />
+      <Row>
+        <Col debug xs={4} md={2} lg={3}>
+          Column 1
+        </Col>
+        <Col debug xs={4} md={2} lg={3}>
+          Column 2
+        </Col>
+        <Col debug xs={4} md={2} lg={3}>
+          Column 3
+        </Col>
+        <Col debug xs={4} md={2} lg={3}>
+          Column 4
+        </Col>
+      </Row>
+      <Row>
+        <Visible xs>
+          <Col debug xs={4}>
+            Visible XS
+          </Col>
+        </Visible>
+        <Visible md>
+          <Col debug xs={4}>
+            Visible MD
+          </Col>
+        </Visible>
+        <Hidden xs>
+          <Col debug xs={4}>
+            Hidden XS
+          </Col>
+        </Hidden>
+        <Hidden md>
+          <Col debug xs={4}>
+            Hidden MD
+          </Col>
+        </Hidden>
+      </Row>
+    </Container>
+  );
+}
+```

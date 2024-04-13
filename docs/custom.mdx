@@ -1,0 +1,100 @@
+---
+sidebar_position: 5
+name: Custom configuration
+---
+
+# Custom configuration
+
+## Using a custom configuration
+
+To use a custom config, import the **ThemeProvider**
+from Styled-components `import { ThemeProvider } from 'styled-components'`,
+and pass a named object `awesomegrid` to the theme prop, as the example below.
+The properties of your custom configuration will overwrite the default settings. Just set properties that are different from the default.
+
+Try changing any property in `customConf` below and see what happens.
+
+```jsx live
+function Custom(props) {
+  const customConf = {
+    mediaQuery: "only screen",
+    columns: {
+      xs: 4,
+      sm: 8,
+      md: 8,
+      lg: 12,
+      xl: 12
+    },
+    gutterWidth: {
+      xs: 1,
+      sm: 1,
+      md: 1.5,
+      lg: 1.5,
+      xl: 1.5
+    },
+    paddingWidth: {
+      xs: 1,
+      sm: 1,
+      md: 1.5,
+      lg: 1.5,
+      xl: 1.5
+    },
+    container: {
+      xs: "full", // 'full' = max-width: 100%
+      sm: "full", // 'full' = max-width: 100%
+      md: "full", // 'full' = max-width: 100%
+      lg: 90, // max-width: 1440px
+      xl: 90 // max-width: 1440px
+    },
+    breakpoints: {
+      xs: 1,
+      sm: 48, // 768px
+      md: 64, // 1024px
+      lg: 90, // 1440px
+      xl: 120 // 1920px
+    }
+  };
+
+  return (
+    <ThemeProvider theme={{ customConf }}>
+      <Container>
+        <Row>
+          <ScreenBadge />
+          <Col debug xs={4} sm={5} md={3}>
+            xs={4} sm={5} md={3}
+          </Col>
+          <Col debug xs={4} sm={3} md={5}>
+            xs={4} sm={3} md={9}
+          </Col>
+        </Row>
+        <Row>
+          <Col debug xs={2} sm={6} md={5} lg={6}>
+            xs={2} sm={6} md={5} lg={6}
+          </Col>
+          <Col debug xs={2} sm={2} md={3} lg={6}>
+            xs={2} sm={2} md={7} lg={6}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ScreenClass
+              render={(screen) => (
+                <p
+                  style={{
+                    color: ["sm", "md"].includes(screen) ? "red" : "purple"
+                  }}
+                >
+                  Hello! Actual screen is {screen}
+                </p>
+              )}
+            />
+          </Col>
+        </Row>
+        <Hidden xs>
+          <div>This text is hidden only on: XS</div>
+        </Hidden>
+      </Container>
+    </ThemeProvider>
+  );
+}
+```
