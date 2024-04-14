@@ -28,3 +28,37 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+/* index page start */
+
+.heroBanner {
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button + .button {
+  margin-left: 16px;
+}
+
+@media only screen and (min-width: 48rem) {
+  .heroBanner {
+    padding: 4rem 0;
+    text-align: left;
+  }
+
+  .buttons {
+    -webkit-box-pack: start;
+    justify-content: start;
+  }
+}
+
+/* index page end */

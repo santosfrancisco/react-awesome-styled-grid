@@ -4,8 +4,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
-import styled from "styled-components";
-import { Container, config } from "@site/lib";
+import { Container } from "@site/lib";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -32,44 +31,14 @@ function HomepageHeader() {
   );
 }
 
-export default styled(({ className }) => {
+export default function IndexPage() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <div className={className}>
-      <Layout title={siteConfig.title} description={siteConfig.tagline}>
-        <HomepageHeader />
-        <Container>
-          <HomepageFeatures />
-        </Container>
-      </Layout>
-    </div>
+    <Layout title={siteConfig.title} description={siteConfig.tagline}>
+      <HomepageHeader />
+      <Container>
+        <HomepageFeatures />
+      </Container>
+    </Layout>
   );
-})`
-  .heroBanner {
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .button + .button {
-      margin-left: 16px;
-    }
-  }
-
-  ${(props) => config(props).media["sm"]`
-    .heroBanner {
-      padding: 4rem 0;
-      text-align: left;
-    }
-    
-    .buttons {
-      justify-content: start;
-    }
-`}
-`;
+}
