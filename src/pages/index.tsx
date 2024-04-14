@@ -24,7 +24,10 @@ function HomepageHeader(props: HomepageHeaderProps) {
           <Link className="button button--secondary button--lg" to="/docs">
             Get started
           </Link>
-          <Link className="button button--secondary button--lg" to="/demo">
+          <Link
+            className="try_a_demo button button--secondary button--lg"
+            to="/demo"
+          >
             Try a demo
           </Link>
         </div>
@@ -55,10 +58,10 @@ export default styled(function Home(props): JSX.Element {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    .button + .button {
-      margin-left: 16px;
-    }
+  .try_a_demo {
+    margin-left: 16px;
   }
 
   ${(props) => config(props).media["sm"]`
