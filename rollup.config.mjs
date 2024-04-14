@@ -1,6 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
-import babel from "@rollup/plugin-babel";
 import terser from "@rollup/plugin-terser";
 import dts from "rollup-plugin-dts";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
@@ -20,8 +19,7 @@ export default [
       typescript({
         tsconfig: "tsconfig.build.json"
       }),
-      resolve(),
-      babel({ babelHelpers: "bundled" })
+      resolve()
     ],
     external: [...Object.keys(pkg.peerDependencies || {})]
   },
@@ -38,8 +36,7 @@ export default [
       typescript({
         tsconfig: "tsconfig.build.json"
       }),
-      resolve(),
-      babel({ babelHelpers: "bundled" })
+      resolve()
     ],
     external: [...Object.keys(pkg.peerDependencies || {})]
   },
@@ -57,7 +54,6 @@ export default [
         tsconfig: "tsconfig.build.json"
       }),
       resolve(),
-      babel({ babelHelpers: "bundled" }),
       terser()
     ],
     external: [...Object.keys(pkg.peerDependencies || {})]
