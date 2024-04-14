@@ -5,7 +5,7 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import styled from "styled-components";
-import { Container } from "@site/lib";
+import { Container, config } from "@site/lib";
 
 type HomepageHeaderProps = {
   className: string;
@@ -51,15 +51,19 @@ export default styled(function Home(props): JSX.Element {
     overflow: hidden;
   }
 
-  @media screen and (max-width: 996px) {
-    .heroBanner {
-      padding: 2rem;
-    }
-  }
-
   .buttons {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+
+    .button + .button {
+      margin-left: 16px;
+    }
   }
+
+  ${(props) => config(props).media["sm"]`
+    .buttons {
+      justify-content: start;
+    }
+`}
 `;
