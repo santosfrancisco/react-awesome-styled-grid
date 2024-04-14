@@ -7,14 +7,10 @@ import Heading from "@theme/Heading";
 import styled from "styled-components";
 import { Container, config } from "@site/lib";
 
-type HomepageHeaderProps = {
-  className: string;
-};
-
-function HomepageHeader(props: HomepageHeaderProps) {
+function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary heroBanner", props.className)}>
+    <header className={clsx("hero hero--primary heroBanner")}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -36,19 +32,21 @@ function HomepageHeader(props: HomepageHeaderProps) {
   );
 }
 
-export default styled(function Home(props): JSX.Element {
+export default styled(({ className }) => {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <HomepageHeader {...props} />
-      <Container>
-        <HomepageFeatures />
-      </Container>
-    </Layout>
+    <div className={className}>
+      <Layout title={siteConfig.title} description={siteConfig.tagline}>
+        <HomepageHeader />
+        <Container>
+          <HomepageFeatures />
+        </Container>
+      </Layout>
+    </div>
   );
 })`
   .heroBanner {
-    padding: 4rem 0;
+    padding: 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -58,13 +56,18 @@ export default styled(function Home(props): JSX.Element {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
 
-  .try_a_demo {
-    margin-left: 16px;
+    .button + .button {
+      margin-left: 16px;
+    }
   }
 
   ${(props) => config(props).media["sm"]`
+    .heroBanner {
+      padding: 4rem 0;
+      text-align: left;
+    }
+    
     .buttons {
       justify-content: start;
     }
