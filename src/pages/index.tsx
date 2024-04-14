@@ -5,6 +5,7 @@ import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 import styled from "styled-components";
+import { Container } from "@site/lib";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -30,17 +31,12 @@ export default styled(function Home(): JSX.Element {
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <HomepageHeader />
-      <main>
+      <Container>
         <HomepageFeatures />
-      </main>
+      </Container>
     </Layout>
   );
 })`
-  /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
   .heroBanner {
     padding: 4rem 0;
     text-align: center;

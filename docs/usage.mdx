@@ -66,7 +66,8 @@ Resizes your window to see the responsive magic happening 😎
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Col debug xs={2} sm={6} md={2} lg={6}>
       xs={2} sm={6} md={2} lg={6}
@@ -164,7 +165,8 @@ in this case, the `offset` prop must receive an object with the screens and thei
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Col debug xs={1} sm={1} lg={1} offset={{ xs: 3, sm: 7, lg: 11 }}>
       &nbsp;
@@ -244,7 +246,8 @@ If you enter a number, that number will apply to all screens.
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Col debug xs={2} order={3}>
       order 3
@@ -342,7 +345,8 @@ Just pass a valid value from flexbox api to `align` prop
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row style={{ height: 80 }} debug align="center">
     <Col debug xs={1}>
       😎
@@ -403,7 +407,8 @@ in this case, the `align` prop must receive an object with the screens and their
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row style={{ height: 80 }} debug align={{ xs: "center", lg: "flex-end" }}>
     <Col debug xs={1}>
       😎
@@ -469,7 +474,8 @@ Just pass a valid value from flexbox api to `justify` prop
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row debug justify="center">
     <Col debug justify="center" xs={1}>
       😎
@@ -534,7 +540,8 @@ in this case, the `justify` prop must receive an object with the screens and the
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row debug justify={{ xs: "center", lg: "space-between" }}>
     <Col debug justify="center" xs={1}>
       😎
@@ -589,7 +596,8 @@ in this case, the `justify` prop must receive an object with the screens and the
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row reverse={["md"]}>
     <Col debug xs={2}>
       Column A
@@ -642,7 +650,8 @@ in this case, the `justify` prop must receive an object with the screens and the
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Col noGutter reverse={["md", "lg"]}>
       <div style={{ backgroundColor: "#5901ad40", outline: "1px solid #fff" }}>
@@ -710,7 +719,8 @@ Show a element only in a specific screen size
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Visible xs sm>
       <Col debug>Visible only on XS and SM screens</Col>
@@ -782,7 +792,8 @@ Hides a element only in a specific screen size
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Hidden xs sm>
       <Col debug>Hidden only on XS and SM screens</Col>
@@ -816,7 +827,8 @@ ScreenClass receive a prop named `render` and renders this by passing the curren
 
 ##### Code example
 
-```jsx<Container>
+```jsx
+<Container>
   <Row>
     <Col debug>
       <ScreenClass

@@ -16,7 +16,7 @@ custom config, it is not mandatory to pass _props_ to config
 > The next media querie (e.g. SM `config().media['sm']`), will apply css on the
 > devices with resolutions above of 48 rem (768px), and so on...
 
-```js
+```jsx
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col, config } from "react-awesome-styled-grid";
@@ -47,7 +47,7 @@ export default styled(({ className, children }) => {
 
 > **Your code**
 >
-> ```js
+> ```jsx
 > ${props => config(props).media['sm']`
 >  color: red;
 >  // ...more css here

@@ -76,11 +76,11 @@ const config: Config = {
       playgroundPosition: "bottom"
     },
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/social-card.jpg",
     navbar: {
       title: "React Awesome Styled Grid",
       logo: {
-        alt: "My Site Logo",
+        alt: "react awesome styled grid logo",
         src: "img/icon.svg"
       },
       items: [
