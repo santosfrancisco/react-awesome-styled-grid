@@ -7,10 +7,14 @@ import Heading from "@theme/Heading";
 import styled from "styled-components";
 import { Container } from "@site/lib";
 
-function HomepageHeader() {
+type HomepageHeaderProps = {
+  className: string;
+};
+
+function HomepageHeader(props: HomepageHeaderProps) {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx("hero hero--primary heroBanner")}>
+    <header className={clsx("hero hero--primary heroBanner", props.className)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -20,17 +24,20 @@ function HomepageHeader() {
           <Link className="button button--secondary button--lg" to="/docs">
             Get started
           </Link>
+          <Link className="button button--secondary button--lg" to="/demo">
+            Try a demo
+          </Link>
         </div>
       </div>
     </header>
   );
 }
 
-export default styled(function Home(): JSX.Element {
+export default styled(function Home(props): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <HomepageHeader />
+      <HomepageHeader {...props} />
       <Container>
         <HomepageFeatures />
       </Container>
@@ -53,6 +60,6 @@ export default styled(function Home(): JSX.Element {
   .buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 16px;
   }
 `;
