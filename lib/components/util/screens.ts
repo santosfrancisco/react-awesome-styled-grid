@@ -1,4 +1,4 @@
-import { ConfigProps, GridBreakpoints } from "@site/types";
+import { ConfigProps, GridBreakpoints } from "../../types";
 import config, { DIMENSIONS } from "../../config";
 
 export function getViewPort() {

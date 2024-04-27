@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import useEventListener from "@use-it/event-listener";
-import { useTheme } from "styled-components";
 import { getScreenClass } from "./screens";
-import { HiddenProps } from "../../../types";
+import { ConfigProps, HiddenProps } from "../../types";
 
-export const Hidden = ({ xs, sm, md, lg, xl, children }: HiddenProps) => {
-  const theme = useTheme();
+export const Hidden = ({
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  children,
+  theme
+}: HiddenProps & ConfigProps) => {
   const [currentScreen, setCurrentScreen] = useState("xs");
 
   const setScreen = () => {
@@ -36,5 +42,5 @@ export const Hidden = ({ xs, sm, md, lg, xl, children }: HiddenProps) => {
     }
   };
   if (isHidden()) return false;
-  return <React.Fragment>{children}</React.Fragment>;
+  return <Fragment>{children}</Fragment>;
 };

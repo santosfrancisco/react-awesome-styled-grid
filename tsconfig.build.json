@@ -1,16 +1,25 @@
 {
   // This file is not used in compilation. It is here just for a nice editor experience.
   "compilerOptions": {
-    "jsx": "react",
-    // "declaration": true,
-    // "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "noEmit": false,
     "baseUrl": ".",
-    // "outDir": "dist",
-    "allowSyntheticDefaultImports": true,
-    "paths": {
-      "@site/*": ["./*"]
-    }
+    "rootDir": "./lib",
+    "outDir": "./types",
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["sidebars.ts", "docusaurus.config.ts", "./src", "lib"]
+
+  "include": ["lib"],
+  "exclude": [
+    "node_modules",
+    "sidebars.ts",
+    "docusaurus.config.ts",
+    "src",
+    "dist",
+    "build",
+    "lib/components/__tests__/**"
+  ]
 }

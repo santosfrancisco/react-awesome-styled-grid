@@ -1,7 +1,10 @@
 import styled, { css } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
 import config, { DIMENSIONS } from "../../config";
 
-export const ScreenBadge: React.FC = styled.div`
+export const ScreenBadge = styled.div.withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop)
+})`
   z-index: 10;
   position: fixed;
   font-size: 1.5rem;
@@ -20,7 +23,7 @@ export const ScreenBadge: React.FC = styled.div`
       (dimension) =>
         config(props).breakpoints[dimension] &&
         config(props).media[dimension]`
-      ::before {
+      &::before {
         content: '${dimension}'
       }
     `

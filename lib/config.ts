@@ -1,4 +1,4 @@
-import { Config, ConfigProps, GridBreakpoints, Media } from "@site/types";
+import { Config, ConfigProps, GridBreakpoints, Media } from "./types";
 import { css, CSSObject } from "styled-components";
 
 export const CUSTOM_CONF = "awesomegrid";

@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import useEventListener from "@use-it/event-listener";
-import { useTheme } from "styled-components";
+import { ConfigProps, VisibleProps } from "../../types";
 import { getScreenClass } from "./screens";
-import { VisibleProps } from "../../../types";
 
-export const Visible = ({ xs, sm, md, lg, xl, children }: VisibleProps) => {
-  const theme = useTheme();
+export const Visible = ({
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  children,
+  theme
+}: VisibleProps & ConfigProps) => {
   const [currentScreen, setCurrentScreen] = useState("xs");
 
   const setScreen = () => {
@@ -36,5 +42,5 @@ export const Visible = ({ xs, sm, md, lg, xl, children }: VisibleProps) => {
     }
   };
   if (!isVisible()) return false;
-  return <React.Fragment>{children}</React.Fragment>;
+  return <Fragment>{children}</Fragment>;
 };

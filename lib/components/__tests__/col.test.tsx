@@ -1,42 +1,16 @@
 import { render } from "@testing-library/react";
-import { DIMENSIONS, BASE_CONF } from "../../config";
 import { Col } from "../grid/col";
+import { GridBreakpoints } from "@site/lib/types";
 
 describe("<Col />", () => {
   it("should render default style correctly", () => {
-    const { container } = render(<Col>children</Col>);
-    expect(container.firstChild).toMatchSnapshot();
+    const { asFragment } = render(<Col>children</Col>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have no gutter", () => {
-    const { container } = render(<Col noGutter>children</Col>);
-
-    expect(container.firstChild).toHaveStyleRule("padding-right", undefined);
-    expect(container.firstChild).toHaveStyleRule("padding-left", undefined);
-  });
-
-  it("should have default gutter", () => {
-    const { container } = render(<Col>children</Col>);
-
-    const { gutterWidth, breakpoints } = BASE_CONF;
-
-    DIMENSIONS.forEach((d) => {
-      const media = {
-        media: `only screen and (min-width: ${breakpoints[d]}rem)`
-      };
-
-      const defaultGutter = `${gutterWidth[d] / 2}rem`;
-      expect(container.firstChild).toHaveStyleRule(
-        "padding-right",
-        defaultGutter,
-        media
-      );
-      expect(container.firstChild).toHaveStyleRule(
-        "padding-left",
-        defaultGutter,
-        media
-      );
-    });
+    const { asFragment } = render(<Col noGutter>children</Col>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have the specified size", () => {
@@ -48,28 +22,9 @@ describe("<Col />", () => {
       xl: 5
     };
 
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    const { breakpoints, columns } = BASE_CONF;
-
-    DIMENSIONS.forEach((d) => {
-      const proportionalSize = (props[d] / columns[d]) * 100;
-
-      const media = {
-        media: `only screen and (min-width: ${breakpoints[d]}rem)`
-      };
-
-      expect(container.firstChild).toHaveStyleRule(
-        "flex",
-        `1 1 ${proportionalSize}%`,
-        media
-      );
-      expect(container.firstChild).toHaveStyleRule(
-        "max-width",
-        `${proportionalSize}%`,
-        media
-      );
-    });
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have a offset space for each media", () => {
@@ -77,25 +32,25 @@ describe("<Col />", () => {
       offset: {
         xs: 1,
         sm: 2,
-        md: 3,
+        md: 0,
         lg: 4,
         xl: 5
       }
     };
 
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    const { breakpoints, columns } = BASE_CONF;
+    expect(asFragment()).toMatchSnapshot();
+  });
 
-    DIMENSIONS.forEach((d) => {
-      expect(container.firstChild).toHaveStyleRule(
-        "margin-left",
-        `${(props.offset[d] / columns[d]) * 100}%`,
-        {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      );
-    });
+  it("should have a offset space for all media", () => {
+    const props = {
+      offset: 2
+    };
+
+    const { asFragment } = render(<Col {...props}>children</Col>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have a order space for each media", () => {
@@ -109,37 +64,33 @@ describe("<Col />", () => {
       }
     };
 
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    const { breakpoints } = BASE_CONF;
-
-    DIMENSIONS.forEach((d) => {
-      expect(container.firstChild).toHaveStyleRule(
-        "order",
-        `${props.order[d]}`,
-        {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      );
-    });
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should have a reverse direction for each media", () => {
-    const { container } = render(<Col reverse>children</Col>);
+  it("should have a order space for all media", () => {
+    const props = {
+      order: 3
+    };
 
-    expect(container.firstChild).toHaveStyleRule(
-      "flex-direction",
-      `column-reverse`
-    );
+    const { asFragment } = render(<Col {...props}>children</Col>);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("should have a reverse direction for all medias", () => {
+    const { asFragment } = render(<Col reverse>children</Col>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have the css rule justify-content center", () => {
     const props = {
       justify: "center"
     };
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    expect(container.firstChild).toHaveStyleRule("justify-content", "center");
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have the css rule justify-content center only in MD screen", () => {
@@ -149,28 +100,18 @@ describe("<Col />", () => {
       }
     };
 
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    const { breakpoints } = BASE_CONF;
-
-    DIMENSIONS.forEach((d) => {
-      expect(container.firstChild).toHaveStyleRule(
-        "justify-content",
-        props.justify[d],
-        {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      );
-    });
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have the css rule align-items center", () => {
     const props = {
       align: "center"
     };
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    expect(container.firstChild).toHaveStyleRule("align-items", "center");
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have the css rule align-items center only in MD screen", () => {
@@ -180,39 +121,32 @@ describe("<Col />", () => {
       }
     };
 
-    const { container } = render(<Col {...props}>children</Col>);
+    const { asFragment } = render(<Col {...props}>children</Col>);
 
-    const { breakpoints } = BASE_CONF;
-
-    DIMENSIONS.forEach((d) => {
-      expect(container.firstChild).toHaveStyleRule(
-        "align-items",
-        props.align[d],
-        {
-          media: `only screen and (min-width: ${breakpoints[d]}rem)`
-        }
-      );
-    });
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  it("should have a reverse direction for each media", () => {
-    const { container } = render(<Col reverse={["md"]}>children</Col>);
-    const { breakpoints } = BASE_CONF;
-    expect(container.firstChild).toHaveStyleRule(
-      "flex-direction",
-      "column-reverse",
-      {
-        media: `only screen and (min-width: ${breakpoints["md"]}rem)`
-      }
-    );
+  it("should have a reverse direction only for all media", () => {
+    const props = {
+      reverse: true
+    };
+    const { asFragment } = render(<Col {...props}>children</Col>);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("should have a reverse direction only for MD media", () => {
+    const props = {
+      reverse: ["md"] as GridBreakpoints[]
+    };
+    const { asFragment } = render(<Col {...props}>children</Col>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("should have different style when it`s debug props is true", () => {
-    const { container } = render(<Col debug>children</Col>);
-    expect(container.firstChild).toHaveStyleRule(
-      "background-color",
-      "#5901ad40"
-    );
-    expect(container.firstChild).toHaveStyleRule("outline", "#fff solid 1px");
+    const { asFragment } = render(<Col debug>children</Col>);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });

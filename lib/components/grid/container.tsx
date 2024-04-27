@@ -1,12 +1,15 @@
 import styled, { css } from "styled-components";
-
+import isPropValid from "@emotion/is-prop-valid";
 import config, { DIMENSIONS } from "../../config";
-import { GridContainerProps } from "@site/types";
+import { GridContainerProps } from "../../types";
 
-export const Container = styled.div<GridContainerProps>`
+export const Container = styled("div").withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop)
+})<GridContainerProps>`
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
 
   ${(props) => css`

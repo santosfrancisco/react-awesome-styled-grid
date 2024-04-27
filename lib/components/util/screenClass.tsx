@@ -1,25 +1,28 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, ReactNode, Fragment } from "react";
 import { getScreenClass } from "./screens";
-import { useTheme } from "styled-components";
+import { ConfigProps } from "../../types";
+import { DIMENSIONS } from "../../config";
 
 type ScreenClassProps = {
-  render: (screen: string) => React.ReactNode;
+  render: (screen: string) => ReactNode;
 };
 
-export const ScreenClass = (props: ScreenClassProps) => {
-  const theme = useTheme();
-  const [currentScreen, setCurrentScreen] = useState("xs");
+export const ScreenClass = (props: ScreenClassProps & ConfigProps) => {
+  const [currentScreen, setCurrentScreen] = useState(DIMENSIONS[0]);
 
   const setScreen = useCallback(() => {
     const lastScreenClass = currentScreen;
-    const newScreenClass = getScreenClass({ theme });
-    if (!lastScreenClass || lastScreenClass !== newScreenClass) {
+    const newScreenClass = getScreenClass(props);
+    if (lastScreenClass !== newScreenClass) {
       setCurrentScreen(newScreenClass);
     }
-  }, []);
+  }, [currentScreen]);
 
   useEffect(() => {
     setScreen();
+  }, []);
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("orientationchange", setScreen, false);
       window.addEventListener("resize", setScreen, false);
@@ -30,7 +33,7 @@ export const ScreenClass = (props: ScreenClassProps) => {
         window.removeEventListener("resize", setScreen);
       }
     };
-  }, []);
+  }, [currentScreen]);
 
-  return <React.Fragment>{props?.render(currentScreen)}</React.Fragment>;
+  return <Fragment>{props?.render(currentScreen)}</Fragment>;
 };

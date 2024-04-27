@@ -2,8 +2,8 @@ import { defaults as tsjPreset } from "ts-jest/presets";
 
 module.exports = {
   preset: "ts-jest",
+  testMatch: ["**/__tests__/**/*.test.tsx"],
   testEnvironment: "jsdom",
-  // setupFiles: ["<rootDir>/jestSetup.ts"],
   setupFilesAfterEnv: ["<rootDir>/jestSetup.ts"],
   transform: {
     ...tsjPreset.transform

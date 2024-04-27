@@ -1,8 +1,11 @@
 import styled, { css } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
 import config, { DIMENSIONS } from "../../config";
-import { GridRowProps } from "@site/types";
+import { GridRowProps } from "../../types";
 
-export const Row = styled.div<GridRowProps>`
+export const Row = styled.div.withConfig({
+  shouldForwardProp: (prop) => isPropValid(prop)
+})<GridRowProps>`
   box-sizing: border-box;
   display: flex;
   flex: 1 1 auto;

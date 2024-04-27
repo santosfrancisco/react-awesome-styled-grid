@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { Container, Row, Col, ScreenClass, ScreenBadge } from "@site/lib";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-export const customConf = {
+const customConf = {
   mediaQuery: "only screen",
   columns: {
     xs: 4,
@@ -48,53 +48,53 @@ type DemoProps = {
 
 const Demo = ({ className }: DemoProps) => {
   return (
-    // <ThemeProvider theme={{ awesomegrid: customConf }}>
-    <div className={className}>
-      <Container className="grid-container">
-        <div>
-          <p>Resize your browser window and see what happens!</p>
-        </div>
-        <ScreenBadge />
-        <Row>
-          <Col>
-            <ScreenClass
-              render={(screen) => (
-                <p
-                  style={{
-                    color: ["sm", "md"].includes(screen) ? "green" : "yellow"
-                  }}
-                >
-                  Current screen is {screen.toUpperCase()}
-                </p>
-              )}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={2} sm={3} md={4} lg={3} xl={6}>
-            <div className="grid-col">
-              xs={2} sm={3} md={4} lg={3} xl={6}
-            </div>
-          </Col>
-          <Col xs={2} sm={5} md={4} lg={3} xl={6}>
-            <div className="grid-col">
-              xs={2} sm={5} md={4} lg={3} xl={6}
-            </div>
-          </Col>
-          <Col xs={4} sm={5} md={4} lg={6} xl={6}>
-            <div className="grid-col">
-              xs={4} sm={5} md={4} lg={6} xl={6}
-            </div>
-          </Col>
-          <Col xs={4} sm={3} md={4} lg={12} xl={6}>
-            <div className="grid-col">
-              xs={4} sm={3} md={4} lg={12} xl={6}
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-    // </ThemeProvider>
+    <ThemeProvider theme={{ awesomegrid: customConf }}>
+      <div className={className}>
+        <Container className="grid-container" debug fluid>
+          <div>
+            <p>Resize your browser window and see what happens!</p>
+          </div>
+          <ScreenBadge />
+          <Row>
+            <Col>
+              <ScreenClass
+                render={(screen) => (
+                  <p
+                    style={{
+                      color: ["sm", "md"].includes(screen) ? "green" : "yellow"
+                    }}
+                  >
+                    Current screen is {screen.toUpperCase()}
+                  </p>
+                )}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={2} sm={3} md={4} lg={3} xl={6}>
+              <div className="grid-col">
+                xs={2} sm={3} md={4} lg={3} xl={6}
+              </div>
+            </Col>
+            <Col xs={2} sm={5} md={4} lg={3} xl={6}>
+              <div className="grid-col">
+                xs={2} sm={5} md={4} lg={3} xl={6}
+              </div>
+            </Col>
+            <Col xs={4} sm={5} md={4} lg={6} xl={6}>
+              <div className="grid-col">
+                xs={4} sm={5} md={4} lg={6} xl={6}
+              </div>
+            </Col>
+            <Col xs={4} sm={3} md={4} lg={12} xl={6}>
+              <div className="grid-col">
+                xs={4} sm={3} md={4} lg={12} xl={6}
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </ThemeProvider>
   );
 };
 
