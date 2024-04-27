@@ -50,7 +50,7 @@ const Demo = ({ className }: DemoProps) => {
   return (
     <ThemeProvider theme={{ awesomegrid: customConf }}>
       <div className={className}>
-        <Container className="grid-container" debug fluid>
+        <Container className="grid-container" debug>
           <div>
             <p>Resize your browser window and see what happens!</p>
           </div>
