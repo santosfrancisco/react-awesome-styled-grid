@@ -61,7 +61,7 @@ const Demo = ({ className }: DemoProps) => {
                 render={(screen) => (
                   <p
                     style={{
-                      color: ["sm", "md"].includes(screen) ? "green" : "yellow"
+                      color: ["sm", "md"].includes(screen) ? "green" : "blue"
                     }}
                   >
                     Current screen is {screen.toUpperCase()}

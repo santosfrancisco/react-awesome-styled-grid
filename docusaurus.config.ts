@@ -66,14 +66,14 @@ const config: Config = {
       } satisfies Preset.Options
     ]
   ],
-  plugins: ["@docusaurus/theme-live-codeblock"],
+  themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
     liveCodeBlock: {
       /**
        * The position of the live playground, above or under the editor
        * Possible values: "top" | "bottom"
        */
-      playgroundPosition: "bottom"
+      playgroundPosition: "top"
     },
     // Replace with your project's social card
     image: "img/social-card.jpg",

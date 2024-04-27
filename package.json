@@ -68,7 +68,7 @@
     "@docusaurus/types": "3.2.1",
     "@emotion/is-prop-valid": "1.2.2",
     "@jest/globals": "29.7.0",
-    "@mdx-js/react": "3.0.0",
+    "@mdx-js/react": "3.0.1",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-terser": "0.4.4",
     "@rollup/plugin-typescript": "11.1.6",
