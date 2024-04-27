@@ -1,6 +1,7 @@
 .docz
 # lib
 dist
+/types
 .DS_Store
 # Logs
 logs
