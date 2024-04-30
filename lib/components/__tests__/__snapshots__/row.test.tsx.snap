@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Row >children</Row> should have a reverse direction for each media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have a reverse direction for specific screen 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have different style when it\`s debug props is true 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  background-color: #5901ad40;
+  outline: #fff solid 1px;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have the css rule align-items center 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have the css rule align-items center only in MD screen 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    align-items: center;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have the css rule justify-content center 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should have the css rule justify-content center only in MD screen 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    justify-content: center;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Row >children</Row> should render default style correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;

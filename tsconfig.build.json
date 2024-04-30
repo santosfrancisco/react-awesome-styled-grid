@@ -1,0 +1,25 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "baseUrl": ".",
+    "rootDir": "./lib",
+    "outDir": "./types",
+    "allowSyntheticDefaultImports": true
+  },
+
+  "include": ["lib"],
+  "exclude": [
+    "node_modules",
+    "sidebars.ts",
+    "docusaurus.config.ts",
+    "src",
+    "dist",
+    "build",
+    "lib/components/__tests__/**"
+  ]
+}

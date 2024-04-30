@@ -1,0 +1,70 @@
+---
+sidebar_position: 3
+name: Table of props
+---
+
+# Table of Props
+
+## Container
+
+| prop     | type    | description                |
+| -------- | ------- | -------------------------- |
+| fluid    | boolean | makes container full-width |
+| debug    | boolean | enables debug              |
+| children | node    | content                    |
+
+## Row
+
+| prop     | type             | description                       |
+| -------- | ---------------- | --------------------------------- |
+| justify  | string or object | align the content horizontally    |
+| align    | string or object | align the content vertically      |
+| reverse  | number or array  | reverses the direction of the row |
+| debug    | boolean          | enables debug                     |
+| children | node             | content                           |
+
+## Col
+
+| prop     | type             | description                                |
+| -------- | ---------------- | ------------------------------------------ |
+| xs       | number or string | sets the number of columns on screens _xs_ |
+| sm       | number or string | sets the number of columns on screens _sm_ |
+| md       | number or string | sets the number of columns on screens _md_ |
+| lg       | number or string | sets the number of columns on screens _lg_ |
+| xl       | number or string | sets the number of columns on screens _xl_ |
+| justify  | string or object | align the content vertically               |
+| align    | string or object | align the content horizontally             |
+| offset   | number or object | sets the number of the offset columns      |
+| order    | number or object | sets the order of the columns              |
+| reverse  | number or array  | reverses the direction of the column       |
+| noGutter | boolean          | removes the gutter                         |
+| debug    | boolean          | enables debug                              |
+| children | node             | content                                    |
+
+## Visible
+
+| prop     | type    | description                                                           |
+| -------- | ------- | --------------------------------------------------------------------- |
+| xs       | boolean | indicates that past content will only be displayed on the screen _xs_ |
+| sm       | boolean | indicates that past content will only be displayed on the screen _sm_ |
+| md       | boolean | indicates that past content will only be displayed on the screen _md_ |
+| lg       | boolean | indicates that past content will only be displayed on the screen _lg_ |
+| xl       | boolean | indicates that past content will only be displayed on the screen _xl_ |
+| children | node    | content                                                               |
+
+## Hidden
+
+| prop     | type    | description                                                        |
+| -------- | ------- | ------------------------------------------------------------------ |
+| xs       | boolean | indicates that past content will only be hidden on the screen _xs_ |
+| sm       | boolean | indicates that past content will only be hidden on the screen _sm_ |
+| md       | boolean | indicates that past content will only be hidden on the screen _md_ |
+| lg       | boolean | indicates that past content will only be hidden on the screen _lg_ |
+| xl       | boolean | indicates that past content will only be hidden on the screen _xl_ |
+| children | node    | content                                                            |
+
+## ScreenClass
+
+| prop   | type | description                                                                    |
+| ------ | ---- | ------------------------------------------------------------------------------ |
+| render | func | the function that will be rendered receiving the current screen as a parameter |

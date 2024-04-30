@@ -1,0 +1,968 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Col /> should have a offset space for all media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: 50%;
+  }
+}
+
+<div
+    class="c0"
+    offset="2"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a offset space for each media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    margin-left: 25%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    margin-left: 33.33333333333333%;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    margin-left: 41.66666666666667%;
+  }
+}
+
+<div
+    class="c0"
+    offset="[object Object]"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a order space for all media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+<div
+    class="c0"
+    order="3"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a order space for each media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    order: 5;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    order: 6;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    order: 8;
+  }
+}
+
+<div
+    class="c0"
+    order="[object Object]"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a reverse direction for all medias 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a reverse direction only for MD media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    flex-direction: column;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have a reverse direction only for all media 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have different style when it\`s debug props is true 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #5901ad40;
+  outline: #fff solid 1px;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have no gutter 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have the css rule align-items center 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have the css rule align-items center only in MD screen 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    align-items: center;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have the css rule justify-content center 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have the css rule justify-content center only in MD screen 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    justify-content: center;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should have the specified size 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    flex: 1 1 25%;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    flex: 1 1 25%;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    flex: 1 1 37.5%;
+    max-width: 37.5%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    flex: 1 1 33.33333333333333%;
+    max-width: 33.33333333333333%;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    flex: 1 1 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Col /> should render default style correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;

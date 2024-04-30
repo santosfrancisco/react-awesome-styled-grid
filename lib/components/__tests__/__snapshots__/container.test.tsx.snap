@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should have a max-width 100% when it is a fluid container 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Container /> should have different style when it\`s debug props is true 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #5901ad40;
+  outline: #fff solid 1px;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    max-width: 90rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    max-width: 90rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Container /> should render default style correctly 1`] = `
+<DocumentFragment>
+  .c0 {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 1rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 90rem) {
+  .c0 {
+    max-width: 90rem;
+  }
+}
+
+@media only screen and (min-width: 120rem) {
+  .c0 {
+    max-width: 90rem;
+  }
+}
+
+<div
+    class="c0"
+  >
+    children
+  </div>
+</DocumentFragment>
+`;

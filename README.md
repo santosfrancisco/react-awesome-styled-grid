@@ -1,15 +1,15 @@
 [![npm version](https://badge.fury.io/js/react-awesome-styled-grid.svg)](https://www.npmjs.com/package/react-awesome-styled-grid)
 [![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 [![codecov](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid/branch/master/graph/badge.svg)](https://codecov.io/gh/santosfrancisco/react-awesome-styled-grid)
 [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid)
 ![Publish](https://github.com/santosfrancisco/react-awesome-styled-grid/workflows/Publish/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/47a9c7f7-444d-4df9-bc7b-10cb06265ed7/deploy-status)](https://app.netlify.com/sites/awesome-styled-grid/deploys)
 
-| Build History |
-| :--------- |
-| [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid) |
+| Build History                                                                                                                                                                                                          |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Build Status](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid.svg?branch=master)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid)                                                  |
 | [![Build history](https://buildstats.info/travisci/chart/santosfrancisco/react-awesome-styled-grid?branch=master&includeBuildsFromPullRequest=false)](https://travis-ci.org/santosfrancisco/react-awesome-styled-grid) |
 
 # React Awesome Styled Grid 😎
@@ -36,36 +36,44 @@ Click [here](https://awesome-styled-grid.netlify.com/) for documentation
 
 ## Basic usage
 
-This grid system is based on [Google Material Design](https://material.io/design/layout/responsive-layout-grid.html). 
+This grid system is based on [Google Material Design](https://material.io/design/layout/responsive-layout-grid.html).
 
 Number of columns: **xs**: 4, **sm**: 8, **md**: 8, **lg**: 12, **xl**: 12
-  
+
 Breakpoints size: **xs**: 1rem, **sm**: 48rem, **md**: 64rem, **lg**: 90rem, **xl**: 120rem
 
 > for a custom configuration, [see this section](https://awesome-styled-grid.netlify.com/custom) of documentation
+
 ```js
-import { Container, Row, Col } from 'react-awesome-styled-grid'
+import { Container, Row, Col } from "react-awesome-styled-grid";
 
 const MyCoolComponent = () => (
   <Container>
     <Row>
-      <Col xs={4} md={2} >Col A</Col>
-      <Col xs={6} md={10}>Col B</Col>
+      <Col xs={4} md={2}>
+        Col A
+      </Col>
+      <Col xs={6} md={10}>
+        Col B
+      </Col>
     </Row>
   </Container>
-)
+);
 ```
 
 ## Development
-run ```yarn install``` or ```npm install``` to install all dependencies
 
-run ```yarn docz dev``` or ```npm run docz:dev``` to run Docz on port 4000
+run `yarn install` or `npm install` to install all dependencies
+
+run `yarn start` or `npm run start` to run Docusaurus on port 3000
+
+Go to [http://localhost:3000/demo](http://localhost:3000/demo) to see live demo and edit [Demo.tsx](src/pages/demo.tsx) file
 
 ## Built With
 
-* [Styled-components](https://github.com/styled-components) - Visual primitives for the component age.
-* [Docz](https:://docz.site) - It's never been easier to document your things
-* [Rollup](https://rollupjs.org/guide/en) - Rollup is a module bundler for JavaScript
+- [Styled-components](https://github.com/styled-components) - Visual primitives for the component age.
+- [Docusaurus](https:://docusaurus.io) - Build optimized websites quickly, focus on your content
+- [Rollup](https://rollupjs.org/guide/en) - Rollup is a module bundler for JavaScript
 
 ## Contributing
 
